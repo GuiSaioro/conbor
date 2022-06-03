@@ -12690,7 +12690,7 @@ iframe {
 }
 
 .home section {
-    min-height: 90vh;
+    min-height: 78vh;
     display: flex;
     flex-direction: column;
     justify-content: center
