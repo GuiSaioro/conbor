@@ -459,17 +459,13 @@ img {
     height: auto
 }
 /*----------------------------------------------------------------------------------*/
-    .img-dropdown-size img {
+.img-dropdown-size img {
     max-width: 120px;
     position:absolute;   
 } 
-    .link_img-dropdown{ 
-     /* Para que a imagem nao saia fora do link*/
-} 
-    .link_img-dropdown:hover{ 
+.link_img-dropdown:hover{ 
     background-color:#717773; 
     border-radius: 30px;
-    set
 }
     .link_img-dropdown span{ 
     display:none; /* Aqui vocÃª define que todo SPAN que estiver dentro de um A estarÃ¡ invisÃ­vel */ 
@@ -735,7 +731,7 @@ input[type=tel],
 input[type=text],
 textarea {
     -webkit-appearance: none;
-    -webkit-border-radius: 0;
+    /*-webkit-border-radius: 0;*/
     box-sizing: border-box;
     border: 1px solid #ebedf0;
     padding: 20px 22px 21px;
@@ -812,7 +808,7 @@ textarea.placeholder {
 }
 
 select {
-    -webkit-border-radius: 0;
+    /*-webkit-border-radius: 0;*/
     border: 1px solid #ebedf0;
     padding: 20px 22px 21px;
     width: 100%;
@@ -838,7 +834,7 @@ input[type=file],
 input[type=reset],
 input[type=submit] {
     -webkit-appearance: none;
-    -webkit-border-radius: 0;
+    /*-webkit-border-radius: 0;*/
     cursor: pointer;
     outline: 0;
     margin-bottom: 32px
@@ -5808,32 +5804,27 @@ header .container {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% calc(100% - 220px), 100% 0%);
-        clip-path: polygon(0% 0%, 0% 100%, 100% calc(100%), 100% 0%);
+        
         z-index: 100;
         background-color: #427eee
     }
 
     @media (max-width:1439px) {
         .main-banner {
-            -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% calc(100% - 85px), 100% 0%);
-            clip-path: polygon(0% 0%, 0% 100%, 100% calc(100%), 100% 0%);
+            
             min-height: 237px;
         }
     }
 
     @media (max-width:1023px) {
         .main-banner {
-            -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% calc(100% - 50px), 100% 0%);
-            clip-path: polygon(0% 0%, 0% 100%, 100% calc(100%), 100% 0%);
-            min-height: 300px
+           
         }
     }
 
     @media (max-width:767px) {
         .main-banner {
-            -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% calc(100% - 20px), 100% 0%);
-            clip-path: polygon(0% 0%, 0% 100%, 100% calc(100%), 100% 0%)
+            
         }
     }
 
@@ -10998,34 +10989,26 @@ p .sitebar button span #nav>li>a.has-drop-down-a span:before {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% calc(100% - 220px), 100% 0%);
-    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
+    
     z-index: 100;
     background-color: #427eee
 }
 
 @media (max-width:1439px) {
     .main-banner {
-        -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% calc(100% - 85px), 100% 0%);
-        clip-path: polygon(0% 0%, 0% 100%, 100% calc(100%), 100% 0%);
+        
         min-height: 400px
     }
 }
 
 @media (max-width:1023px) {
     .main-banner {
-        -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% calc(100% - 50px), 100% 0%);
-        clip-path: polygon(0% 0%, 0% 100%, 100% calc(100%), 100% 0%);
+        
         min-height: 300px
     }
 }
 
-@media (max-width:767px) {
-    .main-banner {
-        -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% calc(100% - 20px), 100% 0%);
-        clip-path: polygon(0% 0%, 0% 100%, 100% calc(100%), 100% 0%)
-    }
-}
+
 
 .main-banner .holder {
     padding: 150px 0 200px;
