@@ -1,9 +1,9 @@
-﻿// page init
+// page init
 jQuery(function(){
 	initTouchNav();
-	initProductPaginationChange();
-	initProductTypePaginationChange();
-	initIndustriesPaginationChange();
+	//initProductPaginationChange();
+	//initProductTypePaginationChange();
+	//initIndustriesPaginationChange();
 	initMobileNav();
 	initDropDownClasses();
 	initCustomHover();
@@ -12,21 +12,41 @@ jQuery(function(){
 	initContactLocationDrop();
 	initContactReasonDrop();
 	initProceedBTNClick();
-	initFindLocation();
+	//initFindLocation();
 	initFilterButton();
 	initSlider();
 	initHomeSlider();
 	initTabs();
 	initAccordion();
 	initAnchors();
-	initListLocationFiltering();
-	initProductFiltering();
-	initListRepresentativesFiltering();
-	initListIndustryDetailPageFiltering();
-	initListProductTypeDetailPageFiltering();
+	//initListLocationFiltering();
+	//initProductFiltering();
+	//initListRepresentativesFiltering();
+	//initListIndustryDetailPageFiltering();
+	//initListProductTypeDetailPageFiltering();
 	initCookies();
+	initsearch_prod();
+	sendtoproductsearchbar();
 });
 
+// Função para pesquisa------------------------------------------------------------
+function initsearch_prod() {
+    let input = document.getElementById('searchbar').value
+    input=input.toLowerCase();
+    let x = document.getElementsByClassName('produtos');
+    let y = x;  
+    for (i = 0; i < x.length; i++) { 
+        if (!x[i].innerHTML.toLowerCase().includes(input)) {
+            x[i].style.display="none";
+        }
+        else {
+            x[i].style.display="list-item";                 
+        }
+    }
+}
+
+
+//------------------------------------------------------------------------
 $(window).load(function(){
     //initMenuCropping();
 });
@@ -81,6 +101,7 @@ function initCookies() {
        
     }
 }
+/*--------------------------------------------------------------------------------------------------
 
 
 function initProductPaginationChange()
@@ -156,7 +177,7 @@ function initIndustriesPaginationChange()
 		}
 	}
 }
-
+*/
 function initMenuCropping()
 {
 	var condition = $('#nav').length
@@ -193,7 +214,7 @@ function initMenuCropping()
 		}
 	}
 }
-
+/*
 function initProductFiltering()
 {
 	var busy = false;
@@ -267,7 +288,7 @@ function initProductFiltering()
 				return false;
 			});
 		}
-
+ 
 		function filterByNameSetup()
 		{
 			$('.filterButtonInput').click(function ()
@@ -587,7 +608,7 @@ function initListRepresentativesFiltering()
 		}
 	}
 }
-
+*/
 function initSitebarClick()
 {
 	var condition = $('.sitebar').length
@@ -656,7 +677,7 @@ function initTabs() {
 	});
 }
 
-// accordion menu init
+// inicialização do menu acordeão
 function initAccordion() {
 	jQuery('ul.accordion').slideAccordion({
 		opener: 'a.opener',
@@ -769,7 +790,14 @@ function initProceedBTNClick()
 		{
 			$('.proceedBTN').click(function ()
 			{
-				
+				var _this = $(this);
+				if($('#contactReasonDrop .filterButton.active').data('filter_val') === 'Become a Supplier') {
+					window.open('https://psp22.onventis.com/OnventisINT1/SupplierRegisterBrowser.aspx?ID=1a602126-7540-46ef-b2a7-67b80db68e66');
+				} else {
+					_this.hide();
+					_this.closest('.item, .holder').find('.box-holder').hide();
+					$('.contact-form').show();
+				}
 
 				return false;
 			});
@@ -806,7 +834,7 @@ function initContactReasonDrop()
 		}
 	}
 }
-
+/*
 function initFindLocation()
 {
 	var busy = false;
@@ -926,7 +954,7 @@ function initListLocationFiltering()
         }
     }
 }
-
+ */
 // mobile menu init
 function initMobileNav() {
 	jQuery('body').mobileNav({
@@ -935,7 +963,7 @@ function initMobileNav() {
 	});
 }
 
-// handle dropdowns on mobile devices
+// listas suspensas em dispositivos mobile-------------------------------
 function initTouchNav() {
 	jQuery('#nav').each(function(){
 		new TouchNav({
@@ -953,7 +981,7 @@ function initAnchors() {
 }
 
 
-// add classes if item has dropdown
+// add classes se o item teve dropdown------------------------------------
 function initDropDownClasses() {
 	jQuery('#nav li').each(function() {
 		var item = jQuery(this);
@@ -966,7 +994,7 @@ function initDropDownClasses() {
 	});
 }
 
-// add classes on hover/touch
+// add classes ao hover/touch---------------------------------------------
 function initCustomHover() {
 	jQuery('.item').touchHover();
 }
@@ -997,9 +1025,7 @@ function initHeaderSmallScroll() {
     }
 }
 
-/*
- * Simple Mobile Navigation
- */
+//Navegação Mobile Simples -------------------------------------------------
 ;(function($) {
 	function MobileNav(options) {
 		this.options = $.extend({
@@ -1103,23 +1129,23 @@ function initHeaderSmallScroll() {
 	};
 }(jQuery));
 
-/*
- * Mobile hover plugin
- */
+
+ // Mobile hover plugin
+
 ;(function($){
 
-	// detect device type
+	// detectar tipo device 
 	var isTouchDevice = ('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch,
 		isWinPhoneDevice = /Windows Phone/.test(navigator.userAgent);
 
-	// define events
+	// define eventos
 	var eventOn = (isTouchDevice && 'touchstart') || (isWinPhoneDevice && navigator.pointerEnabled && 'pointerdown') || (isWinPhoneDevice && navigator.msPointerEnabled && 'MSPointerDown') || 'mouseenter',
 		eventOff = (isTouchDevice && 'touchend') || (isWinPhoneDevice && navigator.pointerEnabled && 'pointerup') || (isWinPhoneDevice && navigator.msPointerEnabled && 'MSPointerUp') || 'mouseleave';
 
-	// event handlers
+	// eventos handlers
 	var toggleOn, toggleOff, preventHandler;
 	if(isTouchDevice || isWinPhoneDevice) {
-		// prevent click handler
+		// preve click handler
 		preventHandler = function(e) {
 			e.preventDefault();
 		};
@@ -1174,7 +1200,7 @@ function initHeaderSmallScroll() {
 	};
 }(jQuery));
 
-// navigation accesibility module
+// módulo de acessibilidade de navegação
 function TouchNav(opt) {
 	this.options = {
 		hoverClass: 'hover',
@@ -1205,7 +1231,7 @@ TouchNav.prototype = {
 		}
 	},
 	addEvents: function() {
-		// attach event handlers
+		// anexar evento handlers
 		var self = this;
 		var touchEvent = (navigator.pointerEnabled && 'pointerdown') || (navigator.msPointerEnabled && 'MSPointerDown') || (this.isTouchDevice && 'touchstart');
 		this.menuItems = lib.queryElementsBySelector(this.options.menuItems, this.menu);
@@ -1214,7 +1240,7 @@ TouchNav.prototype = {
 			var currentDrop = lib.queryElementsBySelector(self.options.menuDrop, item)[0],
 				currentOpener = lib.queryElementsBySelector(self.options.menuOpener, item)[0];
 
-			// only for touch input devices
+			// apenas devices para entrada de toque 
 			if( currentDrop && currentOpener && (self.isTouchDevice || self.isPointerDevice) ) {
 				lib.event.add(currentOpener, 'click', lib.bind(self.clickHandler, self));
 				lib.event.add(currentOpener, 'mousedown', lib.bind(self.mousedownHandler, self));
@@ -1229,7 +1255,7 @@ TouchNav.prototype = {
 					self.pressHandler.apply(self, arguments);
 				});
 			}
-			// for desktop computers and touch devices
+			// para computadores desktop e devices de toque
 			jQuery(item).bind('mouseenter', function(){
 				if(!self.touchFlag) {
 					self.currentItem = item;
@@ -1245,12 +1271,12 @@ TouchNav.prototype = {
 			item.touchNavActive = true;
 		};
 
-		// addd handlers for all menu items
+		// add handlers para todos os itens de menu
 		for(var i = 0; i < this.menuItems.length; i++) {
 			initMenuItem(self.menuItems[i]);
 		}
 
-		// hide dropdowns when clicking outside navigation
+		// ocultar menus suspensos ao clicar fora da navegação
 		if(this.isTouchDevice || this.isPointerDevice) {
 			lib.event.add(document.documentElement, 'mousedown', lib.bind(this.clickOutsideHandler, this));
 			lib.event.add(document.documentElement, touchEvent, lib.bind(this.clickOutsideHandler, this));
@@ -1281,7 +1307,7 @@ TouchNav.prototype = {
 		this.activeParent = null;
 	},
 	pressHandler: function(e) {
-		// hide previous drop (if active)
+		// ocultar a queda anterior (se ativo)
 		if(this.currentItem !== this.activeParent) {
 			if(this.activeParent && this.currentItem.parentNode === this.activeParent.parentNode) {
 				lib.removeClass(this.activeParent, this.options.hoverClass);
@@ -1289,7 +1315,7 @@ TouchNav.prototype = {
 				this.hideActiveDropdown();
 			}
 		}
-		// handle current drop
+		// lidar com queda de corrente
 		this.activeParent = this.currentItem;
 		if(lib.hasClass(this.currentItem, this.options.hoverClass)) {
 			this.preventCurrentClick = false;
@@ -1301,7 +1327,7 @@ TouchNav.prototype = {
 		}
 	},
 	clickHandler: function(e) {
-		// prevent first click on link
+		// impedir primeiro clique no link
 		if(this.preventCurrentClick) {
 			e.preventDefault();
 		}
@@ -1335,9 +1361,9 @@ TouchNav.prototype = {
 	}())
 };
 
-/*
- * Utility module
- */
+
+ //Módulo utilitário
+
 lib = {
 	hasClass: function(el,cls) {
 		return el && el.className ? el.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)')) : false;
@@ -1529,9 +1555,9 @@ lib = {
 	}
 };
 
-/*
- * jQuery Tabs plugin
- */
+
+ // plug-in de guias jQuery
+
 
 ;(function($, $win) {
 	'use strict';
@@ -1707,9 +1733,9 @@ lib = {
 	};
 }(jQuery, jQuery(window)));
 
-/*
- * jQuery Accordion plugin
- */
+
+ // plug-in jQuery Acordião
+
 ;(function($){
 	$.fn.slideAccordion = function(opt){
 		// default options
@@ -1774,11 +1800,9 @@ lib = {
 	};
 }(jQuery));
 
-/*!
- * SmoothScroll module
- */
+//Módulo de rolagem suave
 ;(function($, exports) {
-	// private variables
+	// variáveis privadas
 	var page,
 		win = $(window),
 		activeBlock, activeWheelHandler,
@@ -1786,7 +1810,7 @@ lib = {
 
 	// animation handlers
 	function scrollTo(offset, options, callback) {
-		// initialize variables
+		// inicializar variáveis
 		var scrollBlock;
 		if (document.body) {
 			if (typeof options === 'number') {
@@ -1802,14 +1826,14 @@ lib = {
 			return;
 		}
 
-		// treat single number as scrollTop
+		// tratar um único número como scrollTop
 		if (typeof offset === 'number') {
 			offset = {
 				top: offset
 			};
 		}
 
-		// handle mousewheel/trackpad while animation is active
+		// manuseie a roda do mouse/trackpad enquanto a animação estiver ativa
 		if (activeBlock && activeWheelHandler) {
 			activeBlock.off(wheelEvents, activeWheelHandler);
 		}
@@ -1825,7 +1849,7 @@ lib = {
 			activeBlock = scrollBlock.on(wheelEvents, activeWheelHandler);
 		}
 
-		// start scrolling animation
+		// comece a rolar a animação
 		scrollBlock.stop().animate({
 			scrollLeft: offset.left,
 			scrollTop: offset.top
@@ -1839,21 +1863,21 @@ lib = {
 		});
 	}
 
-	// smooth scroll contstructor
+	// construtor de rolagem suave
 	function SmoothScroll(options) {
 		this.options = $.extend({
-			anchorLinks: 'a[href^="#"]', // selector or jQuery object
-			container: null, // specify container for scrolling (default - whole page)
-			extraOffset: null, // function or fixed number
-			activeClasses: null, // null, "link", "parent"
-			easing: 'swing', // easing of scrolling
-			animMode: 'duration', // or "speed" mode
-			animDuration: 800, // total duration for scroll (any distance)
-			animSpeed: 1500, // pixels per second
+			anchorLinks: 'a[href^="#"]',
+			container: null,
+			extraOffset: null, 
+			activeClasses: null, 
+			easing: 'swing', 
+			animMode: 'duration', 
+			animDuration: 800,
+			animSpeed: 1500, 
 			anchorActiveClass: 'anchor-active',
 			sectionActiveClass: 'section-active',
-			wheelBehavior: 'stop', // "stop", "ignore" or "none"
-			useNativeAnchorScrolling: false // do not handle click in devices with native smooth scrolling
+			wheelBehavior: 'stop', 
+			useNativeAnchorScrolling: false
 		}, options);
 		this.init();
 	}
@@ -1904,9 +1928,9 @@ lib = {
 		attachEvents: function() {
 			var self = this;
 
-			// handle active classes
+			// lidar com classes ativas
 			if (this.options.activeClasses && this.anchorLinks.length) {
-				// cache structure
+				// estrutura de cache
 				this.anchorData = [];
 
 				for (var i = 0; i < this.anchorLinks.length; i++) {
@@ -1930,7 +1954,7 @@ lib = {
 					}
 				};
 
-				// add additional event handlers
+				// adicionar manipuladores de eventos adicionais
 				this.resizeHandler = function() {
 					if (!self.isInit) return;
 					self.recalculateOffsets();
@@ -1944,7 +1968,7 @@ lib = {
 				win.on('resize.SmoothScroll load.SmoothScroll orientationchange.SmoothScroll refreshAnchor.SmoothScroll', this.resizeHandler);
 			}
 
-			// handle click event
+			// manipular evento de clique
 			this.clickHandler = function(e) {
 				self.onClick(e);
 			};
@@ -1971,32 +1995,32 @@ lib = {
 				viewPortHeight = this.scrollContainer.height(),
 				scrollTop = this.options.container ? this.container.prop('scrollTop') : win.scrollTop();
 
-			// user function instead of default handler
+			// função do usuário em vez do manipulador padrão
 			if (this.options.customScrollHandler) {
 				this.options.customScrollHandler.call(this, scrollTop, this.anchorData);
 				return;
 			}
 
-			// sort anchor data by offsets
+			// classificar dados de âncora por deslocamentos
 			this.anchorData.sort(function(a, b) {
 				return a.offset.top - b.offset.top;
 			});
 
-			// default active class handler
+			// manipulador de classe ativa padrão
 			$.each(this.anchorData, function(index) {
 				var reverseIndex = self.anchorData.length - index - 1,
 					data = self.anchorData[reverseIndex],
 					anchorElement = (self.options.activeClasses === 'parent' ? data.link.parent() : data.link);
 
 				if (scrollTop >= containerHeight - viewPortHeight) {
-					// handle last section
+					// lidar com a última seção
 					if (reverseIndex === self.anchorData.length - 1) {
 						self.toggleActiveClass(anchorElement, data.block, true);
 					} else {
 						self.toggleActiveClass(anchorElement, data.block, false);
 					}
 				} else {
-					// handle other sections
+					// lidar com outras seções
 					if (!foundFlag && (scrollTop >= data.offset.top - 1 || reverseIndex === 0)) {
 						foundFlag = true;
 						self.toggleActiveClass(anchorElement, data.block, true);
@@ -2053,25 +2077,19 @@ lib = {
 		}
 	};
 
-	// public API
+	// API publico
 	$.extend(SmoothScroll, {
 		scrollTo: function(blockOrOffset, durationOrOptions, callback) {
 			scrollTo(blockOrOffset, durationOrOptions, callback);
 		}
 	});
 
-	// export module
+	// exportar modulo
 	exports.SmoothScroll = SmoothScroll;
 }(jQuery, this));
 
 
 /*  -------------------- GDPR Cookies plugin -------------------------- */
 
-/**
- * Minified by jsDelivr using Terser v3.14.1.
- * Original file: /npm/js-cookie@2.2.1/src/js.cookie.js
- * 
- * Do NOT use SRI with dynamically generated files! More information: https://www.jsdelivr.com/using-sri-with-dynamic-files
- */
 !function(e){var n;if("function"==typeof define&&define.amd&&(define(e),n=!0),"object"==typeof exports&&(module.exports=e(),n=!0),!n){var t=window.Cookies,o=window.Cookies=e();o.noConflict=function(){return window.Cookies=t,o}}}(function(){function e(){for(var e=0,n={};e<arguments.length;e++){var t=arguments[e];for(var o in t)n[o]=t[o]}return n}function n(e){return e.replace(/(%[0-9A-Z]{2})+/g,decodeURIComponent)}return function t(o){function r(){}function i(n,t,i){if("undefined"!=typeof document){"number"==typeof(i=e({path:"/"},r.defaults,i)).expires&&(i.expires=new Date(1*new Date+864e5*i.expires)),i.expires=i.expires?i.expires.toUTCString():"";try{var c=JSON.stringify(t);/^[\{\[]/.test(c)&&(t=c)}catch(e){}t=o.write?o.write(t,n):encodeURIComponent(String(t)).replace(/%(23|24|26|2B|3A|3C|3E|3D|2F|3F|40|5B|5D|5E|60|7B|7D|7C)/g,decodeURIComponent),n=encodeURIComponent(String(n)).replace(/%(23|24|26|2B|5E|60|7C)/g,decodeURIComponent).replace(/[\(\)]/g,escape);var f="";for(var u in i)i[u]&&(f+="; "+u,!0!==i[u]&&(f+="="+i[u].split(";")[0]));return document.cookie=n+"="+t+f}}function c(e,t){if("undefined"!=typeof document){for(var r={},i=document.cookie?document.cookie.split("; "):[],c=0;c<i.length;c++){var f=i[c].split("="),u=f.slice(1).join("=");t||'"'!==u.charAt(0)||(u=u.slice(1,-1));try{var a=n(f[0]);if(u=(o.read||o)(u,a)||n(u),t)try{u=JSON.parse(u)}catch(e){}if(r[a]=u,e===a)break}catch(e){}}return e?r[e]:r}}return r.set=i,r.get=function(e){return c(e,!1)},r.getJSON=function(e){return c(e,!0)},r.remove=function(n,t){i(n,"",e(t,{expires:-1}))},r.defaults={},r.withConverter=t,r}(function(){})});
 

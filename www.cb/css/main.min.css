@@ -900,8 +900,11 @@ form .text a {
     flex-flow: row wrap;
     flex-grow: 1;
     margin-left: -22px;
-    margin-right: -22px
-;flex-direction: row;align-content: space-between;justify-content: flex-end;}
+    margin-right: -22px;
+    flex-direction: row;align-content: space-between;
+    justify-content: flex-start;
+}
+
 
 @media (max-width:1199px) {
     .row-holder {
@@ -3337,7 +3340,8 @@ header .container {
 
     @media (max-width:1023px) {
         .logo img {
-            max-width: 150px
+            max-width: 150px;
+            margin-right: 52px;
         }
     }
 
@@ -9145,9 +9149,9 @@ header .container {
     z-index: 999;
     position: fixed;
     right: 0;
-    top: 155px;
+    top: 130px;
     display: flex;
-    flex-direction: column
+    flex-direction: column;
 }
 
 @media (max-width:1023px) {
@@ -9170,14 +9174,15 @@ header .container {
 }
 
 .sitebar>li {
-    margin-bottom: 6px;
+    margin-bottom: 15px;
     position: relative
 }
 
 @media (max-width:767px) {
     .sitebar>li {
-        padding: 0 3px;
-        position: static
+        padding: 0 0px 0px;
+        position: static;
+        margin-bottom: 10em;
     }
 }
 
@@ -9228,15 +9233,15 @@ header .container {
 
 .sitebar button,
 .sitebar>li>a {
-    width: 130px;
-    height: 50px;
-    border: 2px solid #00b2e4;
-    border-radius: 21px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #00b2e4;
+    border-radius: 30px;
     color: #00b2e4;
     text-decoration: none;
-    font-size: 34px;
+    font-size: 35px;
     display: block;
-    line-height: 48px;
+    line-height: 60px;
     text-align: center;
     background: 0 0 #00000094;
     position: absolute;
@@ -13224,7 +13229,7 @@ footer a:hover {
     .top-footer {
         justify-content: center;
         align-items: center;
-        flex-direction: column
+        flex-direction: row;
     }
 }
 
@@ -13280,7 +13285,7 @@ footer a:hover {
 
     .footer-list,
     .footer-nav {
-        font-size: 12px
+        font-size: 12px;
     }
 }
 
@@ -13312,7 +13317,7 @@ footer a:hover {
 @media (max-width:767px) {
     .footer-nav {
         -moz-column-count: 1;
-        column-count: 1
+        column-count: 1;
     }
 }
 
