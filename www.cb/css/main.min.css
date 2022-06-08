@@ -9158,7 +9158,7 @@ header .container {
         flex-direction: column;
         justify-content: flex-end;
         padding: 5px 5px;
-        top: 70px;
+        top: 41px;
         left: 0;
         right: 0
     }
@@ -9171,9 +9171,9 @@ header .container {
 
 @media (max-width:767px) {
     .sitebar>li {
-        padding: 0 0px 0px;
+        padding: 0px 0px 0px;
         position: static;
-        margin-bottom: 10em;
+        margin-bottom: 1em;
     }
 }
 
@@ -10985,39 +10985,37 @@ p .sitebar button span #nav>li>a.has-drop-down-a span:before {
     background-size: cover;
     min-height: 400px;
     position: relative;
-    color: rgb(255, 255, 255);
+    color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
     z-index: 100;
     background-color: #427eee
 }
 
 @media (max-width:1439px) {
     .main-banner {
-        
-        min-height: 400px
+        min-height: 260px;
+        height: 170px;
     }
 }
 
 @media (max-width:1023px) {
     .main-banner {
-        
-        min-height: 300px
+        min-height: 170px;
     }
 }
 
 
 
 .main-banner .holder {
-    padding: 150px 0 200px;
+    padding: 70px 0 20px;
     max-width: 900px
 }
 
 @media (max-width:1023px) {
     .main-banner .holder {
-        padding: 80px 0 100px
+        padding: 15px 0 6px;
     }
 }
 
