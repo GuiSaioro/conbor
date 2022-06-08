@@ -2217,12 +2217,19 @@ header .container {
     *,
     :after,
     :before {
-        box-sizing: inherit
+        box-sizing: inherit;
     }
 
     * {
         max-height: 1000000px
     }
+
+.product-holder {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+}
 
     body {
         color: #0e0e10;
@@ -10627,7 +10634,7 @@ p .sitebar button span #nav>li>a.has-drop-down-a span:before {
 
 .container {
     max-width: 1170px;
-    padding: 0 15px;
+    padding: 0px 15px;
     margin: 0 auto;
     width: 100%
 }
@@ -11075,7 +11082,8 @@ p .sitebar button span #nav>li>a.has-drop-down-a span:before {
 
 @media (max-width:1439px) {
     .line {
-        margin-top: -20px;}
+        margin-top: 10px;
+        }
 }
 
 @media (max-width:1023px) {
