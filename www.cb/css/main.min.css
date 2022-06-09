@@ -2029,6 +2029,7 @@ header .container {
         text-transform: none;
         line-height: 1;
         -webkit-font-smoothing: antialiased;
+        margin: auto;
         -moz-osx-font-smoothing: grayscale
     }
 
@@ -2656,7 +2657,8 @@ header .container {
         flex-flow: row wrap;
         flex-grow: 1;
         margin-left: -22px;
-        margin-right: -22px
+        margin-right: -22px;
+        flex-direction: row;
     }
 
     @media (max-width:1199px) {
@@ -3460,7 +3462,7 @@ header .container {
     .home-download-catalogo {
         display: flex;
         justify-content: space-evenly;
-        height: inherit;
+        min-height: 93vh;
         align-items: center;
         background-size: cover;
         width: -webkit-fill-available;
@@ -3469,15 +3471,16 @@ header .container {
     @media (max-width: 767px){
 
         .home-download-catalogo {
-            height: 650px;    
+            /* height: 650px; */
+            min-height: 71vh;
     }
     }
         
     .img-catalogo{
-        width: 150px;
-        height: 200px;
+        width: 18vw;
+        height: 24vw;
         overflow: hidden;
-        border: 2px solid #000;       
+        border: 2px solid #000;
     }
     .img-catalogo img{
         width: 100%;
@@ -8695,7 +8698,7 @@ header .container {
         text-transform: none;
         line-height: 1;
         font-size: 11px;
-        color: #00b2e4
+        color: #0e0e10;
     }
 
     @media (max-width:1023px) {
@@ -12691,7 +12694,7 @@ iframe {
 }
 
 .home section {
-    min-height: 78vh;
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center
@@ -13148,7 +13151,7 @@ footer {
 
 @media (max-width:1439px) {
     footer {
-        padding: 130px 0 0;
+        padding: 102px 0 0;
         margin-top: -100px
     }
 }
@@ -13179,7 +13182,7 @@ footer a:hover {
 .footer-bottom,
 .footer-content,
 .top-footer {
-    padding: 43px 0;
+    padding: 18px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between
@@ -13724,7 +13727,8 @@ button.btn {
 }
 
 .search {
-    position: relative
+    position: relative;
+    display: flex;
 }
 
 .search input[type=text] {
@@ -13873,7 +13877,7 @@ button.btn {
     text-transform: none;
     line-height: 1;
     font-size: 11px;
-    color: #00b2e4
+    color: #000000;
 }
 
 @media (max-width:1023px) {
@@ -13936,7 +13940,8 @@ button.btn {
 }
 
 .product-info .button-holder {
-    margin-bottom: 93px
+    margin-bottom: 90px;
+    margin-top: 20px;
 }
 
 @media (max-width:1199px) {
