@@ -13036,6 +13036,7 @@ iframe {
 
 #gdpr-cookies {
     background: #fff;
+    border: 3px solid #0000009e;
     color: #0e0e10;
     padding: 30px 50px;
     position: fixed;
@@ -13043,12 +13044,12 @@ iframe {
     left: 50%;
     transform: translateX(-50%);
     z-index: 9999;
-    box-shadow: 0 0 2px #ebedf0
+    box-shadow: 0 0 34px #ebedf0;
 }
 
 @media (max-width:1399px) {
     #gdpr-cookies {
-        padding: 20px 30px;
+        padding: 25px 30px;
         bottom: 10px
     }
 }
