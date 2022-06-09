@@ -3447,21 +3447,20 @@ header .container {
 
     .home-download {
         display: flex;
-        justify-content: space-around; 
+        justify-content: space-around;
         background-color: transparent;
-        height: 630px;
+        height: 600px;
         width: auto;
         align-content: space-around;
-        align-items: center;    
-        background-size: cover; 
-        
+        align-items: center;
+        background-size: cover;
     }
   
 
     .home-download-catalogo {
         display: flex;
         justify-content: space-evenly;
-        height: 798px;
+        height: inherit;
         align-items: center;
         background-size: cover;
         width: -webkit-fill-available;
@@ -3499,7 +3498,7 @@ header .container {
         border: 3px solid #000000;
         background-color: white;
         margin-bottom: auto;
-        margin-top: 50px;
+        margin-top: auto;
     }
     .home-catalogo-text-up{
         color: #ffffff;
@@ -5811,27 +5810,31 @@ header .container {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        
+        -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% calc(100% - 220px), 100% 0%);
+        clip-path: polygon(0% 0%, 0% 100%, 100% calc(100%), 100% 0%);
         z-index: 100;
         background-color: #427eee
     }
 
     @media (max-width:1439px) {
         .main-banner {
-            
+            -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% calc(100% - 85px), 100% 0%);
+            clip-path: polygon(0% 0%, 0% 100%, 100% calc(100%), 100% 0%);
             min-height: 237px;
         }
     }
 
     @media (max-width:1023px) {
         .main-banner {
-           
+            webkit-clip-path: polygon(0% 0%, 0% 100%, 100% calc(100% - 50px), 100% 0%);
+            clip-path: polygon(0% 0%, 0% 100%, 100% calc(100%), 100% 0%);
         }
     }
 
     @media (max-width:767px) {
         .main-banner {
-            
+            -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% calc(100% - 20px), 100% 0%);
+            clip-path: polygon(0% 0%, 0% 100%, 100% calc(100%), 100% 0%)
         }
     }
 
@@ -10996,20 +10999,24 @@ p .sitebar button span #nav>li>a.has-drop-down-a span:before {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    
     z-index: 100;
     background-color: #427eee
 }
 
 @media (max-width:1439px) {
     .main-banner {
-        min-height: 260px;
-        height: 170px;
+        
+min-height: 260px;
+        
+height: 170px;
     }
 }
 
 @media (max-width:1023px) {
     .main-banner {
-        min-height: 170px;
+        
+min-height: 170px;
     }
 }
 
@@ -11082,7 +11089,7 @@ p .sitebar button span #nav>li>a.has-drop-down-a span:before {
 
 @media (max-width:1439px) {
     .line {
-        margin-top: 10px;
+        margin-top: 0px;
         }
 }
 
@@ -11116,7 +11123,7 @@ p .sitebar button span #nav>li>a.has-drop-down-a span:before {
 }
 
 .line:nth-child(3) {
-    z-index: calc(50 - 3)
+    z-index: calc(50 - 3);
 }
 
 .line:nth-child(4) {
@@ -13380,7 +13387,8 @@ footer a:hover {
     min-width: 150px;
     text-align: center;
     border: 1px solid #112fd9;
-    transition: color .3s ease-in-out, background .3s ease-in-out, border .3s ease-in-out
+    transition: color .3s ease-in-out, background .3s ease-in-out, border .3s ease-in-out;
+    margin-bottom: 10px;
 }
 
 @media (max-width:1023px) {
