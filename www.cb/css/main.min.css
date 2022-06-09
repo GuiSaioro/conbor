@@ -441,7 +441,7 @@ html {
 body {
     color: #8d8e8f;
     background: #fff;
-    font: 16px/1.5 'kanit', "Helvetica Neue", Helvetica, sans-serif;
+    font: 16px/1.5 'Coda Caption', "Helvetica Neue", Helvetica, sans-serif;
     min-width: 320px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -2234,7 +2234,7 @@ header .container {
     body {
         color: #0e0e10;
         background: #fff;
-        font: 16px/1.5 'kanit', Arial, "Helvetica Neue", Helvetica, sans-serif;
+        font: 16px/1.5 'Coda Caption', Arial, "Helvetica Neue", Helvetica, sans-serif;
         min-width: 320px;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
@@ -13818,7 +13818,8 @@ button.btn {
 
 .custom-select .label {
     letter-spacing: 1.6px;
-    margin-bottom: 14px
+    margin-bottom: 14px;
+    margin-top: 16px;
 }
 
 @media (max-width:1023px) {
