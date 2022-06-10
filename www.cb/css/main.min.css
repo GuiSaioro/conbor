@@ -2235,7 +2235,7 @@ header .container {
     body {
         color: #0e0e10;
         background: #fff;
-        font: 16px/1.5 'Coda Caption', Arial, "Helvetica Neue", Helvetica, sans-serif;
+        font: 16px/1.5 'Coda Caption', Arial, Helvetica, sans-serif;
         min-width: 320px;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
@@ -6973,12 +6973,11 @@ header .container {
     .tabset a.active,
     .tabset a:hover {
         color: #00b2e4;
-        border-bottom: 1px solid #00b2e4
+        /* border-bottom: 1px solid #00b2e4; */
     }
 
     .tabset a.active:after,
     .tabset a:hover:after {
-        border-top: 5px solid #00b2e4
     }
 
     .tab-content h3 {
@@ -12140,7 +12139,7 @@ min-height: 170px;
     left: 50%;
     transform: translateX(-50%);
     border: 5px solid transparent;
-    border-top: 5px solid transparent
+    border-top: 5px solid transparent;
 }
 
 @media (max-width:767px) {
@@ -12151,14 +12150,15 @@ min-height: 170px;
 
 .tabset a.active,
 .tabset a:hover {
+    padding: 10px;
     color: #00b2e4;
-    border-bottom: 1px solid #00b2e4
+    /* border-bottom: 1px solid #00b2e4; */
+    background: #e7e7e7;
+    border-radius: 6px;
 }
 
 .tabset a.active:after,
-.tabset a:hover:after {
-    border-top: 5px solid #00b2e4
-}
+.tabset a:hover:after {}
 
 .tab-content h3 {
     font-weight: 400;
