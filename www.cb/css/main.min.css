@@ -2475,7 +2475,7 @@ header .container {
     a:focus,
     a:hover {
         text-decoration: none;
-        color: #00b2e4
+        color: #00b2e4;
     }
 
     fieldset,
@@ -3316,7 +3316,7 @@ header .container {
 
     @media (max-width:1199px) {
         header {
-            padding: 10px 0
+            padding: 10px 0;
         }
     }
 
@@ -3462,7 +3462,7 @@ header .container {
     .home-download-catalogo {
         display: flex;
         justify-content: space-evenly;
-        min-height: 93vh;
+        min-height: 100vh;
         align-items: center;
         background-size: cover;
         width: -webkit-fill-available;
@@ -3477,8 +3477,8 @@ header .container {
     }
         
     .img-catalogo{
-        width: 18vw;
-        height: 24vw;
+        max-width: 55vw;
+        max-height: 87vw;
         overflow: hidden;
         border: 2px solid #000;
     }
@@ -3493,6 +3493,19 @@ header .container {
         -webkit-transform: scale(1.1);
         transform: scale(1.1);
      }
+     @media (min-width: 1023px) {
+        .img-catalogo{
+            max-width: 21vw;
+            max-height: 28vw;
+        }
+        }
+    
+    @media (min-width: 767px) {
+        .img-catalogo{
+        min-width: 18vw;
+        min-height: 24vw;
+        }
+    }
     .home-catalogo-text{
         font-size: 20px;
         color: #000000;
@@ -9093,10 +9106,10 @@ header .container {
 
 .nav-opener {
     display: none;
-    width: 17px;
-    height: 15px;
+    width: 20px;
+    height: 16px;
     position: absolute;
-    bottom: 16px;
+    bottom: 5px;
     right: 20px
 }
 
@@ -9179,7 +9192,8 @@ header .container {
 
 .sitebar>li {
     margin-bottom: 15px;
-    position: relative
+    position: relative;
+    margin-right: 10px;
 }
 
 @media (max-width:767px) {
