@@ -1,8 +1,8 @@
 
 .wrapper-slider{
   position: relative;
-  height: 395px;
-  width: 555px;
+  height: 256px;
+  width: 291px;
   overflow: hidden;
   background: #fff;
   border: 7px solid #fff;
@@ -17,7 +17,7 @@
 .wrapper-slider .images-slider .img-1{
   height: 100%;
   width: 100%;
-  background: url("../images/slide-recuper/slider-velha1.png") no-repeat;
+  background: url("../images/slide-recuper/slider-nova1.png") no-repeat;
   
 }
 .wrapper-slider .images-slider .img-2{
@@ -25,7 +25,7 @@
   height: 100%;
   width: 50%;
   /* filter: blur(5px); */
-  background: url("../images/slide-recuper/slider-velha1-1.png") no-repeat;
+  background: url("../images/slide-recuper/slider-velha1.png") no-repeat;
   
 }
 .wrapper-slider .slid{
@@ -49,7 +49,7 @@
 }
 .slid .drag-line{
   width: 3px;
-  height: 395px;
+  height: 256px;
   position: absolute;
   left: 49.85%;
   pointer-events: none;
@@ -93,6 +93,189 @@
   border-left-color: #fff;
 }
 .slid .drag-line span::after{
+  left: 60%;
+  border-top-color: #fff;
+}
+/*---------------------------------------------*/
+
+.wrapper-slider .images-slider2{
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+.wrapper-slider .images-slider2 .img-3{
+  height: 100%;
+  width: 100%;
+  background: url("../images/slide-recuper/slider-nova2.jpg") no-repeat;
+  
+}
+.wrapper-slider .images-slider2 .img-4{
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  /* filter: blur(5px); */
+  background: url("../images/slide-recuper/slider-velha2.jpg") no-repeat;
+  
+}
+.wrapper-slider .slid2{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
+.wrapper-slider .slid2 input{
+  width: 100%;
+  outline: none;
+  background: none;
+  -webkit-appearance: none;
+}
+.slid2 input::-webkit-slider-thumb{
+  height: 486px;
+  width: 3px;
+  background: none;
+  -webkit-appearance: none;
+  cursor: col-resize;
+}
+.slid2 .drag-line2{
+  width: 3px;
+  height: 256px;
+  position: absolute;
+  left: 49.85%;
+  pointer-events: none;
+}
+.slid2 .drag-line2::before,
+.slid2 .drag-line2::after{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 222px;
+  background: #fff;
+}
+.slid2 .drag-line2::before{
+  top: 0;
+}
+.slid2 .drag-line2::after{
+  bottom: 0;
+}
+.slid2 .drag-line2 span{
+  height: 42px;
+  width: 42px;
+  border: 3px solid #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.slid2 .drag-line2 span::before,
+.slid2 .drag-line2 span::after{
+  position: absolute;
+  content: "";
+  top: 50%;
+  border: 10px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.slid2 .drag-line2 span::before{
+  left: 40%;
+  border-left-color: #fff;
+}
+.slid2 .drag-line2 span::after{
+  left: 60%;
+  border-top-color: #fff;
+}
+
+/*--------------------------------------------*/
+
+.wrapper-slider .images-slider3{
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+.wrapper-slider .images-slider3 .img-5{
+  height: 100%;
+  width: 100%;
+  background: url("../images/slide-recuper/slider-nova3.jpg") no-repeat;
+  
+}
+.wrapper-slider .images-slider3 .img-5 p{
+  text-align: right;
+  
+}
+.wrapper-slider .images-slider3 .img-6{
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  /* filter: blur(5px); */
+  background: url("../images/slide-recuper/slider-velha3.jpg") no-repeat;
+  
+}
+.wrapper-slider .slid3{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
+.wrapper-slider .slid3 input{
+  width: 100%;
+  outline: none;
+  background: none;
+  -webkit-appearance: none;
+}
+.slid3 input::-webkit-slider-thumb{
+  height: 486px;
+  width: 3px;
+  background: none;
+  -webkit-appearance: none;
+  cursor: col-resize;
+}
+.slid3 .drag-line3{
+  width: 3px;
+  height: 256px;
+  position: absolute;
+  left: 49.85%;
+  pointer-events: none;
+}
+.slid3 .drag-line3::before,
+.slid3 .drag-line3::after{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 222px;
+  background: #fff;
+}
+.slid3 .drag-line3::before{
+  top: 0;
+}
+.slid3 .drag-line3::after{
+  bottom: 0;
+}
+.slid3 .drag-line3 span{
+  height: 42px;
+  width: 42px;
+  border: 3px solid #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.slid3 .drag-line3 span::before,
+.slid3 .drag-line3 span::after{
+  position: absolute;
+  content: "";
+  top: 50%;
+  border: 10px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.slid3 .drag-line3 span::before{
+  left: 40%;
+  border-left-color: #fff;
+}
+.slid3 .drag-line3 span::after{
   left: 60%;
   border-top-color: #fff;
 }

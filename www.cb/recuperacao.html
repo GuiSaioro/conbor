@@ -42,17 +42,13 @@
 
 
 
-        <title>CONBOR | Produtos </title>
+        <title>CONBOR | Recuperação </title>
         <style>
     .grecaptcha-badge{
         z-index: 9999;
     }
 </style> 
-   
-
-<!--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-200750506-1"></script><script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-200750506-1'); </script>-->
- </head>
-
+    </head>
 <body>
     <div id="wrapper">
         <header>
@@ -231,43 +227,68 @@
                 <div class="container">
                     <div class="holder">
         
-                        <h1 class="large">Produtos</h1>
+                        <h1 class="large">Recuperação</h1>
                         <ul class="breadcrumbs">
                             <li><a href="index.html">Início</a></li>
-                            <li>Produtos</li>
+                            <li><a href="#"> Serviços</a></li>
+                            <li>Recuperação</li>
                         </ul>
                     </div>
                 </div>
             </section>
-            
-
 
 <section>     
-        
-    <div class="wrapper-slider">
-        <div class="images-slider">
-          <div class="img-1"></div>
-          <div class="img-2"></div>
+        <div class="container">
+                <p><h3> CONBOR recupera elementos pneumáticos radiais, com garantia de peça nova, por uma fração
+                 do preço de elementos novos.</h3></p>
+                <p><h2>Veja abaixo algumas de nossas recuperações!</h2></p> 
         </div>
-        <div class="slid">
-          <div class="drag-line">
-            <span></span>
-          </div>
-          <input type="range" min="0" max="100" value="50">
+        <div class="sliderbox">
+            <div class="wrapper-slider">
+                <div class="images-slider">
+                <div class="img-1"></div>
+                <div class="img-2"></div>
+                </div>
+                <div class="slid">
+                <div class="drag-line">
+                    <span></span>
+                </div>
+                <input type="range" min="0" max="100" value="50">
+                </div>
+            </div>
+            <div class="wrapper-slider">
+                <div class="images-slider2">
+                <div class="img-3"></div>
+                <div class="img-4"></div>
+                </div>
+                <div class="slid2">
+                <div class="drag-line2">
+                    <span></span>
+                </div>
+                <input type="range" min="0" max="100" value="50">
+                </div>
+            </div>
+            <div class="wrapper-slider">
+                <div class="images-slider3">
+                <div class="img-5">
+                </div>
+                <div class="img-6" >
+            
+                </div>
+                </div>
+                <div class="slid3">
+                <div class="drag-line3">
+                    <span></span>
+                </div>
+                <input type="range" min="0" max="100" value="50">
+                </div>
+            </div>
+            
         </div>
-      </div>
+      <script src="js/script-slider.js"></script>
 
-      <script>
-        const slider = document.querySelector(".slid input");
-        const img = document.querySelector(".images-slider .img-2");
-        const dragLine = document.querySelector(".slid .drag-line");
-        slider.oninput = ()=>{
-          let sliderVal = slider.value;
-          dragLine.style.left = sliderVal + "%";
-          img.style.width = sliderVal + "%";
-        }
-      </script>
-</section>
+      
+  </section>
 
 
 

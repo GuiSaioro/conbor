@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 html {
-    font-family: 'kanit', sans-serif;
+    font-family: 'Commissioner', sans-serif;
     -ms-text-size-adjust: 100%
 }
 
@@ -9180,7 +9180,7 @@ header .container {
 @media (max-width:767px) {
     .sitebar {
         position: absolute;
-        flex-direction: column;
+        flex-direction: inherit;
         justify-content: flex-end;
         padding: 5px 5px;
         top: 41px;
@@ -11022,17 +11022,14 @@ p .sitebar button span #nav>li>a.has-drop-down-a span:before {
 
 @media (max-width:1439px) {
     .main-banner {
-        
-min-height: 260px;
-        
-height: 170px;
+        min-height: 260px;
+        height: 170px;
     }
 }
 
 @media (max-width:1023px) {
     .main-banner {
-        
-min-height: 170px;
+        min-height: 170px;
     }
 }
 
@@ -11051,7 +11048,7 @@ min-height: 170px;
 
 @media (max-width:767px) {
     .main-banner .holder {
-        padding: 80px 0 50px
+        padding: 41px 0 40px;
     }
 }
 
@@ -11071,7 +11068,7 @@ min-height: 170px;
     z-index: 2;
     position: relative;
     width: 100%;
-    padding-top: 25px
+    padding-top: 10px;
 }
 
 .main-banner p {
@@ -13990,4 +13987,7 @@ button.btn {
 }
 
 /*----------------------------------slide-----------------------------------------------------*/
-
+.sliderbox{
+    display: flex;
+    flex-wrap: wrap;
+}
