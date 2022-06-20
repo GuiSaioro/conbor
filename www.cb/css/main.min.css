@@ -8285,21 +8285,13 @@ header .container {
 
     .fotos p {
         font-size: 20px;
-        margin-bottom: 0
+        margin-bottom: 0;
     }
 
     .fotos p a {
         color: #0e0e10;
-        text-decoration: none
-    }
-
-    .fotos p a:hover {
-        color: #00b2e4
-    }
-    .img-holder a :hover{
-        -webkit-transform scale: (1.1);
-        transform: scale(1.1);
-    }
+        text-decoration: none;  
+    } 
 
     @media (max-width:1023px) {
         .fotos p {
