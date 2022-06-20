@@ -13438,6 +13438,10 @@ footer a:hover {
 button.btn {
     outline: 0
 }
+.fotos{
+    margin: auto;
+    
+}
 
 .fotos p {
     font-size: 20px;
