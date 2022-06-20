@@ -11022,14 +11022,17 @@ p .sitebar button span #nav>li>a.has-drop-down-a span:before {
 
 @media (max-width:1439px) {
     .main-banner {
-        min-height: 260px;
-        height: 170px;
+        
+min-height: 260px;
+        
+height: 170px;
     }
 }
 
 @media (max-width:1023px) {
     .main-banner {
-        min-height: 170px;
+        
+min-height: 170px;
     }
 }
 
@@ -13162,8 +13165,8 @@ footer {
 
 @media (max-width:1439px) {
     footer {
-        padding: 102px 0 0;
-        margin-top: -100px
+        padding: 80px 0 0;
+        margin-top: -60px;
     }
 }
 
@@ -13984,6 +13987,33 @@ button.btn {
 
 .application h3 {
     font-weight: 400
+}
+.sobre{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.txt-sobre{
+    max-width: 50%;
+    text-align: justify;
+    padding: 10px;
+}
+.txt-sobre h1{
+    font-style:italic;
+}
+@media (max-width:1023px) {
+    .sobre {
+        margin-bottom: 53px;
+    }
+}
+@media (max-width:760px) {
+    .sobre {
+        display: block;
+    }
+    .txt-sobre{
+        max-width: 100%;
+    }
 }
 
 /*----------------------------------slide-----------------------------------------------------*/
