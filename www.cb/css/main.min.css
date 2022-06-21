@@ -8840,11 +8840,14 @@ header .container {
         border: #0022e4;
         border-radius: 50px;
         padding:31px 40px;
-        min-width:279px;
+        min-width: 500px;
         opacity:0;
-        transition:all .3s ease;
-        display:none;
-        position:relative
+        transition:
+        all .3s ease;
+        display:
+        none;
+        position:
+        relative
     }
 
 
@@ -8982,7 +8985,7 @@ header .container {
     padding: 20px 24px;
     border-bottom: 1px solid transparent;
     border-right: 5px solid #d1cece;
-    display: inline-block;
+    display: flex;
     width: 230px
 }
 
