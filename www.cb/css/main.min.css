@@ -282,12 +282,8 @@ th {
     content: "\e908"
 }
 
-.icon-whatsapp:before {
-    content:"\ea93"
-}
-
 .icon-instagram:before {
-    content: "\f16d"
+    content: "\ea93"
 }
 
 .icon-linkedin:before {
@@ -8042,7 +8038,7 @@ header .container {
     }
 
     footer a:hover {
-        color: #00b2e4
+        color: #0022e4
     }
 
     .footer-bottom,
@@ -13221,9 +13217,7 @@ footer a {
     text-decoration: none
 }
 
-footer a:hover {
-    color: #00b2e4
-}
+
 
 .footer-bottom,
 .footer-content,
