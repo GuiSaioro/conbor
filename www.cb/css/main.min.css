@@ -286,6 +286,10 @@ th {
     content:"\ea93"
 }
 
+.icon-instagram:before {
+    content: "\f16d"
+}
+
 .icon-linkedin:before {
     content: "\e90a"
 }
@@ -8082,6 +8086,11 @@ header .container {
         text-transform: uppercase
     }
 
+    .footer-bottom p a img:hover{
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1)
+    }
+
     .top-footer {
         padding-top: 0;
         align-items: flex-end
@@ -14050,4 +14059,18 @@ button.btn {
 .sliderbox{
     display: flex;
     flex-wrap: wrap;
+}
+
+/*----------------------------------google tradutor-----------------------------------------------------*/
+
+#google_translate_element {
+    display: none;
+}
+
+.goog-te-banner-frame {
+    display: none !important;
+}
+body {
+    position: static !important;
+    top: 0 !important;
 }
