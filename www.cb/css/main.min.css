@@ -458,37 +458,33 @@ img {
     max-width: 100%;
     height: auto
 }
-/*----------------------------------------------------------------------------------*/
-.img-dropdown-size img {
-    max-width: 120px;
-    position:absolute;   
-} 
-.link_img-dropdown:hover{ 
-    background-color:#717773; 
-    border-radius: 30px;
-}
-    .link_img-dropdown span{ 
-    display:none; /* Aqui vocÃª define que todo SPAN que estiver dentro de um A estarÃ¡ invisÃ­vel */ 
-} 
+/*------------------------------------Dopdown produtos----------------------------------------------*/
 
+.img-dropdown-size img  {
+    visibility: hidden;
+    position: absolute;
+} 
 @media (max-width:1023px){
-    .link_img-dropdown span{ 
-        display:contents; /* Aqui visÃ­vel imagens em celular */
+
+    .img-dropdown-size img {
+        max-width: 50px;
+        visibility: visible;
+        position: absolute;
+    } 
+    #showimg{
+       display: none;
     }
 }
-@media (max-width:767px) {
-    .link_img-dropdown span{ 
-        display:contents; /* Aqui visÃ­vel imagens em celular */
+@media (max-width:767px){
+    .img-dropdown-size img {
+        max-width: 50px;
+        position: absolute;
+        left: 180px;
+    } 
+    #showimg{
+        display: none;
     }
 }
-
-    .link_img-dropdown:hover span{ 
-    display:flex; /* Aqui vocÃª diz que ao passar o mouse sobre o link, colocar um display no span dentro desse link */ 
-    position:absolute ; /* Para vocÃª poder posicionar ao queira, sem quebrar o layour em volta */ 
-    top: 0px; /* Para ficar na mesma altura do link */ 
-    left: 200px; /* Empurra a imagem para fora do link, ficando ao seu lado */ 
- }
-
 /*-------------------------------------------------------------------------------------------------------------------------------*/
 
 
@@ -8956,7 +8952,7 @@ header .container {
 
 #nav>li.product-nav>.dropdown li.hover .dropdown {
     display: block;
-    padding-top: 0
+    padding-top: 0px;
 }
 
 #nav>li.product-nav>.dropdown li.hover .dropdown .dropdown {
@@ -9093,15 +9089,14 @@ header .container {
 #nav>li.product-nav>.dropdown .dropdown a {
     display: block;
     border: none;
-    padding: 0 10px;
-    text-transform:none;
+    padding: 0px 10px;
+    text-transform:
+    none;
     font-size: 16px;
     width: 100%;
-    margin-bottom: 19px;
+    margin-bottom: 0px;
     line-height: 4.4;
     font-weight: 400
-    
-    
 }
 
 @media (max-width:1199px) {

@@ -61,38 +61,35 @@
                                 <ul>
                                     <li>
                                         <a href="#">Por tipo de produto</a>
-                                        <div class=" dropdown ">
-                                        <ul>
+                                        <div class=" dropdown " onmouseout="nomouse()" onmouseover="havemouse()">
+                                        <ul>   
                                     </li>   
-                                                
                                     <li>
-                                        <a class="link_img-dropdown img-dropdown-size" href="product-types/acoplamentos.html">
-                                            Acoplamentos<span><img src="images/menu-dropdown/img-AEC-Standart.png"></span></a>
+                                        <a id="aco" class="img-dropdown-size" href="product-types/acoplamentos.html" >Acoplamentos<img src="images/menu-dropdown/img-AEC-Standart.png" alt=""></a>
+                                        
                                     </li>
-                                  
+                                 
                                     <li>
-                                        <a class="link_img-dropdown img-dropdown-size" href="product-types/freios-embreagens-pneumaticas.html">
-                                            Freios e embreagens<span><img src="images/menu-dropdown/img-ei-s.png"></span></a>
+                                        <a id="emb" class="img-dropdown-size" href="product-types/freios-embreagens-pneumaticas.html">Freios e embreagens<img src="images/menu-dropdown/img-ei-s.png" alt=""></a>
                                         
                                     </li>
                                     <li>
-                                        <a class="link_img-dropdown img-dropdown-size" href="product-types/#">
-                                            Câmaras CW<span><img src="images/menu-dropdown/img-cw.png"></span></a>
+                                        <a id="cw" class="img-dropdown-size" href="product-types/freios-embreagens-pneumaticas.html" >Câmaras CW<img src="images/menu-dropdown/img-cw.png" alt=""></a>
                                     </li>
                                     <li>
-                                        <a class="link_img-dropdown img-dropdown-size" href="product-types/diafragma-dc.html">
-                                            Diafragma DC<span><img src="images/menu-dropdown/img-dc.png"></span></a>
+                                        <a id="dc" class="img-dropdown-size" href="product-types/diafragma-dc.html">Diafragma DC<img src="images/menu-dropdown/img-dc.png" alt=""></a>
                                     </li>
                                     <li>
-                                        <a class="link_img-dropdown img-dropdown-size" href="product-types/#">
-                                            Cintas<span><img src="images/menu-dropdown/img-cinta.png"></span></a>
+                                        <a id="ct" class="img-dropdown-size" href="product-types/freios-embreagens-pneumaticas.html">Cintas<img src="images/menu-dropdown/img-cinta.png" alt=""></a>
                                     </li>
                                     <li>
-                                        <a class="link_img-dropdown img-dropdown-size" href="product-types/#">
-                                            Freios Tensionadores<span><img src="images/menu-dropdown/img-freio-ei.png"></span></a>
+                                        <a id="ft" class="img-dropdown-size" href="product-types/freios-embreagens-pneumaticas.html">Freios Tensionadores<img src="images/menu-dropdown/img-freio-ei.png" alt=""></a>
                                     </li>
-                                    
-                                
+                                    <li>
+                                      <img id="showimg" src="images/menu-dropdown/img-vazia.jpg">
+                                        <ul> 
+                                    </li>  
+                                    </ul>
                                 </ul>
                             </div>
                         </li>
@@ -218,47 +215,6 @@
             <a class="button" href="contact.html"><span class="icon-service-02" ></span></a> <!--data-fancybox colocar entre button e data para lista de traduções-->
         </li>
     </ul>
-
-   <!-- <div id="popup-lang" class="popup-holder popup-lang" style="display:none">
-        <a href="javascript:;" data-fancybox-close="" class="close">
-            close window
-        </a>
-        <div class="holder">
-            <span class="icon icon-lang"></span>
-            <h3>Selecione um idioma para uma tradução. </h3>
-            <div class="custom-select filterButtonHolder filterButtonSelectLanguageHolder">
-                <div class="category">
-                    <a class="filterButtonBTN" href="javascript:;">Selecione um idioma</a>
-                </div>
-                <div class="drop-holder">
-                    <ul class="drop">
-                        <li><a class="filterButton" href="#" title="">Selecione um idioma</a></li>
-                        <li><a class="filterButton gflag nturl" href="#" data-lang="pt-br|ar" title="Arabic">Arabic</a>
-                        </li>
-                        <li><a class="filterButton gflag nturl" href="#" data-lang="pt-br|zh-CN"
-                                title="Chinese (Simplified)">Chinese (Simplified)</a></li>
-                        <li><a class="filterButton gflag nturl" href="#" data-lang="pt-br|nl" title="Dutch">Dutch</a></li>
-                        <li><a class="filterButton gflag nturl" href="#" data-lang="pt|en" title="English">English</a>
-                        </li>
-                        <li><a class="filterButton gflag nturl" href="#" data-lang="pt-br|fr" title="French">French</a>
-                        </li>
-                        <li><a class="filterButton gflag nturl" href="#" data-lang="pt-br|de" title="German">German</a>
-                        </li>
-                        <li><a class="filterButton gflag nturl" href="#" data-lang="pt-br|it" title="Italian">Italian</a>
-                        </li>
-                        <li><a class="filterButton gflag nturl" href="#" data-lang="pt-br|ja" title="Japanese">Japanese</a>
-                        </li>
-                        <li><a class="filterButton gflag nturl" href="#" data-lang="pt-br|ru" title="Russian">Russian</a>
-                        </li>
-                        <li><a class="filterButton gflag nturl" href="#" data-lang="pt-br|es" title="Spanish">Spanish</a>
-                        </li>
-                        <li><a class="filterButton gflag nturl" href="#" data-lang="pt-br|sv" title="Swedish">Swedish</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-    </div>-->
     <main role="main">
         <section class="main-banner" style="background-image: url(images/home-video.jpg)">
             <div class="container">
@@ -482,7 +438,7 @@
                 <a href="javascript:trocarIdioma('en')"><img alt="ingles" src="images/flags-tradutor/img-flag-en.png" width="50px"></a></p>
             </div>
         </div>
-        <!--<div id="gdpr-cookies" class="container">
+        <div id="gdpr-cookies" class="container">
             <div class="holder">
                 <p>O site CONBOR está utilizando cookies para lhe proporcionar a melhor experiência de usuário. Para
                     continuar a usar conbor.com.br, você concorda com o uso de cookies de acordo com nossa <a
@@ -490,7 +446,7 @@
                 <button href="#" class="btn btn-accept-cookie"><span class="icon-icon-accept"></span> Aceitar</button>
                 <button href="#" class="close-btn"><span class="icon-icon-close"></span></button>
             </div>
-        </div>-->
+        </div>
     </footer>
     <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script type="text/javascript">

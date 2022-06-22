@@ -1,9 +1,6 @@
 // page init
 jQuery(function () {
 	initTouchNav();
-	//initProductPaginationChange();
-	//initProductTypePaginationChange();
-	//initIndustriesPaginationChange();
 	initMobileNav();
 	initDropDownClasses();
 	initCustomHover();
@@ -12,23 +9,71 @@ jQuery(function () {
 	initContactLocationDrop();
 	initContactReasonDrop();
 	initProceedBTNClick();
-	//initFindLocation();
 	initFilterButton();
 	initSlider();
 	initHomeSlider();
 	initTabs();
 	initAccordion();
 	initAnchors();
-	//initListLocationFiltering();
-	//initProductFiltering();
-	//initListRepresentativesFiltering();
-	//initListIndustryDetailPageFiltering();
-	//initListProductTypeDetailPageFiltering();
 	initCookies();
 	initsearch_prod();
 	sendtoproductsearchbar();
 	
 });
+
+// Função menu DropDonw imagens--------------------------------------------------------
+
+function havemouse(){
+
+	document.getElementById('aco').onmouseover = function(){
+		document.getElementById('showimg').setAttribute('src','images/menu-dropdown/img-AEC-Standart.png')
+	}
+	document.getElementById('emb').onmouseover = function(){
+		document.getElementById('showimg').setAttribute('src','images/menu-dropdown/img-ei-s.png')
+	}
+	document.getElementById('cw').onmouseover = function(){
+		document.getElementById('showimg').setAttribute('src','images/menu-dropdown/img-cw.png')
+	}
+	document.getElementById('dc').onmouseover = function(){
+		document.getElementById('showimg').setAttribute('src','images/menu-dropdown/img-dc.png')
+	}
+	document.getElementById('ct').onmouseover = function(){
+		document.getElementById('showimg').setAttribute('src','images/menu-dropdown/img-cinta.png')
+	}
+	document.getElementById('ft').onmouseover = function(){
+		document.getElementById('showimg').setAttribute('src','images/menu-dropdown/img-freio-ei.png')
+	}
+}
+function nomouse() {
+	document.getElementById('showimg').setAttribute('src', 'images/menu-dropdown/img-vazia.jpg')
+}
+
+//------------------função com endereços dentro pasta------------------------------
+
+function havemouse1(){
+
+	document.getElementById('aco').onmouseover = function(){
+		document.getElementById('showimg').setAttribute('src','../images/menu-dropdown/img-AEC-Standart.png')
+	}
+	document.getElementById('emb').onmouseover = function(){
+		document.getElementById('showimg').setAttribute('src','../images/menu-dropdown/img-ei-s.png')
+	}
+	document.getElementById('cw').onmouseover = function(){
+		document.getElementById('showimg').setAttribute('src','../images/menu-dropdown/img-cw.png')
+	}
+	document.getElementById('dc').onmouseover = function(){
+		document.getElementById('showimg').setAttribute('src','../images/menu-dropdown/img-dc.png')
+	}
+	document.getElementById('ct').onmouseover = function(){
+		document.getElementById('showimg').setAttribute('src','../images/menu-dropdown/img-cinta.png')
+	}
+	document.getElementById('ft').onmouseover = function(){
+		document.getElementById('showimg').setAttribute('src','../images/menu-dropdown/img-freio-ei.png')
+	}
+}
+function nomouse1() {
+	document.getElementById('showimg').setAttribute('src', '../images/menu-dropdown/img-vazia.jpg')
+}
 
 // Função para pesquisa------------------------------------------------------------
 function initsearch_prod() {
@@ -45,7 +90,6 @@ function initsearch_prod() {
 		}
 	}
 }
-
 
 //------------------------------------------------------------------------
 $(window).load(function () {
