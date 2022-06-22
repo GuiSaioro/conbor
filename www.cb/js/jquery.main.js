@@ -88,7 +88,6 @@ function initsearch_prod() {
 		}
 	}
 }
-
 //------------------------------------------------------------------------
 $(window).load(function () {
 	//initMenuCropping();
