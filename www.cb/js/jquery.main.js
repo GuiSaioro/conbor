@@ -16,8 +16,6 @@ jQuery(function () {
 	initAccordion();
 	initAnchors();
 	initCookies();
-	initsearch_prod();
-	sendtoproductsearchbar();
 	
 });
 
@@ -97,10 +95,9 @@ $(window).load(function () {
 });
 
 function initCookies() {
-	var condition = $('#gdpr-cookies').size()
+	var condition = $('#gdpr-cookies').size();
 		// && false
-		; init(condition);
-
+ init(condition);
 	function init(condition) {
 		if (condition || condition == null) {
 			var setCookie = "";
