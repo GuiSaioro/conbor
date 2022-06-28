@@ -1,9 +1,6 @@
 // page init
 jQuery(function () {
 	initTouchNav();
-	//initProductPaginationChange();
-	//initProductTypePaginationChange();
-	//initIndustriesPaginationChange();
 	initMobileNav();
 	initDropDownClasses();
 	initCustomHover();
@@ -12,23 +9,69 @@ jQuery(function () {
 	initContactLocationDrop();
 	initContactReasonDrop();
 	initProceedBTNClick();
-	//initFindLocation();
 	initFilterButton();
 	initSlider();
 	initHomeSlider();
 	initTabs();
 	initAccordion();
 	initAnchors();
-	//initListLocationFiltering();
-	//initProductFiltering();
-	//initListRepresentativesFiltering();
-	//initListIndustryDetailPageFiltering();
-	//initListProductTypeDetailPageFiltering();
 	initCookies();
-	initsearch_prod();
-	sendtoproductsearchbar();
 	
 });
+
+// Função menu DropDonw imagens--------------------------------------------------------
+
+function havemouse(){
+
+	document.getElementById('aco').onmouseover = function(){
+		document.getElementById('showimg').setAttribute('src','images/menu-dropdown/img-AEC-Standart.png')
+	}
+	document.getElementById('emb').onmouseover = function(){
+		document.getElementById('showimg').setAttribute('src','images/menu-dropdown/img-ei-s.png')
+	}
+	document.getElementById('cw').onmouseover = function(){
+		document.getElementById('showimg').setAttribute('src','images/menu-dropdown/img-cw.png')
+	}
+	document.getElementById('dc').onmouseover = function(){
+		document.getElementById('showimg').setAttribute('src','images/menu-dropdown/img-dc.png')
+	}
+	document.getElementById('ct').onmouseover = function(){
+		document.getElementById('showimg').setAttribute('src','images/menu-dropdown/img-cinta.png')
+	}
+	document.getElementById('ft').onmouseover = function(){
+		document.getElementById('showimg').setAttribute('src','images/menu-dropdown/img-freio-ei.png')
+	}
+}
+function nomouse() {
+	document.getElementById('showimg').setAttribute('src', 'images/menu-dropdown/img-vazia.jpg')
+}
+
+//------------------função com endereços dentro pasta------------------------------
+
+function havemouse1(){
+
+	document.getElementById('aco').onmouseover = function(){
+		document.getElementById('showimg').setAttribute('src','../images/menu-dropdown/img-AEC-Standart.png')
+	}
+	document.getElementById('emb').onmouseover = function(){
+		document.getElementById('showimg').setAttribute('src','../images/menu-dropdown/img-ei-s.png')
+	}
+	document.getElementById('cw').onmouseover = function(){
+		document.getElementById('showimg').setAttribute('src','../images/menu-dropdown/img-cw.png')
+	}
+	document.getElementById('dc').onmouseover = function(){
+		document.getElementById('showimg').setAttribute('src','../images/menu-dropdown/img-dc.png')
+	}
+	document.getElementById('ct').onmouseover = function(){
+		document.getElementById('showimg').setAttribute('src','../images/menu-dropdown/img-cinta.png')
+	}
+	document.getElementById('ft').onmouseover = function(){
+		document.getElementById('showimg').setAttribute('src','../images/menu-dropdown/img-freio-ei.png')
+	}
+}
+function nomouse1() {
+	document.getElementById('showimg').setAttribute('src', '../images/menu-dropdown/img-vazia.jpg')
+}
 
 // Função para pesquisa------------------------------------------------------------
 function initsearch_prod() {
@@ -45,18 +88,15 @@ function initsearch_prod() {
 		}
 	}
 }
-
-
 //------------------------------------------------------------------------
 $(window).load(function () {
 	//initMenuCropping();
 });
 
 function initCookies() {
-	var condition = $('#gdpr-cookies').size()
+	var condition = $('#gdpr-cookies').size();
 		// && false
-		; init(condition);
-
+ init(condition);
 	function init(condition) {
 		if (condition || condition == null) {
 			var setCookie = "";
@@ -2066,7 +2106,35 @@ lib = {
 
 !function (e) { var n; if ("function" == typeof define && define.amd && (define(e), n = !0), "object" == typeof exports && (module.exports = e(), n = !0), !n) { var t = window.Cookies, o = window.Cookies = e(); o.noConflict = function () { return window.Cookies = t, o } } }(function () { function e() { for (var e = 0, n = {}; e < arguments.length; e++) { var t = arguments[e]; for (var o in t) n[o] = t[o] } return n } function n(e) { return e.replace(/(%[0-9A-Z]{2})+/g, decodeURIComponent) } return function t(o) { function r() { } function i(n, t, i) { if ("undefined" != typeof document) { "number" == typeof (i = e({ path: "/" }, r.defaults, i)).expires && (i.expires = new Date(1 * new Date + 864e5 * i.expires)), i.expires = i.expires ? i.expires.toUTCString() : ""; try { var c = JSON.stringify(t); /^[\{\[]/.test(c) && (t = c) } catch (e) { } t = o.write ? o.write(t, n) : encodeURIComponent(String(t)).replace(/%(23|24|26|2B|3A|3C|3E|3D|2F|3F|40|5B|5D|5E|60|7B|7D|7C)/g, decodeURIComponent), n = encodeURIComponent(String(n)).replace(/%(23|24|26|2B|5E|60|7C)/g, decodeURIComponent).replace(/[\(\)]/g, escape); var f = ""; for (var u in i) i[u] && (f += "; " + u, !0 !== i[u] && (f += "=" + i[u].split(";")[0])); return document.cookie = n + "=" + t + f } } function c(e, t) { if ("undefined" != typeof document) { for (var r = {}, i = document.cookie ? document.cookie.split("; ") : [], c = 0; c < i.length; c++) { var f = i[c].split("="), u = f.slice(1).join("="); t || '"' !== u.charAt(0) || (u = u.slice(1, -1)); try { var a = n(f[0]); if (u = (o.read || o)(u, a) || n(u), t) try { u = JSON.parse(u) } catch (e) { } if (r[a] = u, e === a) break } catch (e) { } } return e ? r[e] : r } } return r.set = i, r.get = function (e) { return c(e, !1) }, r.getJSON = function (e) { return c(e, !0) }, r.remove = function (n, t) { i(n, "", e(t, { expires: -1 })) }, r.defaults = {}, r.withConverter = t, r }(function () { }) });
 
-/*----------------------------------------------------------*/
+/*----------------------Google translator------------------------------------*/
 
          
-     
+var comboGoogleTradutor = null; //Varialvel global
+
+function googleTranslateElementInit() {
+	new google.translate.TranslateElement({
+		pageLanguage: 'pt',
+		includedLanguages: 'en,es,fr',
+		layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+	}, 'google_translate_element');
+
+	comboGoogleTradutor = document.getElementById("google_translate_element").querySelector(".goog-te-combo");
+}
+
+function changeEvent(el) {
+	if (el.fireEvent) {
+		el.fireEvent('onchange');
+	} else {
+		var evObj = document.createEvent("HTMLEvents");
+
+		evObj.initEvent("change", false, true);
+		el.dispatchEvent(evObj);
+	}
+}
+
+function trocarIdioma(sigla) {
+	if (comboGoogleTradutor) {
+		comboGoogleTradutor.value = sigla;
+		changeEvent(comboGoogleTradutor);//Dispara a troca
+	}
+}

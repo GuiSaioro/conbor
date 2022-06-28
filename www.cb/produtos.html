@@ -2,25 +2,13 @@
 <!doctype html>
 <html lang="pt-BR" lang="pt">
 
-
-
-    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <head>
         <link media="all" rel="stylesheet" href="cms-assets/css/main.css">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" type="text/css" href="../cdn.jsdelivr.net/npm/slick-carousel%401.8.1/slick/slick.css" />
-        <link rel="preconnect" href="https://fonts.gstatic.com/">
-    
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-        href="http://fonts.googleapis.com/css2?family=Commissioner:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-        rel="stylesheet">
-        
-        <link rel="stylesheet" href="../cdn.jsdelivr.net/gh/fancyapps/fancybox%403.5.7/dist/jquery.fancybox.min.css" />
+        <link href="http://fonts.googleapis.com/css2?family=Commissioner:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/main.min.css">
         <script src="../ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script type="text/javascript" src="../cdn.jsdelivr.net/npm/slick-carousel%401.8.1/slick/slick.min.js"></script>
@@ -60,38 +48,35 @@
                                 <ul>
                                     <li>
                                         <a href="#">Por tipo de produto</a>
-                                        <div class=" dropdown ">
-                                        <ul>
+                                        <div class=" dropdown " onmouseout="nomouse()" onmouseover="havemouse()">
+                                        <ul>   
                                     </li>   
-                                                
                                     <li>
-                                        <a class="link_img-dropdown img-dropdown-size" href="product-types/acoplamentos.html">
-                                            Acoplamentos<span><img src="images/menu-dropdown/img-AEC-Standart.png"></span></a>
+                                        <a id="aco" class="img-dropdown-size" href="product-types/acoplamentos.html" >Acoplamentos<img src="images/menu-dropdown/img-AEC-Standart.png" alt=""></a>
+                                        
                                     </li>
-                                  
+                                 
                                     <li>
-                                        <a class="link_img-dropdown img-dropdown-size" href="product-types/freios-embreagens-pneumaticas.html">
-                                            Freios e embreagens<span><img src="images/menu-dropdown/img-ei-s.png"></span></a>
+                                        <a id="emb" class="img-dropdown-size" href="product-types/freios-embreagens-pneumaticas.html">Freios e embreagens<img src="images/menu-dropdown/img-ei-s.png" alt=""></a>
                                         
                                     </li>
                                     <li>
-                                        <a class="link_img-dropdown img-dropdown-size" href="product-types/freios-embreagens-pneumaticas.html">
-                                            Câmaras CW<span><img src="images/menu-dropdown/img-cw.png"></span></a>
+                                        <a id="cw" class="img-dropdown-size" href="product-types/freios-embreagens-pneumaticas.html" >Câmaras CW<img src="images/menu-dropdown/img-cw.png" alt=""></a>
                                     </li>
                                     <li>
-                                        <a class="link_img-dropdown img-dropdown-size" href="product-types/diafragma-dc.html">
-                                            Diafragma DC<span><img src="images/menu-dropdown/img-dc.png"></span></a>
+                                        <a id="dc" class="img-dropdown-size" href="product-types/diafragma-dc.html">Diafragma DC<img src="images/menu-dropdown/img-dc.png" alt=""></a>
                                     </li>
                                     <li>
-                                        <a class="link_img-dropdown img-dropdown-size" href="product-types/freios-embreagens-pneumaticas.html">
-                                            Cintas<span><img src="images/menu-dropdown/img-cinta.png"></span></a>
+                                        <a id="ct" class="img-dropdown-size" href="product-types/freios-embreagens-pneumaticas.html">Cintas<img src="images/menu-dropdown/img-cinta.png" alt=""></a>
                                     </li>
                                     <li>
-                                        <a class="link_img-dropdown img-dropdown-size" href="product-types/freios-embreagens-pneumaticas.html">
-                                            Freios Tensionadores<span><img src="images/menu-dropdown/img-freio-ei.png"></span></a>
+                                        <a id="ft" class="img-dropdown-size" href="product-types/freios-embreagens-pneumaticas.html">Freios Tensionadores<img src="images/menu-dropdown/img-freio-ei.png" alt=""></a>
                                     </li>
-                                    
-                                
+                                    <li>
+                                      <img id="showimg" src="images/menu-dropdown/img-vazia.jpg">
+                                        <ul> 
+                                    </li>  
+                                    </ul>
                                 </ul>
                             </div>
                         </li>
@@ -178,7 +163,7 @@
                 </div>
             </li>
             <li>
-                <a href="company/empresa.html">Empresa <span></span></a>
+                <a href="empresa.html">Empresa <span></span></a>
                 <div class="dropdown">
                 </div>
             </li>
@@ -246,10 +231,10 @@
                             <ul class="drop">
                                 <li><a href="../www.cb/produtos.html">Todos</a></li>
 
-                                <li><a href="../product-types/acoplamentos.html" title="Acoplamentos">Acoplamentos</a></li>
-                                <li><a href="../product-types/freios-e-embreagens.html" title="Freios e Embreagens">Freios e embreagens</a></li>
-                                <li><a href="../product-types/camaras-cw.html">Câmaras CW</a></li>
-                                <li><a href="../product-types/diafragma-dc.html">Diafragmas DC</a></li>
+                                <li><a href="product-types/acoplamentos.html" title="Acoplamentos">Acoplamentos</a></li>
+                                <li><a href="product-types/freios-embreagens-pneumaticas.html" title="Freios e Embreagens">Freios e embreagens</a></li>
+                                <li><a href="product-types/camaras-cw.html">Câmaras CW</a></li>
+                                <li><a href="product-types/diafragma-dc.html">Diafragmas DC</a></li>
                                 <li><a href="#" >Cintas</a></li>
                                 <li><a href="#" >Freio Tensionador</a></li>
                               
@@ -509,53 +494,51 @@
                 <img src="images/header-logo-white.png" alt="CONBOR">
             </a>
             <ul class="social">
-                <!--<li><a href="https://www.facebook.com/DellnerBubenzer"><span class="icon-facebook"></span></a></li>
-                <li><a href="https://twitter.com/dellnerbubenzer"><span class="icon-twitter"></span></a></li>-->
-                <li><a href="https://www.linkedin.com/company/dellner-bubenzer/"><span
-                            class="icon-linkedin"></span></a></li>
-                <!--<li><a href="#"><span class="icon-youtube"></span></a></li>-->
-                <!--<li><a href="https://www.instagram.com/dellnerbubenzer/"><span class="icon-instagram"></span></a></li>-->
+                <li><a href="https://www.linkedin.com/company/conbor-borrachas-t%C3%A9cnico-industriais-ltda./mycompany/"target="_blank"><span class="icon-linkedin"></span></a></li>
+                <li><a href="https://www.instagram.com/conborborrachas/" target="_blank"><span class="fa fa-instagram"></span></a></li>
             </ul>
         </div>
         <div class="footer-content">
             <ul class="footer-list" translate="no">
                 <li>CONBOR</li>
-                <li> +55 (21) 2270-0821<br>
-                    +55 (21) 3866-4508 <br>
-                    +55 (21) 3885-3343 <br>
-                    +55 (21) 3217-3565</li>
+                    <li><a href="tel:+552122700821">(21) 2270-0821</a></li>
+                    <li><a href="tel:+552138664508">(21) 3866-4508</a></li>
+                    <li><a href="tel:+552138853343">(21) 3885-3343 </a></li>
+                    <li><a href="tel:+552132173565">(21) 3217-3565</a></li>
             </ul>
             <ul class="footer-nav">
                 <li>
                     <a href="produtos.html">VER PRODUTOS</a>
                 </li>
                 <li>
-                    <a href="services/support-unlimited.html">Suporte</a>
+                    <a href="servicos.html">Suporte</a>
                 </li>
                 <li>
-                    <a href="products/document-downloads.html">Downloads</a>
+                    <a href="products/downloads.html">Downloads</a>
                 </li>
                 <li>
-                    <a href="certifications.html">Certificações</a>
+                    <a href="certificacoes.html">Certificações</a>
                 </li>
                 <li>
-                    <a href="company/overview.html">Sobre a empresa</a>
+                    <a href="empresa.html">Sobre a empresa</a>
                 </li>
                 <li>
-                    <a href="location.html">Contato</a>
+                    <a href="contato.html">Contato</a>
                 </li>
             </ul>
         </div>
         <div class="footer-bottom">
             <ul class="copy-list">
                 <li>© 2022, CONBOR. all rights reserved. </li>
-                <li><a href="imprint.html">IMPRINT</a></li>
-                <li><a href="privacy-policy.html">POLITICA DE PRIVACIDADE</a></li>
+                <!--<li><a href="">POLITICA DE PRIVACIDADE</a></li>-->
             </ul>
-            <p translate="no">WEBSITE BY: <!--<a href="" target="_blank">-->>GUISAIORO</a></p>
+            <p translate="no">WEBSITE BY: <!--<a href="" target="_blank">-->GUISAIORO</a></p>
+            <div id="google_translate_element" class="boxTradutor"></div>
+            <p><a href="javascript:trocarIdioma('es')"><img alt="espanhol" src="images/flags-tradutor/img-flag-es.png" width="50px"></a>
+            <a href="javascript:trocarIdioma('en')"><img alt="ingles" src="images/flags-tradutor/img-flag-en.png" width="50px"></a></p>
         </div>
     </div>
-    <!--<div id="gdpr-cookies" class="container">
+   <!--<div id="gdpr-cookies" class="container">
         <div class="holder">
             <p>O site CONBOR está utilizando cookies para lhe proporcionar a melhor experiência de usuário. Para
                 continuar a usar conbor.com.br, você concorda com o uso de cookies de acordo com nossa <a
@@ -565,6 +548,7 @@
         </div>
     </div>-->
 </footer>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 <script type="text/javascript">
 /* <!--CDATAOPENTAG--> */
