@@ -16,11 +16,15 @@ import * as THREE from 'three';
 			function init() {
 
 				const container = document.createElement( 'div' );
-				document.body.appendChild( container );
+				document.getElementById("3d").appendChild(container);
+				//document.body.appendChild( container );
+
+				
+				
 
 				renderer = new THREE.WebGLRenderer( { antialias: true } );
 				renderer.setPixelRatio( window.devicePixelRatio );
-				renderer.setSize( window.innerWidth, window.innerHeight );
+				renderer.setSize( window.innerWidth/2, window.innerHeight/2);
 				renderer.toneMapping = THREE.ACESFilmicToneMapping;
 				renderer.toneMappingExposure = 1;
 				renderer.outputEncoding = THREE.sRGBEncoding;
