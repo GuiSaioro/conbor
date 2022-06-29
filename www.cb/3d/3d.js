@@ -30,21 +30,21 @@ import * as THREE from 'three';
 				renderer.outputEncoding = THREE.sRGBEncoding;
 				container.appendChild( renderer.domElement );
 
-				camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.1, 2000 );
-				camera.position.set( 0, 100, 0 );
+				camera = new THREE.PerspectiveCamera( 65, window.innerWidth / window.innerHeight, 10, 2000 );
+				camera.position.set( -5, 100, -10 );
 
 				const environment = new RoomEnvironment();
 				const pmremGenerator = new THREE.PMREMGenerator( renderer );
 
 				scene = new THREE.Scene();
-				scene.background = new THREE.Color( 0xbbbbbb );
+				scene.background = new THREE.Color( 0xffffff );
 				scene.environment = pmremGenerator.fromScene( environment ).texture;
 
-				const grid = new THREE.GridHelper( 500, 10, 0xffffff, 0xffffff );
+				/*const grid = new THREE.GridHelper( 500, 10, 0xffffff, 0xffffff );
 				grid.material.opacity = 0.5;
 				grid.material.depthWrite = false;
 				grid.material.transparent = true;
-				scene.add( grid );
+				scene.add( grid );*/
 
 				const ktx2Loader = new KTX2Loader()
 					.setTranscoderPath( 'basis/' )
@@ -53,19 +53,21 @@ import * as THREE from 'three';
 				const loader = new GLTFLoader().setPath( 'models/gltf/' );
 				loader.setKTX2Loader( ktx2Loader );
 				loader.setMeshoptDecoder( MeshoptDecoder );
-				loader.load( 'coffeemat.glb', function ( gltf ) {
+				loader.load( 'carro.glb', function ( gltf ) {
 
 					// coffeemat.glb was produced from the source scene using gltfpack:
 					// gltfpack -i coffeemat/scene.gltf -o coffeemat.glb -cc -tc
 					// The resulting model uses EXT_meshopt_compression (for geometry) and KHR_texture_basisu (for texture compression using ETC1S/BasisLZ)
 
-					gltf.scene.position.y = 8;
+					gltf.scene.position.y = 59;
 
 					scene.add( gltf.scene );
 
 					render();
 
 				} );
+
+				
 
 				
 				const controls = new OrbitControls( camera, renderer.domElement );

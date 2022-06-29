@@ -14066,3 +14066,6 @@ body {
     position: static !important;
     top: 0 !important;
 }
+canvas{
+    margin: auto;
+}
