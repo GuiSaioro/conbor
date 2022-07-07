@@ -8855,7 +8855,7 @@ header .container {
 @media (max-width:1023px) {
     #nav>li>.dropdown>ul {
         padding: 20px;
-        min-width: 230px
+        min-width: 401px;
     }
 }
 
