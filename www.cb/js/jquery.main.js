@@ -16,6 +16,7 @@ jQuery(function () {
 	initAccordion();
 	initAnchors();
 	initCookies();
+	modal();
 	
 });
 
@@ -142,83 +143,147 @@ function initCookies() {
 
 	}
 }
-/*--------------------------------------------------------------------------------------------------
 
+/*-----------------------------------------Calculo dimensionamento AEC----------------------------------------------------*/
 
-function initProductPaginationChange()
-{
-	var condition = $('.mainProduct').length
-		// && false
-	;init(condition);
+function calculo(){
 
-	function init(condition)
-	{
-		if(condition || condition == null)
-		{
-			$('.mainProduct .pagination a').each(function(){
-				var href = $(this).attr('href'); 
-				var thisHeader = $('h1.large').text().replace('&', '%26');   
-				if(thisHeader != "WPT Disc Clutches & Brakes")
-				{
-					if(href.indexOf('prop_ProductType') == -1 && href.indexOf('prop_IsWPTProduct=false') == -1)
-					{ 
-						$(this).attr('href', href + "&prop_IsWPTProduct=false");
-					}
-				}
-			});
-		}
-	}
+    var x = document.getElementsByName('und')
+ 
+    var f1 = document.getElementById('fs1').value
+    var f2 = document.getElementById('fs2').value
+    var f3 = document.getElementById('fs3').value
+    var f4 = document.getElementById('fs4').value
+    
+   f1 = Number(fs1.value)
+   f2 = Number(fs2.value)
+   f3 = Number(fs3.value)
+   f4 = Number(fs4.value)
+  
+   
+    var fs = f1 * f2 * f3 * f4;
+
+    var u ;
+// Conversão de und
+    var und = document.getElementsByName('rund')
+    if (und[0].checked){
+      u = 716
+    } else if (und[1].checked){
+      u = 726
+    }else{
+      u = 973
+    }
+
+    
+    p = document.getElementById('potencia').value
+    n = document.getElementById('rpm').value
+
+    //var eixo = document.getElementById('eixo').value
+    
+   
+    if (p != 0 && n != 0){     
+      var t = (u * p * fs)/n // Calculo a ser feito
+       
+      if (t > 0 && t < 4 && n < 4500){
+        var aec = 'AEC086'
+        
+      }else if (t >= 4 && t < 7 && n < 4500){
+       var aec = 'AEC104'
+      }else if (t >= 7 && t < 16 && n < 4500){
+        var aec = 'AEC136'
+      }else if (t >= 16 && t < 33 && n < 3600){
+        var aec = 'AEC178'
+      }else if (t >= 33 && t < 50 && n < 3600){
+        var aec = 'AEC178H'
+      }else if (t >= 50 && t < 85 && n < 3600){
+        var aec = 'AE210'
+      }else if (t >= 85 && t < 105 && n < 3600){
+        var aec = 'AEC210H'
+      }else if (t >= 105 && t < 135 && n < 2700){
+        var aec = 'AEC263'
+      }else if (t >= 135 && t < 180 && n < 2700){
+        var aec = 'AEC263H'
+      }else if (t >= 180 && t < 250 && n < 2700){
+        var aec = 'AEC310'
+      }else if (t >= 250 && t < 300 && n < 2700){
+        var aec = 'AEC310H'
+      }else if (t >= 300 && t < 370 && n < 2250){
+        var aec = 'AEC370'
+      }else if (t >= 370 && t < 450 && n < 2250){
+        var aec = 'AEC370H'
+      }else if (t >= 450 && t < 525 && n < 2070){
+        var aec = 'AEC402'
+      }else if (t >= 525 && t < 675 && n < 2070){
+        var aec = 'AEC402H'
+      }else if (t >= 675 && t < 750 && n < 1620){
+        var aec = 'AEC450'
+      }else if (t >= 750 && t < 940 && n < 1620){
+        var aec = 'AEC450H'
+      }else if (t >= 940 && t < 1350 && n < 1350){
+        var aec = 'AEC550'
+      }else if (t >= 1350 && t < 1940 && n < 1350){
+        var aec = 'AEC550H'
+      }else if (t >= 1940 && t < 105 && n < 4900){
+        var aec = 'AEC724H'
+    }else {}
+// --------------------------------------------------------------------
+
+      /*if (eixo < 0 ){
+        tipo = ''
+      }else if (aec === 'AEC086' && eixo >= 0 && eixo <= 20){
+        var tipo = 'Std'
+
+      }else if (aec === 'AEC086' && eixo <= 32) {
+        var tipo = 'FI'
+
+      }else if (aec === 'AEC104' && eixo <= 25){
+        var tipo = 'Std'
+
+      }else if (aec === 'AEC104' && eixo <= 25) {
+        var tipo = 'FG' 
+        
+      }else if (aec === 'AEC104' && eixo <= 70) {
+        var tipo = 'FI'
+
+      }
+
+      else{
+        tipo = ''
+        alert ('Diâmetro exedido do eixo')
+      }*/
+
+     // aec_mudar_img ()
+      
+      var converter = t * 9.8067
+
+     
+      res.innerHTML = `O Acoplamento ideal é ${aec}.`
+     // aec_mudar_img();
+      
+      torque.value = `${converter.toFixed(2)}`
+	  document.getElementById('AEC').style.display = "block"// tirar se colocar o tipo
+	  document.getElementById("imgaco").src = "../images/products/img-aec.png"
+     
+    }else{
+      alert('Digite valores válidos') 
+    }
+
+    /*function aec_mudar_img() {
+      if (tipo === 'Std'){
+        document.getElementById("imgaco").src = "../images/products/img-aec.png"
+        document.getElementById('AEC').style.display = "block"
+      } else if (tipo === 'FG'){
+        document.getElementById("imgaco").src = "./img/img-AEC-FG-corte.jpg"
+      } else if (tipo === 'FI'){
+        document.getElementById("imgaco").src = "./img/img-AEC-FI-FG-corte.jpg"
+      } else {
+        document.getElementById("imgaco").src = ""
+      }
+    }  */
 }
 
-function initProductTypePaginationChange()
-{
-	var condition = $('.filtrationProductTypeDetailHolder').length
-		// && false
-	;init(condition);
+/*------------------------------------------------------------------------------------------*/
 
-	function init(condition)
-	{
-		if(condition || condition == null)
-		{
-			$('.pagination a').each(function(){
-				var href = $(this).attr('href'); 
-				var thisHeader = $('h1.large').text().replace('&', '%26');   
-				if(href.indexOf('prop_ProductType') == -1)
-				{ 
-					$(this).attr('href', href + "&prop_ProductType=" + thisHeader);
-					href = $(this).attr('href');
-					if(thisHeader != "WPT Disc Clutches & Brakes")
-					{
-						$(this).attr('href', href + "&prop_IsWPTProduct=false");
-					}
-				}
-			});
-		}
-	}
-}
-
-function initIndustriesPaginationChange()
-{
-	var condition = $('.filtrationIndustryDetailProductsHolder').length
-		// && false
-	;init(condition);
-
-	function init(condition)
-	{
-		if(condition || condition == null)
-		{
-			$('.pagination a').each(function(){
-				var href = $(this).attr('href'); 
-				var thisHeader = $('h1.large').text().replace('&', '%26');   
-				if(href.indexOf('prop_Industries') == -1)
-				{ 
-					$(this).attr('href', href + "&prop_Industries=" + thisHeader);
-				}
-			});
-		}
-	}
-}
-*/
 function initMenuCropping() {
 	var condition = $('#nav').length
 		// && false
@@ -2137,4 +2202,26 @@ function trocarIdioma(sigla) {
 		comboGoogleTradutor.value = sigla;
 		changeEvent(comboGoogleTradutor);//Dispara a troca
 	}
+}
+
+function modal(){
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("btnModal");
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function() {
+	modal.style.display = "block"
+	
+}
+
+span.onclick = function() {
+	modal.style.display = "none";
+	
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+   modal.style.display = "none";
+   
+  }
+}
 }
