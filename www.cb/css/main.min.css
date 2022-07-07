@@ -11141,7 +11141,7 @@ min-height: 170px;
 
 @media (max-width:1023px) {
     .line {
-        margin-top: -50px
+        margin-top: 0px;
     }
 }
 
