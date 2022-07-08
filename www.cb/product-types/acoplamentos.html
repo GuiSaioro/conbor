@@ -277,8 +277,8 @@
 
                         <!-- Conteudo do Modal  -->
                         <div class="modal-content">
-                            <div class="modal-header"><h1>Dimensione Seu CONBORFLEX
-                                <span class="close">&times;</span></h1>
+                            <div class="modal-header"><h1>Ferramenta de dimensionamento CONBORFLEX
+                                <!--<img id="imgaco" src="../images/products/img-aec.png" alt=""><span class="close">&times;</span></h1>-->
                             </div>
                                 <div class="fatores">
                                     <div class="quadro">
@@ -340,62 +340,118 @@
                                     <p><input type="number" id="torque" disabled> Nm </p>
                                     <p><button class="btn" id="fatorservico" onclick="calculo()">Calcular</button></p>
                                     </div>
+                                    <div class="resposta" id="res"></div>
                                 </div>
                                 <div class="img-inputs">
-                                    <p></p>
-                                    <div class="resposta" id="res"></div>
-                                    <div class = "dirres">
-                                    <img id="imgaco" src="../images/products/img-aec.png" alt="">
                                     
-                                    <ul>
-                                        <li id="AEC"  style="display: none">
-                                        <table width="200" cellspacing="0" cellpadding="0">
-                                        <tr>
-                                            <td colspan="3" class="nometabela">Informações técnicas</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="cabeca">Tamanho</td>
-                                            <td class="cabeca">Furação máx. (mm)</td>
-                                            <td class="cabeca">Rotação máx. (rpm)</td>
-                                        </tr>
-                                        <tr>
-                                            <td>AEC086</td>
-                                            <td>24</td>
-                                            <td>5000</td>
-                                        </tr>
-                                        <tr>
-                                            <td>AEC104</td>
-                                            <td>32</td>
-                                            <td>4000</td>
-                                        </tr>
-                                        <tr>
-                                            <td>AEC136</td>
-                                            <td>48</td>
-                                            <td>3600</td>
-                                        </tr>
-                                        <tr>
-                                            <td>AEC210</td>
-                                            <td>70</td>
-                                            <td>3250</td>
-                                        </tr>
-                                        <tr>
-                                            <td>AEC 90</td>
-                                            <td>85</td>
-                                            <td>2000</td>
-                                        </tr>
-                                        <tr>
-                                            <td>AEC 105</td>
-                                            <td>110</td>
-                                            <td>2000</td>
-                                        </tr>
-                                        <tr>
-                                            <td>AEC 140</td>
-                                            <td>150</td>
-                                            <td>1400</td>
-                                        </tr>
-                                        </table>
-                                        </li>
-                                </ul>
+                                    
+                                    <div class = "dirres">
+                                        
+                                        <ul>
+                                            <li id="AEC" style="list-style: none;">
+                                                <table width="200" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                    <td colspan="5" class="nometabela">Informações técnicas</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="nometabela" style="border-bottom: none;">Modelo</td>
+                                                    <td colspan="3" class="nometabela">Furo máximo (mm)</td>
+                                                    <td class="nometabela" style="border-bottom: none;">Rotação máx.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="cabeca" style="border-top: none;">AEC</td>
+                                                    <td class="cabeca">St</td>
+                                                    <td class="cabeca">FI</td>
+                                                    <td class="cabeca">FG</td>
+                                                    <td class="cabeca" style="border-top: none;">(rpm)</td>
+                                                </tr>
+                                                <tr id="a086">
+                                                    <td>086</td>
+                                                    <td>20</td> <!--std-->
+                                                    <td>32</td> <!--FI-->
+                                                    <td>-</td> <!--FG-->
+                                                    <td>4500</td> <!--RPM-->
+                                                </tr>
+                                                <tr id="a104">
+                                                    <td>104</td>
+                                                    <td>25</td>
+                                                    <td>35</td>
+                                                    <td>25</td>
+                                                    <td>4500</td>
+                                                </tr>
+                                                <tr id="a136">
+                                                    <td>136</td>
+                                                    <td>35</td>
+                                                    <td>45</td>
+                                                    <td>35</td>
+                                                    <td>4500</td>
+                                                </tr>
+                                                <tr id="a178">
+                                                    <td>178</td>
+                                                    <td>48</td>
+                                                    <td>60</td>
+                                                    <td>48</td>
+                                                    <td>3600</td>
+                                                </tr>
+                                                <tr id="a210">
+                                                    <td>210</td>
+                                                    <td>60</td>
+                                                    <td>85</td>
+                                                    <td>60</td>
+                                                    <td>3600</td>
+                                                </tr>
+                                                <tr id="a263">
+                                                    <td>263</td>
+                                                    <td>70</td>
+                                                    <td>110</td>
+                                                    <td>70</td>
+                                                    <td>2700</td>
+                                                </tr>
+                                                <tr id="a310">
+                                                    <td>310</td>
+                                                    <td>100</td>
+                                                    <td>130</td>
+                                                    <td>100</td>
+                                                    <td>2700</td>
+                                                </tr>
+                                                <tr id="a370">
+                                                    <td>370</td>
+                                                    <td>100</td>
+                                                    <td>170</td>
+                                                    <td>100</td>
+                                                    <td>2250</td>
+                                                </tr>
+                                                <tr id="a402">
+                                                    <td>402</td>
+                                                    <td>110</td>
+                                                    <td>170</td>
+                                                    <td>110</td>
+                                                    <td>2070</td>
+                                                </tr>
+                                                <tr id="a450">
+                                                    <td>450</td>
+                                                    <td>120</td>
+                                                    <td>120</td>
+                                                    <td>120</td>
+                                                    <td>1620</td>
+                                                </tr>
+                                                <tr id="a550">
+                                                    <td>550</td>
+                                                    <td>140</td>
+                                                    <td>200</td>
+                                                    <td>140</td>
+                                                    <td>1350</td>
+                                                </tr>
+                                                <tr id="a724">
+                                                    <td>724</td>
+                                                    <td>220</td>
+                                                    <td>260</td>
+                                                    <td>220</td>
+                                                    <td>910</td>
+                                                </tr>
+                                                </table>
+                                            </li>
+                                    </ul>
                                 </div>
                                 </div>
                             </div>

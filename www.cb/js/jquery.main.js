@@ -144,6 +144,28 @@ function initCookies() {
 	}
 }
 
+/*-------------------------------------------------Modal--------------------------------------*/
+function modal(){
+	var modal = document.getElementById("myModal");
+	var btn = document.getElementById("btnModal");
+	var span = document.getElementsByClassName("close")[0];
+	btn.onclick = function() {
+		modal.style.display = "block"
+		
+	}
+	
+	span.onclick = function() {
+		modal.style.display = "none";
+		
+	}
+	
+	window.onclick = function(event) {
+	  if (event.target == modal) {
+	   modal.style.display = "none";
+	   
+	  }
+	}
+	}
 /*-----------------------------------------Calculo dimensionamento AEC----------------------------------------------------*/
 
 function calculo(){
@@ -228,29 +250,51 @@ function calculo(){
     }else {}
 // --------------------------------------------------------------------
 
-      /*if (eixo < 0 ){
-        tipo = ''
-      }else if (aec === 'AEC086' && eixo >= 0 && eixo <= 20){
-        var tipo = 'Std'
+	 if (aec === 'AEC086'){
+        document.getElementById("#a086").style.background = "var(--selected-aec-color)";
+		document.getElementById("a086").style.color = "var(--selected-aec-colorfont)";
 
-      }else if (aec === 'AEC086' && eixo <= 32) {
-        var tipo = 'FI'
+      }else if (aec === 'AEC104'){
+        document.getElementById("a104").style.background = "var(--selected-aec-color)";
+		document.getElementById("a104").style.color = "var(--selected-aec-colorfont)";
 
-      }else if (aec === 'AEC104' && eixo <= 25){
-        var tipo = 'Std'
-
-      }else if (aec === 'AEC104' && eixo <= 25) {
-        var tipo = 'FG' 
+      }else if (aec === 'AEC136') {
+        document.getElementById("a136").style.background = "var(--selected-aec-color)";
+		document.getElementById("a136").style.color = "var(--selected-aec-colorfont)";
         
-      }else if (aec === 'AEC104' && eixo <= 70) {
-        var tipo = 'FI'
+      }else if (aec === 'AEC210') {
+		document.getElementById("a210").style.background = "var(--selected-aec-color)";
+		document.getElementById("a210").style.color = "var(--selected-aec-colorfont)";
 
-      }
+      }else if (aec === 'AEC263') {
+		document.getElementById("a263").style.background = "var(--selected-aec-color)";
+		document.getElementById("a263").style.color = "var(--selected-aec-colorfont)";
 
-      else{
-        tipo = ''
-        alert ('Diâmetro exedido do eixo')
-      }*/
+      }else if (aec === 'AEC310') {
+		document.getElementById("a310").style.background = "var(--selected-aec-color)";
+		document.getElementById("a310").style.color = "var(--selected-aec-colorfont)";
+
+      }else if (aec === 'AEC370') {
+		document.getElementById("a370").style.background = "var(--selected-aec-color)";
+		document.getElementById("a370").style.color = "var(--selected-aec-colorfont)";
+
+      }else if (aec === 'AEC402') {
+		document.getElementById("a402").style.background = "var(--selected-aec-color)";
+		document.getElementById("a402").style.color = "var(--selected-aec-colorfont)";
+
+      }else if (aec === 'AEC450') {
+		document.getElementById("a450").style.background = "var(--selected-aec-color)";
+		document.getElementById("a450").style.color = "var(--selected-aec-colorfont)";
+
+      }else if (aec === 'AEC550') {
+		document.getElementById("a550").style.background = "var(--selected-aec-color)";
+		document.getElementById("a550").style.color = "var(--selected-aec-colorfont)";
+
+      }else if (aec === 'AEC724') {
+		document.getElementById("a724").style.background = "var(--selected-aec-color)";
+		document.getElementById("a724").style.color = "var(--selected-aec-colorfont)";
+
+      }else{}
 
      // aec_mudar_img ()
       
@@ -261,8 +305,6 @@ function calculo(){
      // aec_mudar_img();
       
       torque.value = `${converter.toFixed(2)}`
-	  document.getElementById('AEC').style.display = "block"// tirar se colocar o tipo
-	  document.getElementById("imgaco").src = "../images/products/img-aec.png"
      
     }else{
       alert('Digite valores válidos') 
@@ -2204,24 +2246,3 @@ function trocarIdioma(sigla) {
 	}
 }
 
-function modal(){
-var modal = document.getElementById("myModal");
-var btn = document.getElementById("btnModal");
-var span = document.getElementsByClassName("close")[0];
-btn.onclick = function() {
-	modal.style.display = "block"
-	
-}
-
-span.onclick = function() {
-	modal.style.display = "none";
-	
-}
-
-window.onclick = function(event) {
-  if (event.target == modal) {
-   modal.style.display = "none";
-   
-  }
-}
-}

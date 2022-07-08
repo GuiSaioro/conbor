@@ -2277,7 +2277,7 @@ header .container {
 
     img {
         max-width: 100%;
-        height: auto
+        height: 100%
     }
 
     .gm-style img {
@@ -14183,17 +14183,30 @@ body {
   }
  .dirres{
     display:flex;
-
  }
+ 
  .cabeca, .nometabela{
     border: 2px solid blue;
     font-style: italic;
+    text-align: center;
+    background-color: #427eee;
+    color: white;
+ }
+
+ :root{
+    --selected-aec-color: green;
+    --selected-aec-colorfont: white;
+ }
+ #a086, #a104, #a136 {
+    color: black;
+    background-color: white;
 
  }
   td {
     border: 1px solid black;
     height: 25px;
     padding: 2px;
+    text-align: center;
  }
 
  .quadro select{
@@ -14222,11 +14235,4 @@ body {
  }
 
 /*-------------------------------------------------------------------------*/
-.container3d {
-    /*background: #000;*/
-}
-
-canvas{
-    margin: auto;
-}
 
