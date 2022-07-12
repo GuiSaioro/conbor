@@ -168,7 +168,7 @@ function modal(){
 	}
 /*-----------------------------------------Calculo dimensionamento AEC----------------------------------------------------*/
 
-function calculo(){
+function calculo(){	
 
     var x = document.getElementsByName('und')
  
@@ -201,128 +201,173 @@ function calculo(){
     n = document.getElementById('rpm').value
 
     //var eixo = document.getElementById('eixo').value
-    
-   
+
     if (p != 0 && n != 0){     
       var t = (u * p * fs)/n // Calculo a ser feito
-       
-      if (t > 0 && t < 4 && n < 4500){
-        var aec = 'AEC086'
-        
-      }else if (t >= 4 && t < 7 && n < 4500){
-       var aec = 'AEC104'
-      }else if (t >= 7 && t < 16 && n < 4500){
+	
+      if (t > 0 && t < 4){
+        var aec = 'AEC086';
+      }else if (t >= 4 && t < 7){
+       var aec = 'AEC104'      
+      }else if (t >= 7 && t < 16){
         var aec = 'AEC136'
-      }else if (t >= 16 && t < 33 && n < 3600){
+      }else if (t >= 16 && t < 33){
         var aec = 'AEC178'
-      }else if (t >= 33 && t < 50 && n < 3600){
+      }else if (t >= 33 && t < 50){
         var aec = 'AEC178H'
-      }else if (t >= 50 && t < 85 && n < 3600){
+      }else if (t >= 50 && t < 85){
         var aec = 'AE210'
-      }else if (t >= 85 && t < 105 && n < 3600){
+      }else if (t >= 85 && t < 105){
         var aec = 'AEC210H'
-      }else if (t >= 105 && t < 135 && n < 2700){
+      }else if (t >= 105 && t < 135){
         var aec = 'AEC263'
-      }else if (t >= 135 && t < 180 && n < 2700){
+      }else if (t >= 135 && t < 180){
         var aec = 'AEC263H'
-      }else if (t >= 180 && t < 250 && n < 2700){
+      }else if (t >= 180 && t < 250){
         var aec = 'AEC310'
-      }else if (t >= 250 && t < 300 && n < 2700){
+      }else if (t >= 250 && t < 300){
         var aec = 'AEC310H'
-      }else if (t >= 300 && t < 370 && n < 2250){
+      }else if (t >= 300 && t < 370){
         var aec = 'AEC370'
-      }else if (t >= 370 && t < 450 && n < 2250){
+      }else if (t >= 370 && t < 450){
         var aec = 'AEC370H'
-      }else if (t >= 450 && t < 525 && n < 2070){
+      }else if (t >= 450 && t < 525){
         var aec = 'AEC402'
-      }else if (t >= 525 && t < 675 && n < 2070){
+      }else if (t >= 525 && t < 675){
         var aec = 'AEC402H'
-      }else if (t >= 675 && t < 750 && n < 1620){
+      }else if (t >= 675 && t < 750){
         var aec = 'AEC450'
-      }else if (t >= 750 && t < 940 && n < 1620){
+      }else if (t >= 750 && t < 940){
         var aec = 'AEC450H'
-      }else if (t >= 940 && t < 1350 && n < 1350){
+      }else if (t >= 940 && t < 1350){
         var aec = 'AEC550'
-      }else if (t >= 1350 && t < 1940 && n < 1350){
+      }else if (t >= 1350 && t < 1940){
         var aec = 'AEC550H'
-      }else if (t >= 1940 && t < 105 && n < 4900){
+      }else if (t >= 1940 && t < 105){
         var aec = 'AEC724H'
-    }else {}
+		}else {	}
+//----------------------------------------------------------------------
+
+if ((aec === 'AEC086'|| aec === 'AEC104' || aec === 'AEC136') && n > 4500 ){
+	var vel = "Velocidade máxima excedida, favor entrar em contato para mais informações";
+}else if ((aec === 'AEC178' || aec === 'AEC178H' || aec === 'AEC210' || aec === 'AEC210H') && n > 3600 ){
+	var vel = "Velocidade máxima excedida, favor entrar em contato para mais informações";
+}else if ((aec === 'AEC263' || aec === 'AEC263H' || aec === 'AEC310'|| aec === 'AEC310H') && n > 2700 ){
+	var vel = "Velocidade máxima excedida, favor entrar em contato para mais informações";
+}else if ((aec === 'AEC370' || aec === 'AEC370H' || aec === 'AEC402' || aec === 'AEC402H') && n > 2250 ){
+	var vel = "Velocidade máxima excedida, favor entrar em contato para mais informações";
+}else if ((aec === 'AEC402' || aec === 'AEC402H') && n > 2070 ){
+	var vel = "Velocidade máxima excedida, favor entrar em contato para mais informações";
+}else if ((aec === 'AEC450' || aec === 'AEC450H') && n > 1620 ){
+	var vel = "Velocidade máxima excedida, favor entrar em contato para mais informações";
+}else if ((aec === 'AEC550' || aec === 'AEC550H') && n > 1350 ){
+	var vel = "Velocidade máxima excedida, favor entrar em contato para mais informações";
+}else if (aec === 'AEC724' && n > 910 ){
+	var vel = "Velocidade máxima excedida, favor entrar em contato para mais informações";
+}else{
+	var vel = "";
+}
+
 // --------------------------------------------------------------------
 
-	 if (aec === 'AEC086'){
-        document.getElementById("#a086").style.background = "var(--selected-aec-color)";
-		document.getElementById("a086").style.color = "var(--selected-aec-colorfont)";
-
-      }else if (aec === 'AEC104'){
-        document.getElementById("a104").style.background = "var(--selected-aec-color)";
-		document.getElementById("a104").style.color = "var(--selected-aec-colorfont)";
-
-      }else if (aec === 'AEC136') {
-        document.getElementById("a136").style.background = "var(--selected-aec-color)";
-		document.getElementById("a136").style.color = "var(--selected-aec-colorfont)";
-        
-      }else if (aec === 'AEC210') {
-		document.getElementById("a210").style.background = "var(--selected-aec-color)";
-		document.getElementById("a210").style.color = "var(--selected-aec-colorfont)";
-
-      }else if (aec === 'AEC263') {
-		document.getElementById("a263").style.background = "var(--selected-aec-color)";
-		document.getElementById("a263").style.color = "var(--selected-aec-colorfont)";
-
-      }else if (aec === 'AEC310') {
-		document.getElementById("a310").style.background = "var(--selected-aec-color)";
-		document.getElementById("a310").style.color = "var(--selected-aec-colorfont)";
-
-      }else if (aec === 'AEC370') {
-		document.getElementById("a370").style.background = "var(--selected-aec-color)";
-		document.getElementById("a370").style.color = "var(--selected-aec-colorfont)";
-
-      }else if (aec === 'AEC402') {
-		document.getElementById("a402").style.background = "var(--selected-aec-color)";
-		document.getElementById("a402").style.color = "var(--selected-aec-colorfont)";
-
-      }else if (aec === 'AEC450') {
-		document.getElementById("a450").style.background = "var(--selected-aec-color)";
-		document.getElementById("a450").style.color = "var(--selected-aec-colorfont)";
-
-      }else if (aec === 'AEC550') {
-		document.getElementById("a550").style.background = "var(--selected-aec-color)";
-		document.getElementById("a550").style.color = "var(--selected-aec-colorfont)";
-
-      }else if (aec === 'AEC724') {
-		document.getElementById("a724").style.background = "var(--selected-aec-color)";
-		document.getElementById("a724").style.color = "var(--selected-aec-colorfont)";
-
-      }else{}
-
-     // aec_mudar_img ()
-      
-      var converter = t * 9.8067
-
-     
-      res.innerHTML = `O Acoplamento ideal é ${aec}.`
-     // aec_mudar_img();
+		var converter = t * 9.8067
+	
       
       torque.value = `${converter.toFixed(2)}`
-     
+	  res.innerHTML = `O Acoplamento ideal é ${aec}.`
+	  res1.innerHTML = `${vel}.`
+
+		if (aec === 'AEC086'){
+			document.getElementById("a086").style.background ="var(--selected-aec-color)"
+			document.getElementById("a086").style.color ="var(--selected-aec-colorfont)"
+		}else {
+			document.getElementById("a086").style.background ="inherit"
+			document.getElementById("a086").style.color ="inherit"
+		} 
+		if (aec === 'AEC104'){
+			document.getElementById("a104").style.background ="var(--selected-aec-color)"
+			document.getElementById("a104").style.color ="var(--selected-aec-colorfont)"
+		}else{
+			document.getElementById("a104").style.background ="inherit"
+			document.getElementById("a104").style.color ="inherit"
+		}
+		if (aec === 'AEC136'){
+			document.getElementById("a136").style.background ="var(--selected-aec-color)"
+			document.getElementById("a136").style.color ="var(--selected-aec-colorfont)"
+		}else {
+			document.getElementById("a136").style.background ="inherit"
+			document.getElementById("a136").style.color ="inherit"
+		} 
+		if (aec === 'AEC178'|| aec === 'AEC178H'){
+			document.getElementById("a178").style.background ="var(--selected-aec-color)"
+			document.getElementById("a178").style.color ="var(--selected-aec-colorfont)"
+		}else{
+			document.getElementById("a178").style.background ="inherit"
+			document.getElementById("a178").style.color ="inherit"
+		}
+		if (aec === 'AEC210' || aec === 'AEC210H'){
+			document.getElementById("a210").style.background ="var(--selected-aec-color)"
+			document.getElementById("a210").style.color ="var(--selected-aec-colorfont)"
+		}else {
+			document.getElementById("a210").style.background ="inherit"
+			document.getElementById("a210").style.color ="inherit"
+		} 
+		if (aec === 'AEC263' || aec === 'AEC263H'){
+			document.getElementById("a263").style.background ="var(--selected-aec-color)"
+			document.getElementById("a263").style.color ="var(--selected-aec-colorfont)"
+		}else{
+			document.getElementById("a263").style.background ="inherit"
+			document.getElementById("a263").style.color ="inherit"
+		}
+		if (aec === 'AEC310' || aec === 'AEC310H'){
+			document.getElementById("a310").style.background ="var(--selected-aec-color)"
+			document.getElementById("a310").style.color ="var(--selected-aec-colorfont)"
+		}else {
+			document.getElementById("a310").style.background ="inherit"
+			document.getElementById("a310").style.color ="inherit"
+		} 
+		if (aec === 'AEC370' || aec === 'AEC370H'){
+			document.getElementById("a370").style.background ="var(--selected-aec-color)"
+			document.getElementById("a370").style.color ="var(--selected-aec-colorfont)"
+		}else{
+			document.getElementById("a370").style.background ="inherit"
+			document.getElementById("a370").style.color ="inherit"
+		}
+		if (aec === 'AEC402' || aec === 'AEC402H'){
+			document.getElementById("a402").style.background ="var(--selected-aec-color)"
+			document.getElementById("a402").style.color ="var(--selected-aec-colorfont)"
+		}else {
+			document.getElementById("a402").style.background ="inherit"
+			document.getElementById("a402").style.color ="inherit"
+		} 
+		if (aec === 'AEC450' || aec === 'AEC450H'){
+			document.getElementById("a450").style.background ="var(--selected-aec-color)"
+			document.getElementById("a450").style.color ="var(--selected-aec-colorfont)"
+		}else{
+			document.getElementById("a450").style.background ="inherit"
+			document.getElementById("a450").style.color ="inherit"
+		}
+		if (aec === 'AEC550' || aec === 'AEC550H'){
+			document.getElementById("a550").style.background ="var(--selected-aec-color)"
+			document.getElementById("a550").style.color ="var(--selected-aec-colorfont)"
+		}else {
+			document.getElementById("a550").style.background ="inherit"
+			document.getElementById("a550").style.color ="inherit"
+		} 
+		if (aec === 'AEC724'){
+			document.getElementById("a724").style.background ="var(--selected-aec-color)"
+			document.getElementById("a724").style.color ="var(--selected-aec-colorfont)"
+		}else{
+			document.getElementById("a724").style.background ="inherit"
+			document.getElementById("a724").style.color ="inherit"
+		}
+	
+	
     }else{
       alert('Digite valores válidos') 
     }
-
-    /*function aec_mudar_img() {
-      if (tipo === 'Std'){
-        document.getElementById("imgaco").src = "../images/products/img-aec.png"
-        document.getElementById('AEC').style.display = "block"
-      } else if (tipo === 'FG'){
-        document.getElementById("imgaco").src = "./img/img-AEC-FG-corte.jpg"
-      } else if (tipo === 'FI'){
-        document.getElementById("imgaco").src = "./img/img-AEC-FI-FG-corte.jpg"
-      } else {
-        document.getElementById("imgaco").src = ""
-      }
-    }  */
 }
+
 
 /*------------------------------------------------------------------------------------------*/
 

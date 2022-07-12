@@ -14169,13 +14169,18 @@ body {
     width: 59vw;
   }
   
-  .resposta{
+  #res{
     text-align: left;
     margin: 25px 0;
-  }
-  #res{
     font-size: 25px;
     font-style:italic;
+  }
+  #res1{
+    text-align: left;
+    margin: 25px 0;
+    font-size: 25px;
+    font-style:italic;
+    color: red;
   }
   .dividido{
     display: flex;
@@ -14194,21 +14199,23 @@ body {
  }
 
  :root{
-    --selected-aec-color: green;
+    --selected-aec-color: #00b2e4;
     --selected-aec-colorfont: white;
  }
- #a086, #a104, #a136 {
-    color: black;
+ .linha {
     background-color: white;
-
+    color: black;
  }
-  td {
+ .active{
+    background-color: greenyellow;
+    color: white;
+ }
+   td {
     border: 1px solid black;
     height: 25px;
-    padding: 2px;
+    padding: 5px;
     text-align: center;
  }
-
  .quadro select{
    border: 1px solid #ebedf0;
    padding: 10px 12px 10px;
