@@ -249,21 +249,21 @@ function calculo(){
 //----------------------------------------------------------------------
 
 if ((aec === 'AEC086'|| aec === 'AEC104' || aec === 'AEC136') && n > 4500 ){
-	var vel = "Velocidade máxima excedida, favor entrar em contato para mais informações";
+	var vel = "Velocidade máxima excedida, favor entrar em contato para mais informações.";
 }else if ((aec === 'AEC178' || aec === 'AEC178H' || aec === 'AEC210' || aec === 'AEC210H') && n > 3600 ){
-	var vel = "Velocidade máxima excedida, favor entrar em contato para mais informações";
+	var vel = "Velocidade máxima excedida, favor entrar em contato para mais informações.";
 }else if ((aec === 'AEC263' || aec === 'AEC263H' || aec === 'AEC310'|| aec === 'AEC310H') && n > 2700 ){
-	var vel = "Velocidade máxima excedida, favor entrar em contato para mais informações";
+	var vel = "Velocidade máxima excedida, favor entrar em contato para mais informações.";
 }else if ((aec === 'AEC370' || aec === 'AEC370H' || aec === 'AEC402' || aec === 'AEC402H') && n > 2250 ){
-	var vel = "Velocidade máxima excedida, favor entrar em contato para mais informações";
+	var vel = "Velocidade máxima excedida, favor entrar em contato para mais informações.";
 }else if ((aec === 'AEC402' || aec === 'AEC402H') && n > 2070 ){
-	var vel = "Velocidade máxima excedida, favor entrar em contato para mais informações";
+	var vel = "Velocidade máxima excedida, favor entrar em contato para mais informações.";
 }else if ((aec === 'AEC450' || aec === 'AEC450H') && n > 1620 ){
-	var vel = "Velocidade máxima excedida, favor entrar em contato para mais informações";
+	var vel = "Velocidade máxima excedida, favor entrar em contato para mais informações.";
 }else if ((aec === 'AEC550' || aec === 'AEC550H') && n > 1350 ){
-	var vel = "Velocidade máxima excedida, favor entrar em contato para mais informações";
+	var vel = "Velocidade máxima excedida, favor entrar em contato para mais informações.";
 }else if (aec === 'AEC724' && n > 910 ){
-	var vel = "Velocidade máxima excedida, favor entrar em contato para mais informações";
+	var vel = "Velocidade máxima excedida, favor entrar em contato para mais informações.";
 }else{
 	var vel = "";
 }
@@ -274,8 +274,8 @@ if ((aec === 'AEC086'|| aec === 'AEC104' || aec === 'AEC136') && n > 4500 ){
 	
       
       torque.value = `${converter.toFixed(2)}`
-	  res.innerHTML = `O Acoplamento ideal é ${aec}.`
-	  res1.innerHTML = `${vel}.`
+	  res.innerHTML = `O Acoplamento ideal é <strong>${aec}</strong>.`
+	  res1.innerHTML = `${vel}`
 
 		if (aec === 'AEC086'){
 			document.getElementById("a086").style.background ="var(--selected-aec-color)"
@@ -2265,8 +2265,8 @@ var comboGoogleTradutor = null; //Varialvel global
 
 function googleTranslateElementInit() {
 	new google.translate.TranslateElement({
-		pageLanguage: 'pt',
-		includedLanguages: 'en,es,fr',
+		pageLanguage: 'pt-BR',
+		includedLanguages: 'en,es,pt',
 		layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
 	}, 'google_translate_element');
 
