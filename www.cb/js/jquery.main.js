@@ -17,6 +17,7 @@ jQuery(function () {
 	initAnchors();
 	initCookies();
 	modal();
+	initacordeom()
 	
 });
 
@@ -166,7 +167,45 @@ function modal(){
 	  }
 	}
 	}
+	function modalf(){
+		var modalf = document.getElementById("myModalf");
+		var btnf = document.getElementById("btnModalf");
+		var spanf = document.getElementsByClassName("close")[0];
+		btnf.onclick = function() {
+			modalf.style.display = "block"
+			
+		}
+		
+		span.onclick = function() {
+			modal.style.display = "none";
+			
+		}
+		
+		window.onclick = function(event) {
+		  if (event.target == modal) {
+		   modal.style.display = "none";
+		   
+		  }
+		}
+		}
 /*-----------------------------------------Calculo dimensionamento AEC----------------------------------------------------*/
+function initacordeom() {
+	var acc = document.getElementsByClassName("accordionf");
+	var i;
+
+	for (i = 0; i < acc.length; i++) {
+	acc[i].addEventListener("click", function() {
+		this.classList.toggle("activef");
+		var panel = this.nextElementSibling;
+		if (panel.style.maxHeight) {
+		panel.style.maxHeight = null;
+		} else {
+		panel.style.maxHeight = panel.scrollHeight + "px";
+		} 
+	});
+	}
+}
+	
 
 function calculo(){	
 
@@ -184,6 +223,7 @@ function calculo(){
   
    
     var fs = f1 * f2 * f3 * f4;
+
 
     var u ;
 // Conversão de und
@@ -204,6 +244,7 @@ function calculo(){
 
     if (p != 0 && n != 0){     
       var t = (u * p * fs)/n // Calculo a ser feito
+	  fatortotal.innerHTML = `<strong>FS = ${fs.toFixed(2)}</strong>`
 	
       if (t > 0 && t < 4){
         var aec = 'AEC086';
@@ -276,6 +317,8 @@ if ((aec === 'AEC086'|| aec === 'AEC104' || aec === 'AEC136') && n > 4500 ){
       torque.value = `${converter.toFixed(2)}`
 	  res.innerHTML = `O Acoplamento ideal é <strong>${aec}</strong>.`
 	  res1.innerHTML = `${vel}`
+
+	  document.getElementById('minhaTabela').style.display = "block"
 
 		if (aec === 'AEC086'){
 			document.getElementById("a086").style.background ="var(--selected-aec-color)"
@@ -404,401 +447,7 @@ function initMenuCropping() {
 		}
 	}
 }
-/*
-function initProductFiltering()
-{
-	var busy = false;
-	var paramTypeVal = '';
-	var paramIndustryVal = '';
-	var paramKeywordVal = '';
-	var paramModuleId =  $('.filtrationProductsHolder').data('module_id');
-	var condition = $('.filtrationProductsHolder').length
-		// && false
-	;init(condition);
 
-	function init(condition)
-	{
-		if(condition || condition == null)
-		{
-			filterByProductTypeSetup();
-			filterByProductIndustrySetup();
-			filterByNameSetup();
-		}
-
-		function filterByProductTypeSetup()
-		{
-			$('.typeFilter .filterButton').click(function ()
-			{
-				if(!busy)
-				{
-					busy = true;
-					var _this = $(this);
-
-					paramTypeVal = _this.data('filter_val');
-					_this.closest('.drop').find('.filterButton').removeClass('active');
-					_this.closest('.custom-select').find('.filterButtonBTN').text(_this.text());
-					_this.addClass('active');
-
-					$('.product-filter').addClass('loader');
-
-					filterAjax(function ()
-					{
-						$('.product-filter').removeClass('loader');
-						busy = false;
-					});
-				}
-
-				return false;
-			});
-		}
-
-		function filterByProductIndustrySetup()
-		{
-			$('.industryFilter .filterButton').click(function ()
-			{
-				if(!busy)
-				{
-					busy = true;
-					var _this = $(this);
-
-					paramIndustryVal = _this.data('filter_val');
-					_this.closest('.drop').find('.filterButton').removeClass('active');
-					_this.closest('.custom-select').find('.filterButtonBTN').text(_this.text());
-					_this.addClass('active');
-
-					$('.product-filter').addClass('loader');
-
-					filterAjax(function ()
-					{
-						$('.product-filter').removeClass('loader');
-						busy = false;
-					});
-				}
-
-				return false;
-			});
-		}
- 
-		function filterByNameSetup()
-		{
-			$('.filterButtonInput').click(function ()
-			{
-				if(!busy)
-				{
-					busy = true;
-					var _this = $(this);
-
-					paramKeywordVal = $('.searchInput').val();
-
-					$('.product-filter').addClass('loader');
-
-					filterAjax(function ()
-					{
-						$('.product-filter').removeClass('loader');
-						busy = false;
-					});
-				}
-
-				return false;
-			});
-		}
-
-
-		function filterAjax(callback)
-		{
-			callback = callback==null ? function(){} : callback;
-			var paramType = '&prop_ProductType=' + encodeURIComponent(paramTypeVal);
-			var paramIndustry = '&prop_Industries=' + encodeURIComponent(paramIndustryVal);
-			var paramKeyword = '&prop_KeyWords=' + encodeURIComponent(paramKeywordVal);
-			var _href = '?prop_ModuleId=' + paramModuleId + paramType + paramIndustry + paramKeyword;
-
-			$.ajax({
-				url: _href,
-				success: function (data) {
-					var content = $(".products-items", data).html();
-					$(".products-items").html(content);
-					callback();
-				}
-			});
-		}
-	}
-}
-
-function initListIndustryDetailPageFiltering()
-{
-	var busy = false;
-	var paramTypeVal = '';
-	var paramIndustryVal = $('.filtrationIndustryDetailProductsHolder').data('industry_name');
-	var paramKeywordVal = '';
-	var paramModuleId =  $('.filtrationIndustryDetailProductsHolder').data('module_id');
-	var condition = $('.filtrationIndustryDetailProductsHolder').length
-		// && false
-	;init(condition);
-
-	function init(condition)
-	{
-		if(condition || condition == null)
-		{
-			filterByProductTypeSetup();
-			filterByNameSetup();
-		}
-
-		function filterByProductTypeSetup()
-		{
-			$('.typeFilter .filterButton').click(function ()
-			{
-				if(!busy)
-				{
-					busy = true;
-					var _this = $(this);
-
-					paramTypeVal = _this.data('filter_val');
-					_this.closest('.drop').find('.filterButton').removeClass('active');
-					_this.closest('.custom-select').find('.filterButtonBTN').text(_this.text());
-					_this.addClass('active');
-
-					$('.product-filter').addClass('loader');
-
-					filterAjax(function ()
-					{
-						$('.product-filter').removeClass('loader');
-						busy = false;
-					});
-				}
-
-				return false;
-			});
-		}
-
-		function filterByNameSetup()
-		{
-			$('.filterButtonInput').click(function ()
-			{
-				if(!busy)
-				{
-					busy = true;
-					var _this = $(this);
-
-					paramKeywordVal = $('.searchInput').val();
-
-					$('.product-filter').addClass('loader');
-
-					filterAjax(function ()
-					{
-						$('.product-filter').removeClass('loader');
-						busy = false;
-					});
-				}
-
-				return false;
-			});
-		}
-
-
-		function filterAjax(callback)
-		{
-			callback = callback==null ? function(){} : callback;
-			var paramType = '&prop_ProductType=' + encodeURIComponent(paramTypeVal);
-			var paramIndustry = '&prop_Industries=' + encodeURIComponent(paramIndustryVal);
-			var paramKeyword = '&prop_KeyWords=' + encodeURIComponent(paramKeywordVal);
-			var _href = '?prop_ModuleId=' + paramModuleId + paramType + paramIndustry + paramKeyword;
-
-			$.ajax({
-				url: _href,
-				success: function (data) {
-					var content = $(".products-items", data).html();
-					$(".products-items").html(content);
-					callback();
-				}
-			});
-		}
-	}
-}
-
-function initListProductTypeDetailPageFiltering()
-{
-	var busy = false;
-	var paramIndustryVal = '';
-	var paramTypeVal = $('.filtrationProductTypeDetailHolder').data('type_name');
-	var paramKeywordVal = '';
-	var paramModuleId =  $('.filtrationProductTypeDetailHolder').data('module_id');
-	var condition = $('.filtrationProductTypeDetailHolder').length
-		// && false
-	;init(condition);
-
-	function init(condition)
-	{
-		if(condition || condition == null)
-		{
-			filterByProductIndustrySetup();
-			filterByNameSetup();
-		}
-
-		function filterByProductIndustrySetup()
-		{
-			$('.industryFilter .filterButton').click(function ()
-			{
-				if(!busy)
-				{
-					busy = true;
-					var _this = $(this);
-
-					paramIndustryVal = _this.data('filter_val');
-					_this.closest('.drop').find('.filterButton').removeClass('active');
-					_this.closest('.custom-select').find('.filterButtonBTN').text(_this.text());
-					_this.addClass('active');
-
-					$('.product-filter').addClass('loader');
-
-					filterAjax(function ()
-					{
-						$('.product-filter').removeClass('loader');
-						busy = false;
-					});
-				}
-
-				return false;
-			});
-		}
-
-		function filterByNameSetup()
-		{
-			$('.filterButtonInput').click(function ()
-			{
-				if(!busy)
-				{
-					busy = true;
-					var _this = $(this);
-
-					paramKeywordVal = $('.searchInput').val();
-
-					$('.product-filter').addClass('loader');
-
-					filterAjax(function ()
-					{
-						$('.product-filter').removeClass('loader');
-						busy = false;
-					});
-				}
-
-				return false;
-			});
-		}
-
-
-		function filterAjax(callback)
-		{
-			callback = callback==null ? function(){} : callback;
-			var paramType = '&prop_ProductType=' + encodeURIComponent(paramTypeVal);
-			var paramIndustry = '&prop_Industries=' + encodeURIComponent(paramIndustryVal);
-			var paramKeyword = '&prop_KeyWords=' + encodeURIComponent(paramKeywordVal);
-			var _href = '?prop_ModuleId=' + paramModuleId + paramType + paramIndustry + paramKeyword;
-
-			$.ajax({
-				url: _href,
-				success: function (data) {
-					var content = $(".products-items", data).html();
-					$(".products-items").html(content);
-					callback();
-				}
-			});
-		}
-	}
-}
-
-function initListRepresentativesFiltering()
-{
-	var busy = false;
-	var paramRegionVal = '';
-	var paramIndustryVal = '';
-	var paramModuleId =  $('.filtrationRepresentativesHolder').data('module_id');
-	var condition = $('.filtrationRepresentativesHolder').length
-		// && false
-	;init(condition);
-
-	function init(condition)
-	{
-		if(condition || condition == null)
-		{
-			filterByRegionSetup();
-			filterByIndustrySetup();
-		}
-
-		function filterByRegionSetup()
-		{
-			$('.regionFilter .filterButton').click(function ()
-			{
-				if(!busy)
-				{
-					busy = true;
-					var _this = $(this);
-
-					paramRegionVal = _this.data('filter_val');
-					_this.closest('.drop').find('.filterButton').removeClass('active');
-					_this.closest('.custom-select').find('.filterButtonBTN').text(_this.text());
-					_this.addClass('active');
-
-					$('.representatives-filter').addClass('loader');
-
-					filterAjax(function ()
-					{
-						$('.representatives-filter').removeClass('loader');
-						busy = false;
-					});
-				}
-
-				return false;
-			});
-		}
-
-		function filterByIndustrySetup()
-		{
-			$('.industryFilter .filterButton').click(function ()
-			{
-				if(!busy)
-				{
-					busy = true;
-					var _this = $(this);
-
-					paramIndustryVal = _this.data('filter_val');
-					_this.closest('.drop').find('.filterButton').removeClass('active');
-					_this.closest('.custom-select').find('.filterButtonBTN').text(_this.text());
-					_this.addClass('active');
-
-					$('.representatives-filter').addClass('loader');
-
-					filterAjax(function ()
-					{
-						$('.representatives-filter').removeClass('loader');
-						busy = false;
-					});
-				}
-
-				return false;
-			});
-		}
-
-
-		function filterAjax(callback)
-		{
-			callback = callback==null ? function(){} : callback;
-			var paramRegion = '&prop_Region=' + encodeURIComponent(paramRegionVal);
-			var paramIndustry = '&prop_Industries=' + encodeURIComponent(paramIndustryVal);
-			var _href = '?prop_ModuleId=' + paramModuleId + paramRegion + paramIndustry;
-
-			$.ajax({
-				url: _href,
-				success: function (data) {
-					var content = $(".representatives-items", data).html();
-					$(".representatives-items").html(content);
-					initAccordion();
-					callback();
-				}
-			});
-		}
-	}
-}
-*/
 function initSitebarClick() {
 	var condition = $('.sitebar').length
 		// && false
