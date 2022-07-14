@@ -14253,14 +14253,32 @@ body {
     outline: none;
     font-size: 15px;
     transition: 0.4s;
+    margin-bottom: 0;
+  }
+  .accordionf1 {
+    background-color: white;
+    color: #0e0e10;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: 2px solid #ebedf0;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    margin-bottom: 0;
   }
   
   .activef, .accordionf:hover {
     transition-duration: .3s;
     color: #00b2e4;
   }
+  .activef1, .accordionf1:hover {
+    transition-duration: .3s;
+    color: #00b2e4;
+  }
   
-  .accordionf:after {
+  .accordionf, .accordionf1:after {
     content: '\002B';
     color: #777;
     font-weight: bold;
@@ -14269,11 +14287,17 @@ body {
     
   }
   
-  .activef:after {
+  .activef, .activef1:after {
     content: "\2212";
   }
-  
   .panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+  .panelf1 {
     padding: 0 18px;
     background-color: white;
     max-height: 0;
