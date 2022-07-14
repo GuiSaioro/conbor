@@ -281,420 +281,101 @@
                                 <span class="close">&times;</span></h1>
                             </div>
 
-                            <div>
-                                <button class="accordionf">Fator de Serviço F1 <span id="fatortotal" style="font-size: 20px;"></span></button>
+                            <div> <!-- selecionando fatores-->
+                                <button class="accordionf">Fator de Serviço F1 = <input type="number" id="fs1" value="1.00" disabled>
+                                </button>
                                     <div class="panel">
                                         <table class="f1">
                                             <tr>
                                                 <td class="cabeca">APLICAÇÃO</td>
                                                 <td class="cabeca">FATOR DE SERVIÇO</td>
                                             </tr>
-                                            <tr class="onfs" onclick="escolherfs1()">
+                                            <tr class="onfs" onclick="getElementById('fs1').value = (2.00).toFixed(2)">
                                                 <td><strong>Aeradores</strong></td>
-                                                <td>2.00</td>
+                                                <td> 2.00</td>
                                             </tr>
                                             <tr>
-                                                <td colspan="2"><strong>Agitadores e Misturadores</strong>&nbsp;</td>
+                                                <td colspan="2"><strong>Agitadores e Misturadores</strong></td>
                                             </tr>
-                                            <tr>
+                                            <tr class="onfs" onclick="getElementById('fs1').value = 1.25">
                                                 <td>Betoneiras</td>
                                                 <td>1.25</td>
                                                 
                                             </tr>
-                                            <tr>
+                                            <tr class="onfs" onclick="getElementById('fs1').value = (1.00).toFixed(2)">
                                                 <td>Líquidos densidade constante</td>
                                                 <td>1.00</td>
                                             </tr>
-                                            <tr>
+                                            <tr class="onfs" onclick="getElementById('fs1').value = 1.25">
                                                 <td>Líquidos densidade variável</td>
                                                 <td>1.25</td>
                                             </tr>
-                                            <tr>
+                                            <tr class="onfs" onclick="getElementById('fs1').value = 1.75">
                                                 <td>Sólidos</td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="2"><strong>Alimentadores</strong>&nbsp;</td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;- Correias, discos ou roscas</td>
-                                                <td>1.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="2"><strong>Bombas&nbsp;</strong><strong>Centrifugas</strong>&nbsp;</td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;- Velocidade constante</td>
-                                                <td>1.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;- Varia&ccedil;&atilde;o freq&uuml;ente da velocidade sob carga</td>
-                                                <td>1.25</td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;- Desincrustadoras com acumulador</td>
-                                                <td>1.25</td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;- De engrenagens, rotativas ou palhetas</td>
-                                                <td>1.25</td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="2"><strong>Bombas Alternativas (rec&iacute;procas)</strong>&nbsp;</td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;- 1 cilindro simples ou dupla a&ccedil;&atilde;o</td>
-                                                <td>3.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;- 2 cilindros simples a&ccedil;&atilde;o</td>
-                                                <td>2.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;- 2 cilindros dupla a&ccedil;&atilde;o</td>
                                                 <td>1.75</td>
                                             </tr>
-                                            <tr>
-                                                <td>&nbsp;- 3 ou mais cilindros</td>
-                                                <td>1.50</td>
-                                            </tr>
-                                            <tr>
-                                                <td><strong>C</strong><strong>lassificadores ou clarificadores</strong></td>
-                                                <td>1.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="2"><strong>Compressores</strong>&nbsp;</td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;- Centr&iacute;fugos</td>
-                                                <td>1.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;- Rotativos, l&oacute;bulos ou palhetas</td>
-                                                <td>1.25</td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;- Rotativos, parafuso</td>
-                                                <td>1.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="2"><strong>Compressores Alternativos (rec&iacute;procos)</strong> *Com volante e engrenagem de redu&ccedil;&atilde;o&nbsp;entre o compressor e o motor</td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;- 1 cilindro simples a&ccedil;&atilde;o</td>
-                                                <td>4.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;- 1 cilindro dupla a&ccedil;&atilde;o</td>
-                                                <td>3.50</td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;- 2 cilindros simples a&ccedil;&atilde;o</td>
-                                                <td>3.50</td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;- 2 cilindros dupla a&ccedil;&atilde;o</td>
-                                                <td>3.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;- 3 cilindros simples a&ccedil;&atilde;o</td>
-                                                <td>3.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;- 3 cilindros dupla a&ccedil;&atilde;o</td>
-                                                <td>2.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;- 4 ou mais cilindros</td>
-                                                <td>1.75</td>
-                                            </tr>
-                                            <tr>
-                                                <td><strong>Dinam&ocirc;metros</strong></td>
-                                                <td>1.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="2"><strong>Eixo principal de acionamento</strong>&nbsp;</td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;- Aciona v&aacute;rios equipamentos</td>
-                                                <td>1.50</td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="2"><strong>Elevadores</strong>&nbsp;</td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;- Ca&ccedil;amba, descarga centrifuga</td>
-                                                <td>1.25</td>
-                                            </tr>
-                                            <tr>
-                                                <td><strong>Extrusoras de pl&aacute;stico</strong></td>
-                                                <td>1.50</td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="2"><strong>Geradores</strong>&nbsp;</td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;- Carga uniforme</td>
-                                                <td>1.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="2"><strong>Guindastes ou guinchos</strong>&nbsp;</td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;- Guincho principal</td>
-                                                <td>2.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;- Ca&ccedil;amba</td>
-                                                <td>1.75</td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;- Inclina&ccedil;&atilde;o de lan&ccedil;a</td>
-                                                <td>1.50</td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;- Deslocamento da ponte ou carro</td>
-                                                <td>1.75</td>
-                                            </tr>
-                                            <tr>
-                                                <td><strong>Lavadoras e batedoras</strong></td>
-                                                <td>2.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="2"><strong>Máquinas de conforma&ccedil;&atilde;o (metais)</strong></td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;- Carro da banca de trefila,&nbsp;acionamento principal, extrusoras,&nbsp;modeladoras e laminadoras</td>
-                                                <td>2.00</td>
-                                            </tr>
-                                        </table>
-                                        <table class="f1">
-                                            <tr>
-                                                <td>&nbsp;- Cortadoras</td>
-                                                <td>1.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;- Trefiladoras de arame e aplainadoras</td>
-                                                <td>1.75</td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;- Bobinadoras ou desbobinadoras</td>
-                                                <td>1.50</td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="2"><strong>M&aacute;quinas operatrizes</strong></td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;- Acionamento principal</td>
-                                                <td>1.50</td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;- Acionamento auxiliar</td>
-                                                <td>1.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;- Acionamento transversal</td>
-                                                <td>1.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="2"><strong>Misturadores</strong> (ver agitadores)</td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;- Concreto</td>
-                                                <td>1.75</td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;- Muller</td>
-                                                <td>1.50</td>
-                                            </tr>
-                                            <tr>
-                                                <td><strong>Moinhos de argamassa</strong></td>
-                                                <td>1.75</td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="2"><strong>Moinhos</strong></td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;- Martelos</td>
-                                                <td>1.75</td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;- Rolos</td>
-                                                <td>1.50</td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="2"><strong>Peneiras</strong></td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;- Lavagem &agrave; ar ou &aacute;gua</td>
-                                                <td>1.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td><strong>Puxadores de vag&atilde;o</strong></td>
-                                                <td>1.50</td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="2"><strong>Secadores</strong></td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;- Centr&iacute;fugos</td>
-                                                <td>1.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;- L&oacute;bulos ou palhetas</td>
-                                                <td>1.25</td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;- Tambores rotativos</td>
-                                                <td>1.75</td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="2"><strong>Transportadores</strong></td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;- Lamelas, correias, rosca, corrente, abas.</td>
-                                                <td>1.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="2"><strong>Ventiladores</strong></td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;- Centr&iacute;fugos</td>
-                                                <td>1.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;- Torres de resfriamento</td>
-                                                <td>2.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;- Ventila&ccedil;&atilde;o for&ccedil;ada (inicio de linha)</td>
-                                                <td>1.50</td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;- Ventila&ccedil;&atilde;o for&ccedil;ada acionada por motor hidr&aacute;ulico</td>
-                                                <td>1.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;- Recircula&ccedil;&atilde;o de gases</td>
-                                                <td>1.50</td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;- Tiragem induzida com controle de vaz&atilde;o&nbsp;&nbsp;ou limpador de l&acirc;minas</td>
-                                                <td>1.25</td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;- Tiragem induzida sem controle</td>
-                                                <td>2.00</td>
-                                            </tr>
+                                            
                                            </table>
-                                           
-                                    <!--     <div class="fatores">
-                                            <div class="quadro">
-                                            <p>Insira o Fator de serviço F1 <br>(tipo de equipamento)</p>
-                                            <select id="fs1">
-                                                <option value="1">1.00</option>
-                                                <option value="1.25">1.25</option>
-                                                <option value="1.5">1.50</option>
-                                                <option value="1.75">1.75</option>
-                                                <option value="2">2.00</option>
-                                                <option value="3.5">3.50</option>
-                                                <option value="4">4.00</option>
-                                            </select>
-                                            </div>
-                                            <div class="quadro">
-                                            <p>Insira o Fator de serviço F2 (Temperatura)</p>
-                                            <select id="fs2">
-                                                <option value="1">1.00</option>
-                                                <option value="1.2">1.20</option>
-                                            </select>              
-                                            </div>
-                                            <div class="quadro">
-                                            <p>Insira o Fator de serviço F3 (Frequência de partida)</p>
-                                            <select id="fs3">
-                                                <option value="1">1.00</option>
-                                                <option value="1.2">1.20</option>
-                                                <option value="1.3">1.30</option>
-                                            </select>
-                                
-                                            </div>
-                                            <div class="quadro">
-                                            <p>Insira o Fator de serviço F4 (Choques ou reversões)</p>
-                                            <select id="fs4">
-                                                <option value="1">1.00</option>
-                                                <option value="1.12">1.12</option>
-                                                <option value="1.20">1.20</option>
-                                            </select>
-                                            </div>
-                                    </div> -->
                                 </div>
-                                <button class="accordionf">Fator de Serviço F2 <span id="fatortotal" style="font-size: 20px;"></span></button>
+                                <button class="accordionf">Fator de Serviço F2 = <input type="number" id="fs2" value="1.00" disabled></button>
                                     <div class="panel">
                                         <table>
                                             <tr>
-                                                <td class="cabeca">AEC</td>
-                                                <td class="cabeca">St</td>
-                                                <td class="cabeca">FI</td>
-                                                <td class="cabeca">FG</td>
+                                                <td class="cabeca">TEMPERATURA AMBIENTE</td>
+                                                <td class="cabeca">FATOR DE SERVIÇO</td>
                                             </tr>
-                                            <tr>
-                                                <td>360</td>
-                                                <td>360</td>
-                                                <td>360</td>
-                                                <td>360</td>
+                                            <tr class="onfs" onclick="getElementById('fs2').value = (1).toFixed(2)">
+                                                <td><strong>Até 75°C</strong></td>
+                                                <td> 1.00</td>
                                             </tr>
-                                            <tr>
-                                                <td>360</td>
-                                                <td>360</td>
-                                                <td>360</td>
-                                                <td>360</td>
+                                            <tr class="onfs" onclick="getElementById('fs2').value = (1.2).toFixed(2)">
+                                                <td><strong>Acima de 75°C</strong></td>
+                                                <td> 1.20</td>
                                             </tr>
-                                       </table>
+                                        </table>
                                     </div>
-                            <button class="accordionf">Fator de Serviço F3 <span id="fatortotal" style="font-size: 20px;"></span></button>
+                            <button class="accordionf">Fator de Serviço F3 = <input type="number" id="fs3" value="1.00" disabled></button>
                             <div class="panel">
-                               <table>
+                                <table>
                                     <tr>
-                                        <td class="cabeca">AEC</td>
-                                        <td class="cabeca">St</td>
-                                        <td class="cabeca">FI</td>
-                                        <td class="cabeca">FG</td>
+                                        <td class="cabeca">PARTIDA/HORAS</td>
+                                        <td class="cabeca">FATOR DE SERVIÇO</td>
                                     </tr>
+                                    <tr class="onfs" onclick="getElementById('fs3').value = (1).toFixed(2)">
+                                        <td><strong>Até 3</strong></td>
+                                        <td> 1.00</td>
+                                    </tr>
+                                    <tr class="onfs" onclick="getElementById('fs3').value = (1.2).toFixed(2)">
+                                        <td><strong>De 3 a 20</strong></td>
+                                        <td> 1.20</td>
+                                    </tr>
+                                    <tr class="onfs" onclick="getElementById('fs3').value = (1.3).toFixed(2)">
+                                        <td><strong>De 20 a 40</strong></td>
+                                        <td> 1.30</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <button class="accordionf">Fator de Serviço F4  = <input type="number" id="fs4" value="1.00" disabled></button>
+                            <div class="panel">
+                                <table>
                                     <tr>
-                                        <td>360</td>
-                                        <td>360</td>
-                                        <td>360</td>
-                                        <td>360</td>
+                                        <td class="cabeca">FUNCIONAMENTO</td>
+                                        <td class="cabeca">FATOR DE SERVIÇO</td>
                                     </tr>
-                                    <tr>
-                                        <td>360</td>
-                                        <td>360</td>
-                                        <td>360</td>
-                                        <td>360</td>
+                                    <tr class="onfs" onclick="getElementById('fs3').value = (1).toFixed(2)">
+                                        <td><strong>Sem choques</strong></td>
+                                        <td> 1.00</td>
                                     </tr>
-                               </table>
-                    </div>
-                    <button class="accordionf">Fator de Serviço F4 <span id="fatortotal" style="font-size: 20px;"></span></button>
-                    <div class="panel">
-                       <table>
-                            <tr>
-                                <td class="cabeca">AEC</td>
-                                <td class="cabeca">St</td>
-                                <td class="cabeca">FI</td>
-                                <td class="cabeca">FG</td>
-                            </tr>
-                            <tr>
-                                <td>360</td>
-                                <td>360</td>
-                                <td>360</td>
-                                <td>360</td>
-                            </tr>
-                            <tr>
-                                <td>360</td>
-                                <td>360</td>
-                                <td>360</td>
-                                <td>360</td>
-                            </tr>
-                       </table>
-            </div>
+                                    <tr class="onfs" onclick="getElementById('fs3').value = (1.2).toFixed(2)">
+                                        <td><strong>Com choques</strong></td>
+                                        <td> 1.12</td>
+                                    </tr>
+                                    <tr class="onfs" onclick="getElementById('fs3').value = (1.3).toFixed(2)">
+                                        <td><strong>Com reversões</strong></td>
+                                        <td> 1.20</td>
+                                    </tr>
+                                </table>
+                            </div>
                             </div>
                             
 
@@ -714,20 +395,21 @@
                                     <p><input type="number" id="potencia"></p>
                                     <p><label>Velocidade</label></p> 
                                     <p><input type="number" id="rpm"> rpm</p>
-                                    <!--<p><label>Ø do furo de eixo MAX</label>
-                                    <p><input type="number" id="eixo"> mm </p>-->
                                     <p><label>Torque</label>
                                     <p><input type="number" id="torque" disabled> Nm </p>
+                                    <p><label>Fator de Segurança total</label></p>
+                                    <p><input type="number" id="fstotal" disabled></p>
+
+                                    
                                     <p><button class="btn" id="fatorservico" onclick="calculo()">Calcular</button></p>
                                     </div>
-                                    <div class="resposta" id="res"></div>
-                                    <div class="resposta" id="res1"></div>
+
                                 </div>
                                 <div class="img-inputs">
-                                    
-                                    
+                                       
                                     <div class = "dirres">
-                                        
+                                        <div class="resposta" id="res"></div>
+                                        <div class="resposta" id="res1"></div>
                                         <ul>
                                             <li id="AEC" style="list-style: none;">
                                                 <table id="minhaTabela" width="200" cellspacing="0" cellpadding="0">
