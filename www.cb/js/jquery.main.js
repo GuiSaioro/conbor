@@ -247,7 +247,6 @@ function calculo(){
 
     if (p != 0 && n != 0){     
       var t = (u * p * fs)/n // Calculo a ser feito
-	  fatortotal.innerHTML = `<strong>FS = ${fs.toFixed(2)}</strong>`
 	
       if (t > 0 && t < 4){
         var aec = 'AEC086';
@@ -318,6 +317,7 @@ if ((aec === 'AEC086'|| aec === 'AEC104' || aec === 'AEC136') && n > 4500 ){
 	
       
       torque.value = `${converter.toFixed(2)}`
+	  fstotal.value = `${fs.toFixed(2)}`
 	  res.innerHTML = `O Acoplamento ideal é <strong>${aec}</strong>.`
 	  res1.innerHTML = `${vel}`
 
