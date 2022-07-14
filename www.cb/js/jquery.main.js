@@ -206,7 +206,10 @@ function initacordeom() {
 	}
 }
 	
-
+function escolherfs1(){
+	
+	alert = ('aaaa')
+}
 function calculo(){	
 
     var x = document.getElementsByName('und')
