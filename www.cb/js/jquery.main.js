@@ -17,7 +17,7 @@ jQuery(function () {
 	initAnchors();
 	initCookies();
 	modal();
-	initacordeom()
+	initacordeom();
 	
 });
 
@@ -167,28 +167,8 @@ function modal(){
 	  }
 	}
 	}
-	function modalf(){
-		var modalf = document.getElementById("myModalf");
-		var btnf = document.getElementById("btnModalf");
-		var spanf = document.getElementsByClassName("close")[0];
-		btnf.onclick = function() {
-			modalf.style.display = "block"
-			
-		}
-		
-		span.onclick = function() {
-			modal.style.display = "none";
-			
-		}
-		
-		window.onclick = function(event) {
-		  if (event.target == modal) {
-		   modal.style.display = "none";
-		   
-		  }
-		}
-		}
 /*-----------------------------------------Calculo dimensionamento AEC----------------------------------------------------*/
+
 function initacordeom() {
 	var acc = document.getElementsByClassName("accordionf");
 	var i;
@@ -203,13 +183,9 @@ function initacordeom() {
 		panel.style.maxHeight = panel.scrollHeight + "px";
 		} 
 	});
-	}
 }
-	
-function escolherfs1(){
-	
-	alert = ('aaaa')
 }
+
 function calculo(){	
 
     var x = document.getElementsByName('und')
