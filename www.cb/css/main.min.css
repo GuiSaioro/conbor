@@ -14235,7 +14235,7 @@ body {
 }
 
 #res {
-    text-align: left;
+    text-align: center;
     margin: 25px 0;
     font-size: 25px;
     font-style: italic;
@@ -14254,10 +14254,6 @@ body {
     justify-content: space-around;
 }
 
-.dirres {
-    display: flex;
-}
-
 .cabeca,
 .nometabela {
     border: 2px solid blue;
@@ -14265,6 +14261,9 @@ body {
     text-align: center;
     background-color: #427eee;
     color: white;
+}
+.cabecaf {
+    width: 70px;
 }
 
 #minhaTabela {
@@ -14350,9 +14349,8 @@ td {
 }
 
 .f1 {
-    margin: 10px 10px 10px 0px;
-    max-width: 50%;
     font-size: 12px;
+    margin-left: 10px;
 }
 
 .accordionf span {
@@ -14367,8 +14365,13 @@ td {
     background-color: #0d9ee3;
     color: white;
 }
-
-@media (max-width:767px) {
+.tdvazio {
+    height:29px;
+}
+.inputfs{
+    max-width: 52px;;
+}
+@media (max-width:768px) {
 
     .fatores,
     .dividido,
@@ -14392,6 +14395,18 @@ td {
 
     .f1 {
         max-width: none;
+        margin: auto;
+    }
+    .modal-content{
+        width: 95%;
+    }
+}
+@media (max-width:803px) {
+    .panel {
+        display: block;
+    }
+    .f1 {
+        margin: auto;
     }
 }
 

@@ -318,7 +318,7 @@ if ((aec === 'AEC086'|| aec === 'AEC104' || aec === 'AEC136') && n > 4500 ){
       
       torque.value = `${converter.toFixed(2)}`
 	  fstotal.value = `${fs.toFixed(2)}`
-	  res.innerHTML = `O Acoplamento ideal é <strong>${aec}</strong>.`
+	  res.innerHTML = `O Acoplamento ideal é <strong style = color:blue;>${aec}</strong>.`
 	  res1.innerHTML = `${vel}`
 
 	  document.getElementById('minhaTabela').style.display = "block"
