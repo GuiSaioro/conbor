@@ -282,9 +282,9 @@
                             </div>
 
                             <div> <!-- selecionando fatores-->
-                                <button class="accordionf">Fator de Serviço F1 = <input class="inputfs" type="number" id="fs1" value="1.00" disabled>
+                                <button id="accor1" class="accordionf">Fator de Serviço F1 = <input class="inputfs" type="number" id="fs1" value="1.00" disabled>
                                 </button>
-                                    <div class="panel">
+                                    <div class="panel" id="pa1">
                                         <div>
                                             <table class="f1">
                                             
@@ -292,26 +292,26 @@
                                                     <td class="cabeca">APLICAÇÃO</td>
                                                     <td class="cabeca cabecaf">FATOR DE SERVIÇO</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (2).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = (2).toFixed(2)">
                                                     <td><strong>Aeradores</strong></td>
                                                     <td> 2.00</td>
                                                 </tr>
                                                 <tr>
                                                     <td colspan="2"><strong>Agitadores e Misturadores</strong></td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = 1.25">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = 1.25">
                                                     <td>Betoneiras</td>
                                                     <td>1.25</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (1).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = (1).toFixed(2)">
                                                     <td>Líquidos densidade constante</td>
                                                     <td>1.00</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = 1.25">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = 1.25">
                                                     <td>Líquidos densidade variável</td>
                                                     <td>1.25</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = 1.75">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = 1.75">
                                                     <td>Sólidos</td>
                                                     <td>1.75</td>
                                                 </tr>
@@ -321,15 +321,15 @@
                                                 <tr>
                                                     <td colspan="2"><strong>Alimentadores</strong></td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (1).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = (1).toFixed(2)">
                                                     <td>Alternativos</td>
                                                     <td>1.00</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = 1.25">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = 1.25">
                                                     <td>Correias</td>
                                                     <td>1.25</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (1).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = (1).toFixed(2)">
                                                     <td>Discos, parafusos e roscas</td>
                                                     <td>1.00</td>
                                                 </tr>
@@ -337,7 +337,7 @@
                                                 <tr>
                                                     <td colspan="2"><strong>Bombas</strong></td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (1).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = (1).toFixed(2)">
                                                     <td>Centrifugas</td>
                                                     <td>1.00</td>
                                                 </tr>
@@ -345,11 +345,11 @@
                                                     <td>Alternativas</td>
                                                     <td></td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (2).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = (2).toFixed(2)">
                                                     <td>1 e 2 cilindros</td>
                                                     <td>2.00</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = 1.75">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = 1.75">
                                                     <td>3 ou mis cilindros</td>
                                                     <td>1.75</td>
                                                 </tr>
@@ -357,52 +357,52 @@
                                                     <td>De êmbolo com volante</td>
                                                     <td>2.00</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (2.4).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = (2.4).toFixed(2)">
                                                     <td>De êmbolo sem volante</td>
                                                     <td>2.40</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = 1.75">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = 1.75">
                                                     <td>De parafusos</td>
                                                     <td>1.75</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (2).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = (2).toFixed(2)">
                                                     <td>De poços profundos</td>
                                                     <td>2.00</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = 1.25">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = 1.25">
                                                     <td>Desencrustadores com acumulador</td>
                                                     <td>1.25</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = 1.25">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = 1.25">
                                                     <td>Dosadoras</td>
                                                     <td>1.25</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = 1.25">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = 1.25">
                                                     <td>Rotativas - Engrenagens, palhetas etc</td>
                                                     <td>1.25</td>
                                                 </tr>
                                                 <tr><td colspan="2" class="tdvazio"></td></tr>
                                                  <tr><td colspan="2"><strong>Britadores</strong></td></tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (2.5).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = (2.5).toFixed(2)">
                                                     <td>Pedras e minérios</td>
                                                     <td>2.50</td>
                                                 </tr>
                                                 <tr><td colspan="2" class="tdvazio"></td></tr>
                                                 <tr><td colspan="2"><strong>Bobinadeiras</strong></td></tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (1.5).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = (1.5).toFixed(2)">
                                                     <td>De metais (á frio)</td>
                                                     <td>1.50</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (2).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom();etElementById('fs1').value = (2).toFixed(2)">
                                                     <td>De metais (á quente)</td>
                                                     <td>2.00</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (1.5).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = (1.5).toFixed(2)">
                                                     <td>De papéis e têxteis</td>
                                                     <td>1.50</td>
                                                 </tr>
                                                 <tr><td colspan="2" class="tdvazio"></td></tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (2).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = (2).toFixed(2)">
                                                     <td><strong>Calandras e Supercalandras</strong></td>
                                                     <td>2.00</td>
                                                 </tr>
@@ -412,31 +412,31 @@
                                                     <td>Alternativos com volantes</td>
                                                     <td></td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (4).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = (4).toFixed(2)">
                                                     <td>Simples efeitos 1 cilindro</td>
                                                     <td>4.00</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (3.5).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = (3.5).toFixed(2)">
                                                     <td>Duplo efeito 1 cilindro</td>
                                                     <td>3.50</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (3.5).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = (3.5).toFixed(2)">
                                                     <td>Simples efeito 2 cilindros</td>
                                                     <td>3.50</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (3).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = (3).toFixed(2)">
                                                     <td>Duplo efeito 2 cilindros</td>
                                                     <td>3.00</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (3).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = (3).toFixed(2)">
                                                     <td>Simples efeito 3 cilindros</td>
                                                     <td>3.00</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (2).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = (2).toFixed(2)">
                                                     <td>Duplo efeito 3 cilindros</td>
                                                     <td>2.00</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = 1.25">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = 1.25">
                                                     <td>Centrífugos</td>
                                                     <td>1.25</td>
                                                 </tr>
@@ -444,21 +444,21 @@
                                                     <td>Rotativos</td>
                                                     <td></td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = 1.25">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = 1.25">
                                                     <td>Lóbulos ou palhetas</td>
                                                     <td>1.25</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = 1.25">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = 1.25">
                                                     <td>Parafusos</td>
                                                     <td>1.25</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = 1.25">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = 1.25">
                                                     <td>Classificadores, Clarificadores</td>
                                                     <td>1.25</td>
                                                 </tr>
                                                 <tr><td colspan="2" class="tdvazio"></td></tr>
                                                 <tr><td colspan="2"><strong>Certadoras</strong></td></tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (1).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = (1).toFixed(2)">
                                                     <td>De metais</td>
                                                     <td>1.00</td>
                                                 </tr>
@@ -466,11 +466,11 @@
                                                     <td>De papéis</td>
                                                     <td>2.00</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = 1.25">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = 1.25">
                                                     <td>Cozinhadores de Cereais</td>
                                                     <td>1.25</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (1).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = (1).toFixed(2)">
                                                     <td>Decantadores</td>
                                                     <td>1.00</td>
                                                 </tr>
@@ -483,46 +483,46 @@
                                             <table class="f1">
                                                 <tr>
                                                     <td class="cabeca">APLICAÇÃO</td>
-                                                    <td class="cabeca  cabecaf"">FATOR DE SERVIÇO</td>
+                                                    <td class="cabeca  cabecaf">FATOR DE SERVIÇO</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (1.5).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = (1.5).toFixed(2)">
                                                     <td><strong>Desbobinadeiras</strong></td>
                                                     <td>1.50</td>
                                                 </tr>
                                                 
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (2).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = (2).toFixed(2)">
                                                     <td><strong>Descascador e Desfolhadeiras</strong></td>
                                                     <td>2.00</td>
                                                 </tr>
                                                 
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (2).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = (2).toFixed(2)">
                                                     <td><strong>Desfibradores</strong></td>
                                                     <td>2.00</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (2).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = (2).toFixed(2)">
                                                     <td><strong>Desempenadores</strong></td>
                                                     <td>2.00</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = 1.25">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = 1.25">
                                                     <td><strong>Dosadores</strong></td>
                                                     <td>1.25</td>
                                                 </tr>
                                                 <tr><td colspan="2" class="tdvazio"></td></tr>
                                                 <td colspan="2"><strong>Dragas</strong></td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (2).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = (2).toFixed(2)">
                                                     <td>Acionamentos do desagregador</td>
                                                     <td>2.00</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (1.5).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = (1.5).toFixed(2)">
                                                     <td>Bomba (carga uniforme)</td>
                                                     <td>1.50</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = 1.75">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = 1.75">
                                                     <td>Enroladoras de cabos</td>
                                                     <td>1.75</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (2).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = (2).toFixed(2)">
                                                     <td>Osciladores</td>
                                                     <td>2.00</td>
                                                 </tr>
@@ -533,116 +533,116 @@
                                                     <td>Acionador principal de vários</td>
                                                     <td></td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (1.5).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = (1.5).toFixed(2)">
                                                     <td>equipamentos</td>
                                                     <td>1.50</td>
                                                 </tr>
                                                 <tr><td colspan="2" class="tdvazio"></td></tr>
                                                 <td colspan="2"><strong>Elevadores</strong></td>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = 1.25">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = 1.25">
                                                     <td>De caçambas (descarga centrifuga)</td>
                                                     <td>1.25</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (1.5).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = (1.5).toFixed(2)">
                                                     <td>Decanecas</td>
                                                     <td>1.50</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (1.5).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = (1.5).toFixed(2)">
                                                     <td>De carga</td>
                                                     <td>1.50</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (2).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = (2).toFixed(2)">
                                                     <td>De passageiros</td>
                                                     <td>2.00</td>
                                                 </tr>
                                                 <tr><td colspan="2" class="tdvazio"></td></tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (1.5).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = (1.5).toFixed(2)">
                                                     <td><strong>Enroladores</strong></td>
                                                     <td>1.50</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = 1.75">
+                                                <tr class="onfs" onclick="cliqueacordeom();getElementById('fs1').value = 1.75">
                                                     <td>Escadas, Rolantes</td>
                                                     <td>1.75</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (1.5).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = (1.5).toFixed(2)">
                                                     <td>Esticadores</td>
                                                     <td>1.50</td>
                                                 </tr>
                                                 <tr><td colspan="2" class="tdvazio"></td></tr>
                                                 <td colspan="2"><strong>Extrusoras</strong></td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = 1.75">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = 1.75">
                                                     <td>De borrachas</td>
                                                     <td>1.75</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (2).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = (2).toFixed(2)">
                                                     <td>De metais</td>
                                                     <td>2.00</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (1.5).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = (1.5).toFixed(2)">
                                                     <td>De plásticos</td>
                                                     <td>1.50</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (1.5).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = (1.5).toFixed(2)">
                                                     <td>Filtros Rotativos</td>
                                                     <td>1.50</td>
                                                 </tr>
                                                 <tr><td colspan="2" class="tdvazio"></td></tr>
                                                 <td colspan="2"><strong>Fornos</strong></td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (1.5).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = (1.5).toFixed(2)">
                                                     <td>Contínuos</td>
                                                     <td>1.50</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (1.5).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = (1.5).toFixed(2)">
                                                     <td>De metais</td>
                                                     <td>2.00</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = 1.75">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = 1.75">
                                                     <td>Rotativos</td>
                                                     <td>1.75</td>
                                                 </tr>
                                                 <tr><td colspan="2" class="tdvazio"></td></tr>
                                                 <td colspan="2"><strong>Geradores</strong></td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (1).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = (1).toFixed(2)">
                                                     <td>Carga uniforme</td>
                                                     <td>1.00</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = 2.25">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = 2.25">
                                                     <td>Para solda</td>
                                                     <td>2.25</td>
                                                 </tr>
                                                 <tr><td colspan="2" class="tdvazio"></td></tr>
                                                 <td colspan="2"><strong>Guindastes</strong></td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = 1.75">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = 1.75">
                                                     <td>Caçamba</td>
                                                     <td>1.75</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = 1.75">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = 1.75">
                                                     <td>Deslocamento do carro ou ponte</td>
                                                     <td>1.75</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (2).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = (2).toFixed(2)">
                                                     <td>Guincho</td>
                                                     <td>2.00</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (1.5).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = (1.5).toFixed(2)">
                                                     <td>Inclinação da lança</td>
                                                     <td>1.50</td>
                                                 </tr>
                                                 <tr><td colspan="2" class="tdvazio"></td></tr>
                                                     <td colspan="2"><strong>Laminadoras</strong></td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (2).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = (2).toFixed(2)">
                                                     <td>Lavadoras</td>
                                                     <td>2.00</td>
                                                 </tr>
                                                 <tr><td colspan="2" class="tdvazio"></td></tr>
                                                     <td colspan="2"><strong>Máquinas operatrizes</strong></td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (1).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = (1).toFixed(2)">
                                                     <td>Acionamento auxiliar</td>
                                                     <td>1.00</td>
                                                 </tr>
@@ -650,7 +650,7 @@
                                                     <td>Acionamento principal</td>
                                                     <td>1.50</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (1).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = (1).toFixed(2)">
                                                     <td>Acionamento transversal</td>
                                                     <td>1.00</td>
                                                 </tr>
@@ -666,15 +666,15 @@
                                                 </tr>
                                                 <td colspan="2"><strong>Mesas de transferência</strong></td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (3).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = (3).toFixed(2)">
                                                     <td>Com reversão</td>
                                                     <td>3.00</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (1.5).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = (1.5).toFixed(2)">
                                                     <td>Sem reversão</td>
                                                     <td>1.50</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (2).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = (2).toFixed(2)">
                                                     <td><strong>Modeladora</strong></td>
                                                     <td>2.00</td>
                                                 </tr>
@@ -683,15 +683,15 @@
                                                     <td colspan="2"><strong>Moedas</strong></td>
                                                 </tr>
                                             
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (2).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = (2).toFixed(2)">
                                                     <td>Máq. acionadora- motor elétrico</td>
                                                     <td>2.00</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (1.5).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = (1.5).toFixed(2)">
                                                     <td>Máq. Acionadora- Turbina</td>
                                                     <td>1.50</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = 1.75">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = 1.75">
                                                     <td>Esteira alimentadora</td>
                                                     <td>1.75</td>
                                                 </tr>
@@ -702,15 +702,15 @@
                                                     <td>Aquecedores</td>
                                                     <td></td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (2).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = (2).toFixed(2)">
                                                     <td>1 ou 2 linha</td>
                                                     <td>2.00</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = 1.75">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = 1.75">
                                                     <td>3 ou mais em linhas</td>
                                                     <td>1.75</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (2).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = (2).toFixed(2)">
                                                     <td>De martelos</td>
                                                     <td>2.00</td>
                                                 </tr>
@@ -718,11 +718,11 @@
                                                     <td>De rolos e bolas</td>
                                                     <td></td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = 2.25">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = 2.25">
                                                     <td>Engrenagens de dentes retos</td>
                                                     <td>2.25</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (2).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = (2).toFixed(2)">
                                                     <td>Engrenagens helicoidais</td>
                                                     <td>2.00</td>
                                                 </tr>
@@ -730,45 +730,45 @@
                                                     <td>Misturadores ou refinadores</td>
                                                     <td></td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (2.5).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = (2.5).toFixed(2)">
                                                     <td>1 ou 2 em linha</td>
                                                     <td>2.50</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (2).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = (2).toFixed(2)">
                                                     <td>3 ou 4 linha</td>
                                                     <td>2.00</td>
                                                 </tr>
                                                 <tr><td colspan="2" class="tdvazio"></td></tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = 1.75">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = 1.75">
                                                     <td><strong>Misturador Tambor Rotativo</strong></td>
                                                     <td>1.75</td>
                                                 </tr>
                                                 <tr><td colspan="2" class="tdvazio"></td></tr>
                                                 <tr><td colspan="2"><strong>Peneiras</strong></td></tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (1).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = (1).toFixed(2)">
                                                     <td>Lavagem a ar ou água</td>
                                                     <td>1.00</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (2).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = (2).toFixed(2)">
                                                     <td><strong>Pontes rolantes</strong></td>
                                                     <td>2.00</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = 1.75">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = 1.75">
                                                     <td><strong>Prensas</strong></td>
                                                     <td>1.75</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (1.5).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = (1.5).toFixed(2)">
                                                     <td><strong>Puxadores de vagões</strong></td>
                                                     <td>1.50</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = 1.25">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = 1.25">
                                                     <td><strong>Resfriadores</strong></td>
                                                     <td>1.25</td>
                                                 </tr>
                                                 <tr><td colspan="2" class="tdvazio"></td></tr>
                                                 <td colspan="2"><strong>Secadores</strong></td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (1).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = (1).toFixed(2)">
                                                     <td>Centrífugos</td>
                                                     <td>1.00</td>
                                                 </tr>
@@ -776,52 +776,52 @@
                                                     <td>Rotativos</td>
                                                     <td></td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = 1.25">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = 1.25">
                                                     <td>Lóbulos ou palhetas</td>
                                                     <td>1.25</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = 1.75">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = 1.75">
                                                     <td>De minérios e papéis</td>
                                                     <td>1.75</td>
                                                 </tr>
                                                 <tr><td colspan="2" class="tdvazio"></td></tr>
                                                 <td colspan="2"><strong>Tambores</strong></td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = 1.75">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = 1.75">
                                                     <td>Rotativos</td>
                                                     <td>1.75</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (1.5).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = (1.5).toFixed(2)">
                                                     <td>De secagem</td>
                                                     <td>1.50</td>
                                                 </tr>
                                                 <tr><td colspan="2" class="tdvazio"></td></tr>
                                                 <td colspan="2"><strong>Transportadores</strong></td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (1).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = (1).toFixed(2)">
                                                     <td>Serviço leve</td>
                                                     <td>1.00</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (2).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = (2).toFixed(2)">
                                                     <td>Serviço pesado</td>
                                                     <td>2.00</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (2).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = (2).toFixed(2)">
                                                     <td><strong>Trefiladoras</strong></td>
                                                     <td>2.00</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = 1.75">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = 1.75">
                                                     <td><strong>Trituradores</strong></td>
                                                     <td>1.75</td>
                                                 </tr>
                                                 <tr><td colspan="2" class="tdvazio"></td></tr>
                                                 <td colspan="2"><strong>Ventiladores</strong></td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (1).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = (1).toFixed(2)">
                                                     <td>Centrífugos</td>
                                                     <td>1.00</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (1.5).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = (1.5).toFixed(2)">
                                                     <td>Tiragem forçada</td>
                                                     <td>1.50</td>
                                                 </tr>
@@ -829,15 +829,15 @@
                                                     <td>Tiragem induzida</td>
                                                     <td></td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = 1.25">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = 1.25">
                                                     <td>Com controle de vazão</td>
                                                     <td>1.25</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (2).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = (2).toFixed(2)">
                                                     <td>Sem controle de vazão</td>
                                                     <td>2.00</td>
                                                 </tr>
-                                                <tr class="onfs" onclick="getElementById('fs1').value = (2).toFixed(2)">
+                                                <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs1').value = (2).toFixed(2)">
                                                     <td>Torres de resfriamento</td>
                                                     <td>2.00</td>
                                                 </tr>
@@ -845,60 +845,60 @@
                                            </table>
                                            </div>
                                 </div>
-                                <button class="accordionf">Fator de Serviço F2 = <input type="number" class="inputfs" id="fs2" value="1.00" disabled></button>
-                                    <div class="panel">
+                                <button id="accor2" class="accordionf">Fator de Serviço F2 = <input type="number" class="inputfs" id="fs2" value="1.00" disabled></button>
+                                    <div class="panel" id="pa2">
                                         <table>
                                             <tr>
                                                 <td class="cabeca">TEMPERATURA AMBIENTE</td>
                                                 <td class="cabeca">FATOR DE SERVIÇO</td>
                                             </tr>
-                                            <tr class="onfs" onclick="getElementById('fs2').value = (1).toFixed(2)">
+                                            <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs2').value = (1).toFixed(2)">
                                                 <td><strong>Até 75°C</strong></td>
                                                 <td> 1.00</td>
                                             </tr>
-                                            <tr class="onfs" onclick="getElementById('fs2').value = (1.2).toFixed(2)">
+                                            <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs2').value = (1.2).toFixed(2)">
                                                 <td><strong>Acima de 75°C</strong></td>
                                                 <td> 1.20</td>
                                             </tr>
                                         </table>
                                     </div>
-                            <button class="accordionf">Fator de Serviço F3 = <input type="number" class="inputfs" id="fs3" value="1.00" disabled></button>
-                            <div class="panel">
+                            <button id="accor3" class="accordionf">Fator de Serviço F3 = <input type="number" class="inputfs" id="fs3" value="1.00" disabled></button>
+                            <div class="panel" id="pa3">
                                 <table>
                                     <tr>
                                         <td class="cabeca">PARTIDA/HORAS</td>
                                         <td class="cabeca">FATOR DE SERVIÇO</td>
                                     </tr>
-                                    <tr class="onfs" onclick="getElementById('fs3').value = (1).toFixed(2)">
+                                    <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs3').value = (1).toFixed(2)">
                                         <td><strong>Até 3</strong></td>
                                         <td> 1.00</td>
                                     </tr>
-                                    <tr class="onfs" onclick="getElementById('fs3').value = (1.2).toFixed(2)">
+                                    <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs3').value = (1.2).toFixed(2)">
                                         <td><strong>De 3 a 20</strong></td>
                                         <td> 1.20</td>
                                     </tr>
-                                    <tr class="onfs" onclick="getElementById('fs3').value = (1.3).toFixed(2)">
+                                    <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs3').value = (1.3).toFixed(2)">
                                         <td><strong>De 20 a 40</strong></td>
                                         <td> 1.30</td>
                                     </tr>
                                 </table>
                             </div>
-                            <button class="accordionf">Fator de Serviço F4  = <input type="number" class="inputfs" id="fs4" value="1.00" disabled></button>
-                            <div class="panel">
+                            <button id="accor4" class="accordionf">Fator de Serviço F4  = <input type="number" class="inputfs" id="fs4" value="1.00" disabled></button>
+                            <div class="panel" id="pa4">
                                 <table>
                                     <tr>
                                         <td class="cabeca">FUNCIONAMENTO</td>
                                         <td class="cabeca">FATOR DE SERVIÇO</td>
                                     </tr>
-                                    <tr class="onfs" onclick="getElementById('fs4').value = (1).toFixed(2)">
+                                    <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs4').value = (1).toFixed(2)">
                                         <td><strong>Sem choques</strong></td>
                                         <td> 1.00</td>
                                     </tr>
-                                    <tr class="onfs" onclick="getElementById('fs4').value = 1.12">
+                                    <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs4').value = 1.12">
                                         <td><strong>Com choques</strong></td>
                                         <td> 1.12</td>
                                     </tr>
-                                    <tr class="onfs" onclick="getElementById('fs4').value = (1.2).toFixed(2)">
+                                    <tr class="onfs" onclick="cliqueacordeom(); getElementById('fs4').value = (1.2).toFixed(2) ">
                                         <td><strong>Com reversões</strong></td>
                                         <td> 1.20</td>
                                     </tr>

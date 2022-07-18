@@ -186,6 +186,17 @@ function initacordeom() {
 }
 }
 
+function cliqueacordeom(){
+	document.getElementById('pa1').style.maxHeight = null
+	document.getElementById('accor1').classList.remove('activef')
+	document.getElementById('pa2').style.maxHeight = null
+	document.getElementById('accor2').classList.remove('activef')
+	document.getElementById('pa3').style.maxHeight = null
+	document.getElementById('accor3').classList.remove('activef')
+	document.getElementById('pa4').style.maxHeight = null
+	document.getElementById('accor4').classList.remove('activef')
+}
+
 function calculo(){	
 
     var x = document.getElementsByName('und')
