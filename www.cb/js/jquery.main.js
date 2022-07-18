@@ -16,7 +16,6 @@ jQuery(function () {
 	initAccordion();
 	initAnchors();
 	initCookies();
-	modal();
 	initacordeom();
 	
 });
