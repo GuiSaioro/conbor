@@ -1602,7 +1602,7 @@ header .container {
 }
 
 .scroll header {
-    background: #112fd9;
+    /* background: #112fd9; */
     padding: 15px 0;
     box-shadow: 0 0 4px 0 #0e0e10
 }
@@ -2382,7 +2382,7 @@ h1.large {
     color: #1484df;
     text-transform: uppercase;
     font-weight: 300;
-    margin: 0 0 18px
+    margin: 36px 0 18px;
 }
 
 @media (max-width:1023px) {
@@ -3369,10 +3369,11 @@ header .container {
 }
 
 .scroll header {
-    background: #1484df;
+    /* background: #1484df; */
+    background-image: linear-gradient(174deg,#1484df, #fc7003);
     padding: 15px 0;
     box-shadow: 0 0 4px 0 #0e0e10;
-    z-index: 49;
+    z-index: 100;
 }
 
 .logo img {
@@ -3516,7 +3517,7 @@ header .container {
 
     .home-download-catalogo {
         /* height: 650px; */
-        min-height: 71vh;
+        min-height: 89vh;
     }
 }
 
@@ -9222,7 +9223,7 @@ button.btn {
 }
 
 .sitebar {
-    z-index: 999;
+    z-index: 47;
     position: fixed;
     right: 0;
     top: 130px;
@@ -9243,7 +9244,7 @@ button.btn {
         flex-direction: inherit;
         justify-content: flex-end;
         padding: 5px 5px;
-        top: 218px;
+        top: 68px;
         left: 0;
         right: 0
     }
@@ -14272,7 +14273,8 @@ body {
 
 :root {
     --selected-aec-color: #00b2e4;
-    --selected-aec-colorfont: white;
+    --selected-aec-colorfont: white; 
+    
 }
 
 .linha {
@@ -14411,3 +14413,4 @@ td {
 }
 
 /*-------------------------------------------------------------------------*/
+
