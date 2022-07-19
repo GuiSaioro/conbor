@@ -25,6 +25,7 @@ summary {
     display: block
 }
 
+
 audio,
 canvas,
 progress,
@@ -6224,6 +6225,7 @@ p .sitebar button span #nav>li>a.has-drop-down-a span:before {
     letter-spacing: 1px;
     color: #00b2e4
 }
+
 
 @media (max-width:1023px) {
     .breadcrumbs li {
@@ -14348,6 +14350,7 @@ td {
     overflow: hidden;
     transition: max-height 0.2s ease-out;
     display: flex;
+    justify-content: center;
 }
 
 .f1 {

@@ -144,6 +144,15 @@ function initCookies() {
 	}
 }
 
+
+function trocarcor(){
+	document.getElementsByClassName('scroll header').classList.toggle("scrollmec");
+
+}
+
+
+
+
 /*-------------------------------------------------Modal--------------------------------------*/
 function modal(){
 	var modal = document.getElementById("myModal");
