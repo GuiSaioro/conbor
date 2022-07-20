@@ -10743,7 +10743,7 @@ p .sitebar button span #nav>li>a.has-drop-down-a span:before {
     padding: 0px 15px;
     margin: 0 auto;
     width: 100%;
-    margin-top: 60px;
+    margin-top: 0px;
 }
 
 .block {
@@ -12783,7 +12783,7 @@ iframe {
 }
 
 .home section {
-    min-height: 78vh;
+    min-height: 79vh;
     display: flex;
     flex-direction: column;
     justify-content: center
