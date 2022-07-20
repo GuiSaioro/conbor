@@ -2505,7 +2505,7 @@ p {
 @media (max-width:1023px) {
     p {
         font-size: 14.4px;
-        margin-bottom: 15px
+        margin-bottom: 0px;
     }
 }
 
@@ -3341,7 +3341,7 @@ header {
     position: fixed;
     z-index: 48;
     width: 100%;
-    padding: 45px 0 10px;
+    padding: 20px 0 10px;
     transition: padding .2s ease
 }
 
@@ -3372,6 +3372,13 @@ header .container {
 .scroll header {
     /* background: #1484df; */
     background-image: linear-gradient(174deg,#1484df, #fc7003);
+    padding: 15px 0;
+    box-shadow: 0 0 4px 0 #0e0e10;
+    z-index: 100;
+}
+.scroll2 header {
+    background: #fc7003;
+    /*background-image: linear-gradient(174deg,#1484df, #fc7003);*/
     padding: 15px 0;
     box-shadow: 0 0 4px 0 #0e0e10;
     z-index: 100;
@@ -3496,7 +3503,7 @@ header .container {
     display: flex;
     justify-content: space-around;
     background-color: transparent;
-    height: 600px;
+    height: 519px;
     width: auto;
     align-content: space-around;
     align-items: center;
@@ -3507,7 +3514,7 @@ header .container {
 .home-download-catalogo {
     display: flex;
     justify-content: space-evenly;
-    min-height: 100vh;
+    min-height: 85vh;
     align-items: center;
     background-size: cover;
     width: -webkit-fill-available;
@@ -3518,7 +3525,7 @@ header .container {
 
     .home-download-catalogo {
         /* height: 650px; */
-        min-height: 89vh;
+        min-height: 90vh;
     }
 }
 
@@ -5950,12 +5957,12 @@ p .sitebar button span #nav>li>a.has-drop-down-a span:before {
 }
 
 .main-banner iframe {
-    width: 100vw;
+    width: 160vw;
     height: 56.25vw;
     min-height: 100vh;
     min-width: 177.77vh;
     position: absolute;
-    top: -62px;
+    top: -122px;
     left: 50%;
     transform: translateX(-50%)
 }
@@ -6260,6 +6267,20 @@ p .sitebar button span #nav>li>a.has-drop-down-a span:before {
     color: #00b2e4
 }
 
+/*-----------------MECTRANS----------------------------------*/
+#breadmec a:hover{
+    color: #ff7b00
+}
+#buttonmec{
+    color: #ff7b00;
+    border-color: #ff7b00;
+}
+#buttonmec:hover {
+    color: black;
+    border-color: black;
+    background-color: #ff7b00;
+}
+/*--------------------------------------------------------------*/
 .section {
     padding: 70px 0
 }
@@ -9246,7 +9267,7 @@ button.btn {
         flex-direction: inherit;
         justify-content: flex-end;
         padding: 5px 5px;
-        top: 68px;
+        top: 91px;
         left: 0;
         right: 0
     }
@@ -10721,7 +10742,8 @@ p .sitebar button span #nav>li>a.has-drop-down-a span:before {
     max-width: 1170px;
     padding: 0px 15px;
     margin: 0 auto;
-    width: 100%
+    width: 100%;
+    margin-top: 60px;
 }
 
 .block {
@@ -10818,7 +10840,7 @@ p .sitebar button span #nav>li>a.has-drop-down-a span:before {
 
 @media (max-width:1023px) {
     .title {
-        margin-bottom: 30px
+        margin-bottom: 30px;
     }
 }
 
@@ -11139,7 +11161,7 @@ p .sitebar button span #nav>li>a.has-drop-down-a span:before {
     z-index: 2;
     position: relative;
     width: 100%;
-    padding-top: 10px;
+    padding-top: 0px;
 }
 
 .main-banner p {
@@ -11147,23 +11169,7 @@ p .sitebar button span #nav>li>a.has-drop-down-a span:before {
     letter-spacing: 1.6px
 }
 
-.main-banner iframe {
-    width: 100vw;
-    height: 56.25vw;
-    min-height: 100vh;
-    min-width: 177.77vh;
-    position: absolute;
-    top: -10px;
-    left: 50%;
-    transform: translateX(-50%)
-}
 
-@media (max-width:767px) {
-    .main-banner iframe {
-        min-height: 75vh;
-        height: 57.25vw
-    }
-}
 
 .line {
     margin-top: 30px;
@@ -12777,7 +12783,7 @@ iframe {
 }
 
 .home section {
-    min-height: 90vh;
+    min-height: 78vh;
     display: flex;
     flex-direction: column;
     justify-content: center
@@ -12785,7 +12791,7 @@ iframe {
 
 @media (max-width:767px) {
     .home section {
-        min-height: 280px
+        min-height: 280px;
     }
 }
 

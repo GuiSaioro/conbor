@@ -144,12 +144,32 @@ function initCookies() {
 	}
 }
 
+/*--------------------------header mectrans--------------------------------------------*/
 
-function trocarcor(){
-	document.getElementsByClassName('scroll header').classList.toggle("scrollmec");
+function initHeaderSmallScroll2() {
+	$(window).scroll(function () {
+		if ($('body').width() > 767) {
+			scroll();
+		}
+	});
 
+	if ($('body').width() > 767) {
+		scroll();
+	}
+
+	scroll();
+
+	function scroll() {
+		var x = $(document).scrollTop();
+		var _offset = 30;
+
+		if (x > _offset) {
+			$('body').addClass('scroll2');
+		} else {
+			$('body').removeClass('scroll2');
+		}
+	}
 }
-
 
 
 
@@ -519,6 +539,16 @@ function initAccordion() {
 
 function initSlider() {
 	$('.slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: true,
+		infinite: false,
+		speed: 300,
+		arrows: false
+	});
+}
+function initSlidermec() {
+	$('.slider2').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		dots: true,
