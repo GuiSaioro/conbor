@@ -13726,3 +13726,7 @@ td {
         display: block;
       }
 }  
+.secaocertificados{
+   /* background-image: linear-gradient(white, blue, white, orange);*/
+   background-image: linear-gradient(white, #8d8e8f);
+}
