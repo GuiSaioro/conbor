@@ -3458,7 +3458,7 @@ header .container {
     }
 
     .home-download-catalogo {
-        height: 612px;
+        height: 611px;
     }
 }
 
@@ -13765,10 +13765,10 @@ td {
 }
 
 .painel_empresas{
-    
     width: 100%;
     height: 100%;
     background-color: #333;
+    position: absolute;
 }
 
 .split {
@@ -13822,12 +13822,18 @@ td {
 .hover-right .left {
     width: 25%;
 }
-
+.home_empresas section {
+    min-height: 85vh;
+    align-items: center;
+    background-size: cover;
+    width: -webkit-fill-available;
+    flex-direction: column;
+}
 
 
 /* ////////////////// responsive ///////////////////////*/
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 450px){
 .painel_empresas{
     display: flex;
     flex-direction: row;
