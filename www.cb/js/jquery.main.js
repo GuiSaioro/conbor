@@ -24,23 +24,23 @@ jQuery(function () {
 
 //-------------------------------------------------------------------------------
 function empresas(){
-const left = document.querySelector('.left');
-const right = document.querySelector('.right');
+const left = document.querySelector('.esquerda');
+const right = document.querySelector('.direita');
 const container = document.querySelector('.painel_empresas');
 
 left.addEventListener('mouseenter', () => {
-  container.classList.add('hover-left')
+  container.classList.add('hover-esquerda')
 })
 left.addEventListener('mouseleave', () => {
-  container.classList.remove('hover-left')
+  container.classList.remove('hover-esquerda')
 })
 
 
 right.addEventListener('mouseenter', () => {
-  container.classList.add('hover-right')
+  container.classList.add('hover-direita')
 })
 right.addEventListener('mouseleave', () => {
-  container.classList.remove('hover-right')
+  container.classList.remove('hover-direita')
 })
 }
 

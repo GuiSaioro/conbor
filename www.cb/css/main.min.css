@@ -13555,9 +13555,11 @@ td {
 .inputfs {
     max-width: 52px;
 }
+
 .boxTradutor img {
     width: 50px;
 }
+
 .boxTradutor img:hover {
     transform: scale(1.2);
     transition: transform 0.5s ease 0s;
@@ -13604,170 +13606,178 @@ td {
         margin: auto;
     }
 }
-.form{
+
+.form {
     position: relative;
     width: 100%;
     height: 100%;
     padding: 40px;
     background-image: linear-gradient(black, green);
-  }
-  
-  .form h2{
+}
+
+.form h2 {
     position: relative;
-    color: #fff;
+    color: rgb(255, 255, 255);
     font-size: 24px;
     font-weight: 600;
     letter-spacing: 1px;
     margin-bottom: 40px;
-  }
-  
-  .form h2::before{
-    content: '';
+}
+
+.form h2::before {
+    content: "";
     position: absolute;
-    left: 0;
+    left: 0px;
     bottom: -10px;
     width: 80px;
     height: 4px;
-    background: #fff;
-  }
-  
-  .form .inputBox{
+    background: rgb(255, 255, 255);
+}
+
+.form .inputBox {
     width: 100%;
     margin-top: 20px;
-  }
-  
-  .form .inputBox input{
+}
+
+.form .inputBox input {
     width: 100%;
-    background: rgba(255,255,255,0.2);
-    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    border-top: none;
+    border-left: none;
+    border-image: initial;
     outline: none;
     padding: 10px 20px;
     border-radius: 35px;
-    border-right: 1px solid rgba(255,255,255,0.2);
-    border-bottom: 1px solid rgba(255,255,255,0.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     font-size: 16px;
     letter-spacing: 1px;
-    color: #fff;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-  }
-  
-  .form .inputBox input::placeholder{
-    color: #fff;
-  }
-  
-  .form .inputBox input[type="submit"]{
-    background: #fff;
-    color: #666;
+    color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 15px;
+}
+
+.form .inputBox input::placeholder {
+    color: rgb(255, 255, 255);
+}
+
+.form .inputBox input[type="submit"] {
+    background: rgb(255, 255, 255);
+    color: rgb(102, 102, 102);
     max-width: 100px;
     cursor: pointer;
     margin-bottom: 20px;
     font-weight: 600;
-  }
-  
-  .forget{
+}
+
+.forget {
     margin-top: 5px;
-    color: #fff;
-  }
-  
-  .forget a{
-    color: #fff;
+    color: rgb(255, 255, 255);
+}
+
+.forget a {
+    color: rgb(255, 255, 255);
     font-weight: 600;
-  }
-  /*------------------------box-certificações--------------------------------------------------------*/
-  .certificados{
+}
+
+.certificados {
     display: flex;
-    padding: 30px 0 30px 0;
-  }
-  .containerbox {
+    padding: 30px 0px;
+}
+
+.containerbox {
     position: relative;
     width: 300px;
     margin: auto;
-  }
-  
-  .imagebox {
+}
+
+.imagebox {
     opacity: 1;
     display: block;
     width: 100%;
     height: auto;
-    transition: .5s ease;
+    transition: all 0.5s ease 0s;
     backface-visibility: hidden;
-  }
-  .imagebox img{
+}
+
+.imagebox img {
     width: 150px;
-  }
-  
-  .middle {
-    transition: .5s ease;
+}
+
+.middle {
+    transition: all 0.5s ease 0s;
     opacity: 0;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
     text-align: center;
-  }
-  
-  .containerbox:hover .imagebox {
+}
+
+.containerbox:hover .imagebox {
     opacity: 0.3;
-  }
-  
-  .containerbox:hover .middle {
+}
+
+.containerbox:hover .middle {
     opacity: 1;
-  }
-  
-  .textbox {
-    background-color: #04AA6D;
+}
+
+.textbox {
+    background-color: rgb(4, 170, 109);
     color: white;
     font-size: 16px;
     padding: 16px 32px;
-  }
-  @media (max-width: 768px) {
-    .certificados{
-        display: block;
-      }
-}  
-.secaocertificados{
-   /* background-image: linear-gradient(white, blue, white, orange);*/
-   background-image: linear-gradient(white, #8d8e8f);
 }
 
-/*----------------------------------------------------------------------------------*/
+@media (max-width: 768px) {
+    .certificados {
+        display: block;
+    }
+}
 
-.btn_empresas{
+.secaocertificados {
+    background-image: linear-gradient(white, rgb(141, 142, 143));
+}
+/*---------------------------------------------------------------------------------*/
+#home_empresas {
+    min-height: 100vh;
+}
+
+.btn_empresas {
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 40%;
+    top: 70%;
     left: 50%;
     transform: translateX(-50%);
     text-decoration: none;
     color: white;
-    border: #fff solid 0.15rem;
+    border: 0.15rem solid rgb(255, 255, 255);
     font-size: 1rem;
     width: 15rem;
     padding: 1.5rem;
     cursor: pointer;
     font-weight: bolder;
     text-transform: uppercase;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease 0s;
 }
 
-.split.left .btn_empresas:hover{
-    background-color:rgba(87,94,255,1);;
-    border-color: rgba(87,94,255,1);
-    font-size: 1.3rem;
-}
-.split.right .btn_empresas:hover{
-    background-color: rgba(28,122,28,1);
-    border-color: rgba(28,122,28,1);
+.split.esquerda .btn_empresas:hover {
+    background-color: rgba(2, 69, 221);
+    border-color: rgba(2, 69, 221);
     font-size: 1.3rem;
 }
 
-.painel_empresas{
+.split.direita .btn_empresas:hover {
+    background-color: rgba(243, 127, 8);
+    border-color:rgba(243, 127, 8);
+    font-size: 1.3rem;
+}
+
+.painel_empresas {
     width: 100%;
     height: 100%;
-    background-color: #333;
+    background-color: rgb(51, 51, 51);
     position: absolute;
 }
 
@@ -13776,115 +13786,145 @@ td {
     width: 50%;
     height: 100%;
     overflow: hidden;
-    transition: all 0.3s linear;
+    transition: all 0.3s linear 0s;
 }
 
-.split.left{
-    left: 0;
-    background: url('https://cdn.vox-cdn.com/thumbor/lCUTZMIb1B4QF2OTxNPUKPYtcSA=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/22015298/vpavic_4278_20201030_0120.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+.split.esquerda {
+    left: 0px;
+    background: url("../images/img-left.jpg") 0% 0% / cover no-repeat;
 }
 
-.split.left::before{
-    content: '';
+.split.esquerda::before {
+    content: "";
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(87,84,231,0.7);;
+    background-color: rgba(2, 69, 221, 0.7);
 }
 
-.split.right{
-    right: 0;
-    background: url('https://compass-ssl.xbox.com/assets/b9/0a/b90ad58f-9950-44a7-87fa-1ee8f0b6a90e.jpg?n=XSX_Page-Hero-0_768x792.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+.split.direita {
+    right: 0px;
+    background: url("../images/img-rigth.jpg") 0% 0% / cover no-repeat;
 }
 
-.split.right::before{
-    content: '';
+.split.direita::before {
+    content: "";
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(43,43,43,0.8);;
+    background-color: rgba(243, 127, 8, 0.5);
 }
 
-.hover-left .left {
+.hover-esquerda .esquerda {
     width: 75%;
 }
-.hover-left .right {
+
+.hover-esquerda .direita {
     width: 25%;
 }
 
-.hover-right .right {
+.hover-direita .direita {
     width: 75%;
 }
-.hover-right .left {
+
+.hover-direita .esquerda {
     width: 25%;
 }
-.home_empresas section {
-    min-height: 85vh;
-    align-items: center;
-    background-size: cover;
-    width: -webkit-fill-available;
-    flex-direction: column;
-}
 
-
-/* ////////////////// responsive ///////////////////////*/
-
-@media screen and (max-width: 450px){
-.painel_empresas{
-    display: flex;
-    flex-direction: row;
-}
-
-.split.left .btn:hover{
-    background-color: rgba(87,94,255,1);;
-    border-color: var(--left-btn-hover-color);
-    font-size: 1.3rem;
-}
-.split.right .btn:hover{
-    background-color: rgba(28,122,28,1);
-    border-color: rgba(28,122,28,1);
-    font-size: 1.3rem;
-}
-
-.btn_empresas{
-    margin: 15px;
-}
-
-h1{
-    color:white;
-    font-size: 2rem;
-}
-
-.split.left::before{
-    content: '';
+.painel_empresas h1 {
+    font-size: 4rem;
+    color: white;
     position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: var(--left-btn-color);
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    text-shadow: black 1px 1px 3px;
 }
 
-.split.left{
-    left: 0;
-    right: 0;
-    height: 50%;
-    background: url('https://cdn.vox-cdn.com/thumbor/lCUTZMIb1B4QF2OTxNPUKPYtcSA=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/22015298/vpavic_4278_20201030_0120.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
+.painel_empresas p {
+    font-size: 1rem;
+    color: white;
+    position: absolute;
+    top: 40%;
+    text-shadow: black 1px 1px 3px;
+    text-align: justify;
+    padding: 0px 40px;
 }
 
-.split.right {
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    background: url('https://compass-ssl.xbox.com/assets/b9/0a/b90ad58f-9950-44a7-87fa-1ee8f0b6a90e.jpg?n=XSX_Page-Hero-0_768x792.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 50%;
-}
+@media screen and (max-width: 760px) {
+    .home_empresas {
+        min-height: 85vh;
+        align-items: center;
+        background-size: cover;
+        width: -webkit-fill-available;
+        flex-direction: column;
+    }
+
+    .painel_empresas {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .split.esquerda .btn:hover {
+        background-color: rgb(87, 94, 255);
+        border-color: rgba(87, 84, 231, 0.7);
+        font-size: 1.3rem;
+    }
+
+    .split.direita .btn:hover {
+        background-color: rgba(28, 122, 28, 0.5);
+        border-color: rgb(28, 122, 28);
+        font-size: 1.3rem;
+    }
+
+    .btn_empresas {
+        margin: 15px;
+    }
+
+    .painel_empresas h1 {
+        color: white;
+        font-size: 2rem;
+    }
+
+    .split.esquerda::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(2, 69, 221, 0.7);
+    }
+
+    .split.esquerda {
+        left: 0px;
+        right: 0px;
+        height: 50%;
+        background: url("../images/img-left.jpg") 0% 0% / cover no-repeat;
+        width: 100%;
+    }
+
+    .split.direita::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(243, 127, 8, 0.5);
+    }
+
+    .split.direita {
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        width: 100%;
+        background: url("../images/img-rigth.jpg") 0% 0% / cover no-repeat;
+        height: 50%;
+    }
+
+    .painel_empresas h1 {
+        top: 5%;
+    }
+
+    .btn_empresas {
+        top: 65%;
+    }
 }
