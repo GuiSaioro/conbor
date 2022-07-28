@@ -13739,7 +13739,7 @@ td {
 }
 /*---------------------------------------------------------------------------------*/
 #home_empresas {
-    min-height: 96vh;
+    min-height: 100vh;
 }
 
 .btn_empresas {
@@ -13853,6 +13853,9 @@ td {
 }
 
 @media screen and (max-width: 760px) {
+    #home_empresas {
+        min-height: 90vh;
+    }
     .btn_empresas {
         width: 15rem;
         padding: 0.9rem;
