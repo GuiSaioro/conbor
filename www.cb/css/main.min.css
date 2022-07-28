@@ -1574,7 +1574,7 @@ header .container {
     margin-bottom: 0px;
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
     .nav-holder {
         width: 100%;
         position: absolute;
@@ -13739,7 +13739,7 @@ td {
 }
 /*---------------------------------------------------------------------------------*/
 #home_empresas {
-    min-height: 95vh;
+    min-height: 100vh;
 }
 
 .btn_empresas {
@@ -13853,9 +13853,7 @@ td {
 }
 
 @media screen and (max-width: 760px) {
-    #home_empresas {
-        min-height: 85vh;
-    }
+    
     .btn_empresas {
         width: 15rem;
         padding: 0.9rem;
