@@ -13854,7 +13854,7 @@ td {
 
 @media screen and (max-width: 760px) {
     #home_empresas {
-        min-height: 90vh;
+        min-height: 85vh;
     }
     .btn_empresas {
         width: 15rem;
