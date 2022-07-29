@@ -195,7 +195,32 @@ function initHeaderSmallScroll2() {
 	}
 }
 
+/*--------------------------header mectrans--------------------------------------------*/
 
+function initHeaderSmallScroll3() {
+	$(window).scroll(function () {
+		if ($('body').width() > 767) {
+			scroll();
+		}
+	});
+
+	if ($('body').width() > 767) {
+		scroll();
+	}
+
+	scroll();
+
+	function scroll() {
+		var x = $(document).scrollTop();
+		var _offset = 30;
+
+		if (x > _offset) {
+			$('body').addClass('scroll3');
+		} else {
+			$('body').removeClass('scroll3');
+		}
+	}
+}
 
 /*-------------------------------------------------Modal--------------------------------------*/
 function modal(){

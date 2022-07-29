@@ -3258,6 +3258,12 @@ header .container {
   box-shadow: rgb(14, 14, 16) 0px 0px 4px 0px;
   z-index: 100;
 }
+.scroll3 header {
+  background: rgb(20, 132, 223);
+  padding: 15px 0px;
+  box-shadow: rgb(14, 14, 16) 0px 0px 4px 0px;
+  z-index: 100;
+}
 
 .logo img {
   transition: max-width 0.2s ease 0s;
@@ -13938,7 +13944,7 @@ td {
   }
 }
 
-/*---------------------------------------------------------------------------*/
+/*----------------------------Diretoria-----------------------------------------------*/
 .diretores {
   background-color: antiquewhite;
   display: flex;
