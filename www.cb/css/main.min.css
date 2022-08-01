@@ -13628,9 +13628,10 @@ td {
 
 .form {
   width: 460px;
-  padding: 4rem 2rem;
+  padding: 1rem 2rem;
   border-radius: 1rem;
   box-shadow: rgba(92, 99, 105, 0.2) 0px 10px 25px;
+  margin: 25px;
 }
 
 .form__div {
@@ -14082,6 +14083,7 @@ td {
 .telefone-list {
   padding: 15px;
   box-shadow: rgba(92, 99, 105, 0.2) 0px 10px 25px;
+  margin: 25px;
 }
 
 @media screen and (max-width: 760px) {
