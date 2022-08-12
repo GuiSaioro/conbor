@@ -13750,7 +13750,7 @@ td {
 }
 
 #home_empresas {
-  min-height: 100vh;
+  min-height: 96vh;
 }
 
 .btn_empresas {
@@ -14083,7 +14083,7 @@ td {
 .telefone-list {
   padding: 15px;
   box-shadow: rgba(92, 99, 105, 0.2) 0px 10px 25px;
-  margin: 25px;
+  margin: 0 25px;
 }
 
 @media screen and (max-width: 760px) {
