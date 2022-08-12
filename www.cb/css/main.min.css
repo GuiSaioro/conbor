@@ -6602,8 +6602,6 @@ p .sitebar button span #nav>li>a.has-drop-down-a span::before {
   color: rgb(0, 178, 228);
 }
 
-.tabset a.active::after,
-.tabset a:hover::after {}
 
 .tab-content h3 {
   font-weight: 400;
@@ -11445,8 +11443,6 @@ p .sitebar button span #nav>li>a.has-drop-down-a span::before {
   border-radius: 6px;
 }
 
-.tabset a.active::after,
-.tabset a:hover::after {}
 
 .tab-content h3 {
   font-weight: 400;
@@ -12163,7 +12159,7 @@ iframe {
   margin-bottom: 0px;
 }
 
-.map .close {
+.map .close{
   position: absolute;
   top: 15px;
   right: 15px;
@@ -12714,7 +12710,7 @@ button.btn {
 
 .fotos {
   margin: auto;
-  padding-top: 55px;
+  padding-top: 20px;
 }
 
 .fotos p {
@@ -13369,9 +13365,17 @@ body {
   font-size: 28px;
   font-weight: bold;
 }
+.button-holder .close2{
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
 
 .close:hover,
-.close:focus {
+.close:focus,
+.close2:hover,
+.close2:focus {
   color: rgb(0, 0, 0);
   text-decoration: none;
   cursor: pointer;
@@ -13623,6 +13627,11 @@ td {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+}
+.d-form {
+  display: flex;
+  justify-content: center;
   height: 100vh;
 }
 
