@@ -11222,7 +11222,7 @@ p .sitebar button span #nav>li>a.has-drop-down-a span::before {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   text-align: center;
 }
 
@@ -13359,7 +13359,7 @@ body {
   animation-duration: 0.4s;
 }
 
-.close {
+.button-holder .close {
   color: white;
   float: right;
   font-size: 28px;
@@ -13493,7 +13493,7 @@ td {
 
 .btn-dimens {
   text-align: right;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
 }
 
 .accordionf {
