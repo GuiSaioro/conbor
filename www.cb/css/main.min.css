@@ -13856,7 +13856,7 @@ td {
   color: white;
   position: absolute;
   left: 50%;
-  top: 20%;
+  top: 5%;
   transform: translateX(-50%);
   white-space: nowrap;
   text-shadow: black 1px 1px 3px;
@@ -13889,6 +13889,7 @@ td {
   .painel_empresas {
     display: flex;
     flex-direction: row;
+    height: 179vh;
   }
 
   .split.esquerda .btn:hover {
@@ -13955,6 +13956,9 @@ td {
 
   .btn_empresas {
     top: 76%;
+  }
+  #home_empresas {
+    min-height: 175vh;
   }
 }
 
