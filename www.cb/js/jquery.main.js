@@ -259,18 +259,6 @@ function modal(){
 	   }
 	}
 	}
-/*-----------------------------------------Abrir em nova janela com javascript---------------------------------------------*/
-
-function openInNewTab(url) {
-	var url = "../pdf/tabela-de-acoplamentos-standart-conbor.pdf";
-	var btnopen = document.querySelector("#btn");
-	var win = window.open(url, '_blank');
-	win.focus();
-  }
-  btnopen.addEventListener('click', function() {
-	  
-	openInNewTab(url);
-  });
 
 /*-----------------------------------------Calculo dimensionamento AEC----------------------------------------------------*/
 
