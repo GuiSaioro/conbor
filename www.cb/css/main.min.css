@@ -11247,7 +11247,6 @@ p .sitebar button span #nav>li>a.has-drop-down-a span::before {
 
 .button-holder span {
   display: inline-block;
-  margin-right: 28px;
   font-size: 14px;
   line-height: 24px;
   text-transform: uppercase;
@@ -13359,6 +13358,12 @@ body {
   animation-duration: 0.4s;
 }
 
+.modal-header .close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
 .button-holder .close {
   color: white;
   float: right;
@@ -13382,7 +13387,7 @@ body {
 }
 
 .modal-header {
-  padding: 2px 16px;
+  padding: 2px 8px;
   background-color: rgb(66, 126, 238);
   color: white;
   border-radius: 10px;
