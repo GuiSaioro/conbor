@@ -1,0 +1,64 @@
+<?php
+
+error_reporting(0);
+
+$nome = utf8_encode($_POST['nome']);
+$empresa = utf8_encode($_POST['empresa']);
+$email = utf8_encode($_POST['email']);
+$tel = utf8_encode($_POST['tel']);
+$mensagem = utf8_encode($_POST['mensagem']);
+//$mensagem = utf8_encode($_POST['mensagem']);
+
+require './php-mailer/PHPMailerAutoload.php';
+
+$mail = new PHPMailer(true);
+$mail->isSMTP();
+//$mail->SMTPDebug = SMTP::DEBUG_SERVER; 
+
+/*
+  Habilitando debug SMTP
+  0 = off (uso em produção)
+  1 = Mensagens ao Cliente
+  2 = Mensagens ao Cliente e Servidor
+*/
+
+$mail->SMTPDebug = 0;
+
+//$mail->setLanguage('pt-br', '/language/phpmailer.lang-pt_br.php');
+
+
+// config servidor
+
+$mail->Host = "mail-nt.braslink.com";
+$mail->Port = "25";
+//$mail->SMTPSecure = false;
+$mail->SMTPSauth = false;
+$mail->Username = "deptec2@conbor.com.br";
+$mail->Password = "07Conb20";
+
+//Config de mensagem
+
+$mail->setFrom($mail->Username, "Site CONBOR/Mectrans"); // Remetente
+$mail->addAddress("deptec2@conbor.com.br");   //Destinatário
+$mail->Subject = "Contato";             //Assunto
+
+$conteudo_email = "E-mail do site:<br>
+Nome: $nome<br>
+Empresa: $empresa<br>
+Telefone: $tel<br>
+e-mail:($email):
+<br>
+<br>
+Mensagem: $mensagem";
+
+$mail->IsHTML(true);
+$mail->Body = $conteudo_email;
+
+
+
+if($mail->send()){
+  header("Location: ../contact.html");
+  } else{
+    echo "Falha no envio. $mail->ErrorInfo";
+}
+?>
