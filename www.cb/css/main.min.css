@@ -7506,13 +7506,6 @@ iframe {
   box-shadow: rgb(235, 237, 240) 0px 0px 2px;
 }
 
-@media (max-width: 1399px) {
-  #gdpr-cookies {
-    padding: 20px 30px;
-    bottom: 10px;
-  }
-}
-
 @media (max-width: 767px) {
   #gdpr-cookies {
     padding: 25px;
@@ -11897,55 +11890,6 @@ iframe {
   letter-spacing: 0px;
 }
 
-.contact .container {
-  max-width: 1280px;
-}
-
-.contact .item {
-  padding: 0px 57px;
-  text-align: center;
-}
-
-@media (max-width: 1023px) {
-  .contact .item {
-    padding: 0px 10px;
-  }
-}
-
-@media (max-width: 767px) {
-  .contact .item {
-    padding: 0px;
-  }
-}
-
-.contact .item h1 {
-  text-align: left;
-}
-
-.contact .item input,
-.contact .item textarea {
-  padding: 13px 14px 16px;
-  border: 1px solid rgb(197, 203, 208);
-}
-
-.contact div[class^="col-"] {
-  border-right: 1px solid rgb(235, 237, 240);
-}
-
-@media (max-width: 767px) {
-  .contact div[class^="col-"] {
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    border-image: initial;
-    border-bottom: 1px solid rgb(235, 237, 240);
-    padding-bottom: 30px;
-  }
-}
-
-.contact div[class^="col-"]:last-child {
-  border: none;
-}
 
 .location-item .custom-select {
   max-width: 400px;
@@ -12333,12 +12277,9 @@ iframe {
 }
 
 #gdpr-cookies {
-  background: rgb(255, 255, 255);
-  border: 3px solid rgba(0, 0, 0, 0.62);
-  color: rgb(14, 14, 16);
-  padding: 30px 50px;
+  background: rgb(14 14 16);
+  color: #eeeeee;
   position: fixed;
-  bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 9999;
@@ -12347,8 +12288,8 @@ iframe {
 
 @media (max-width: 1399px) {
   #gdpr-cookies {
-    padding: 25px 30px;
-    bottom: 10px;
+    padding: 15px 30px;
+    bottom: 50px;
   }
 }
 
@@ -12381,7 +12322,7 @@ iframe {
 }
 
 #gdpr-cookies a {
-  color: rgb(14, 14, 16);
+  color: #10b7f7;
   text-decoration: underline;
 }
 
@@ -14108,8 +14049,20 @@ td {
   .contact-section {
     display: block;
   }
+  .contact{
+    flex-direction: column;
+  }
+  .endereco{
+    padding: inherit;
+  }
 
   .endereco h2 {
     margin-top: 30px;
   }
+}
+.privacy p{
+  text-align: justify;
+}
+.privacy h1{
+  margin-top: 20px;
 }
