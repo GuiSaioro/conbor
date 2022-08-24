@@ -1,6 +1,7 @@
 <?php
 
-error_reporting(0);
+
+//error_reporting(0);
 
 $nome = utf8_encode($_POST['nome']);
 $empresa = utf8_encode($_POST['empresa']);
@@ -51,14 +52,46 @@ e-mail:($email):
 <br>
 Mensagem: $mensagem";
 
+
 $mail->IsHTML(true);
 $mail->Body = $conteudo_email;
 
+if (isset($_POST['enviar'])){
+  //print_r($_POST);
 
+  if (!empty($_POST['g-recaptcha-response']))
+  // continuar o envio
+  $url = "https://www.google.com/recaptcha/api/siteverify";
+  $secret = "6LeJHaAhAAAAAN2DNAiJq9CZNnyijNYwwwtj_JCu";
+  $response = $_POST['g-recaptcha-response'];
+  $variaveis = "secret=" .$secret. "&response=".$response;
 
-if($mail->send()){
-  header("Location: ../contact.html");
-  } else{
+  $ch = curl_init($url);
+  curl_setopt( $ch, CURLOPT_POST, 1);
+  curl_setopt( $ch, CURLOPT_POSTFIELDS, $variaveis);
+  curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, 1);
+  curl_setopt( $ch, CURLOPT_HEADER, 0);
+  curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1);
+  $resposta = curl_exec($ch);
+  //print_r($resposta);
+  $resultado = json_decode($resposta);
+  //print_r($resultado);
+  //echo $resultado->sucess;
+  if ($resultado->success == 1){
+    header("Location: enviado.html");
+  }else{
     echo "Falha no envio. $mail->ErrorInfo";
 }
+
+
+}
+
+/*if($mail->send()){
+  //header("Location: enviado.html");
+
+
+
+  } else{
+    echo "Falha no envio. $mail->ErrorInfo";
+}*/
 ?>

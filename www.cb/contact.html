@@ -257,32 +257,40 @@
 
         <section class="contact-section container">
             <div class="l-form">
-                <form action="php/enviar.php" class="form" method="POST">
+                <form action="enviar.php" class="form" method="POST" >
                     <h2 class="">CONTATO</h2>
                     <div class="form__div">
-                        <input class="form__input" type="text" name="name" placeholder=" " required>
+                        <input class="form__input" id="nome" type="text" name="nome" placeholder=" " required>
                         <label for="" class="form__label">Nome</label>
                     </div>
                     <div class="form__div">
-                        <input class="form__input" type="text" name="empresa" placeholder=" " required>
+                        <input class="form__input" id="empresa" type="text" name="empresa" placeholder=" " required>
                         <label for="" class="form__label">Empresa</label>
                     </div>
                     <div class="form__div">
-                        <input class="form__input" type="text" name="email" placeholder=" " required>
+                        <input class="form__input" id="email" type="text" name="email" placeholder=" " required>
                         <label for="" class="form__label">E-Mail</label>
                     </div>
                     <div class="form__div">
-                        <input class="form__input" type="tel" name="tel" placeholder=" " required>
+                        <input class="form__input" id="tel" type="tel" name="tel" placeholder=" " required>
                         <label for="" class="form__label">Tel.:(xx)xxxx-xxxx</label>
                     </div>
                     <div class="form__div">
-                        <textarea class="form__input" name="message" cols="30" rows="10" placeholder=" "></textarea>
+                        <textarea class="form__input" id="mensagem" name="mensagem" cols="30" rows="10" placeholder=" "></textarea>
                         <label for="" class="form__label">Mensagem</label>
                     </div>
-
-                    <input type="submit" class="btn form__button" value="ENVIAR">
+                    <div class="g-recaptcha" data-sitekey="6LeJHaAhAAAAAOBepaMINJ8qzXyI8CpamNj_Niz5"></div>
+                    <input class="btn form__button" type="submit" value="enviar" name="enviar" onclick="valida()">
+                   <!--<button class="btn form__button" target="_blank"> Enviar</button>-->
                 </form>
-            </div>
+                <script type="text/javascript">
+                    function valida(){
+                        if (grecaptcha.getResponse() == "") {
+                            alert("Você precisa marcar")
+                            return false;
+                        }
+                    }
+                </script>
             <div class="">
                 <ul class="endereco" translate="no">
                     <div class="contact">
