@@ -6,7 +6,6 @@ jQuery(function () {
 	initCustomHover();
 	initHeaderSmallScroll();
 	initSitebarClick();
-	initContactLocationDrop();
 	initContactReasonDrop();
 	initProceedBTNClick();
 	initFilterButton();
@@ -22,55 +21,59 @@ jQuery(function () {
 
 
 //-------------------------------------------------------------------------------//
+$(window).load(function () {
+	//initMenuCropping();
+});
 
 function initCookies() {
-	var condition = $('#gdpr-cookies').size();
-	// && false
-	init(condition);
-	function init(condition) {
-		if (condition || condition == null) {
-			var setCookie = "";
-			var messageBlock = $("#gdpr-cookies");
+    var condition = $('#gdpr-cookies').size();
+        // && false
+    init(condition);
 
-			setCookie = Cookies.get('gdpr-cookie');
-
-			if (isCookieSet()) {
-
-				hideMessageBlock();
-			} else {
-				showMessageBlock();
-			}
-
-			$(document).on('click', 'button.btn-accept-cookie', function (event) {
-				event.preventDefault();
-				hideMessageBlock();
-
-				Cookies.remove('gdpr-cookie');
-				Cookies.set('gdpr-cookie', 'accepted', { expires: 365 });
-			});
-
-			$(document).on('click', 'button.close-btn', function (event) {
-				hideMessageBlock();
-
-				Cookies.remove('gdpr-cookie');
-			});
-
-			function hideMessageBlock() {
-				messageBlock.hide();
-			}
-
-			function showMessageBlock() {
-				messageBlock.show();
-			}
-
-			function isCookieSet() {
-				if (setCookie == "accepted" || setCookie == "rejected") {
-					return true;
-				}
-			}
-		}
-
-	}
+    function init(condition) {
+        if (condition || condition == null) { 
+            var setCookie = "";
+            var messageBlock = $("#gdpr-cookies");
+              
+            setCookie = Cookies.get('gdpr-cookie'); 
+              
+            if(isCookieSet()){
+                
+                hideMessageBlock();
+            } else{
+                showMessageBlock();
+            }
+    
+            $(document).on('click', 'button.btn-accept-cookie', function(event) {
+                event.preventDefault();
+                hideMessageBlock();
+            
+                Cookies.remove('gdpr-cookie');
+                Cookies.set('gdpr-cookie', 'accepted', { expires: 365 });
+            });
+            
+            $(document).on('click', 'button.close-btn', function(event) {
+                hideMessageBlock();
+            
+                Cookies.remove('gdpr-cookie');
+            });
+       
+            function hideMessageBlock(){
+                messageBlock.hide(); 
+            }
+    
+            function showMessageBlock(){
+                messageBlock.show(); 
+            }
+    
+            function isCookieSet(){
+              if(setCookie == "accepted" || setCookie == "rejected"){
+                return true;
+              }
+            }
+        }
+       
+    }
 }
 //-----------------------Home Empresas-------------------------------------//
 function empresas() {
@@ -164,9 +167,6 @@ function initsearch_prod() {
 	}
 }
 //------------------------------------------------------------------------
-$(window).load(function () {
-	//initMenuCropping();
-});
 
 
 
@@ -681,34 +681,6 @@ function initFilterButton() {
 
 			$(window).click(function () {
 				$('.custom-select').removeClass('active');
-			});
-		}
-	}
-}
-
-function initContactLocationDrop() {
-	var busy = false;
-	var condition = $('#contactLocationDrop').length
-		// && false
-		; init(condition);
-
-	function init(condition) {
-		if (condition || condition == null) {
-			contactFormSetup();
-		}
-
-		function contactFormSetup() {
-			$('#contactLocationDrop .filterButton').click(function () {
-				var _this = $(this);
-
-				var id = _this.data('filter_val');
-				_this.closest('.drop').find('.filterButton').removeClass('active');
-				_this.closest('.custom-select').find('.filterButtonBTN').text(_this.text());
-				_this.addClass('active');
-				const regex = new RegExp('contact_form(.*?)\&');
-				var formAction = $('.contact-form form').attr('action').replace(regex, 'contact_form' + id + '&');
-				$('.contact-form form').attr('action', formAction);
-				return false;
 			});
 		}
 	}
