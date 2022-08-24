@@ -1,6 +1,5 @@
 // page init
 jQuery(function () {
-	initCookies();
 	initTouchNav();
 	initMobileNav();
 	initDropDownClasses();
@@ -17,15 +16,17 @@ jQuery(function () {
 	initAccordion();
 	initAnchors();
 	initacordeom();
-	
+	initCookies();
 });
+//-------------------------------------------------------------------------------//
 
-//-------------------------------------------------------------------------------
+
+//-------------------------------------------------------------------------------//
 
 function initCookies() {
 	var condition = $('#gdpr-cookies').size();
-		// && false
- init(condition);
+	// && false
+	init(condition);
 	function init(condition) {
 		if (condition || condition == null) {
 			var setCookie = "";
@@ -72,48 +73,48 @@ function initCookies() {
 	}
 }
 //-----------------------Home Empresas-------------------------------------//
-function empresas(){
-const left = document.querySelector('.esquerda');
-const right = document.querySelector('.direita');
-const container = document.querySelector('.painel_empresas');
+function empresas() {
+	const left = document.querySelector('.esquerda');
+	const right = document.querySelector('.direita');
+	const container = document.querySelector('.painel_empresas');
 
-left.addEventListener('mouseenter', () => {
-  container.classList.add('hover-esquerda')
-})
-left.addEventListener('mouseleave', () => {
-  container.classList.remove('hover-esquerda')
-})
+	left.addEventListener('mouseenter', () => {
+		container.classList.add('hover-esquerda')
+	})
+	left.addEventListener('mouseleave', () => {
+		container.classList.remove('hover-esquerda')
+	})
 
 
-right.addEventListener('mouseenter', () => {
-  container.classList.add('hover-direita')
-})
-right.addEventListener('mouseleave', () => {
-  container.classList.remove('hover-direita')
-})
+	right.addEventListener('mouseenter', () => {
+		container.classList.add('hover-direita')
+	})
+	right.addEventListener('mouseleave', () => {
+		container.classList.remove('hover-direita')
+	})
 }
 
 // Função menu DropDonw imagens--------------------------------------------------------
 
-function havemouse(){
+function havemouse() {
 
-	document.getElementById('aco').onmouseover = function(){
-		document.getElementById('showimg').setAttribute('src','images/menu-dropdown/img-AEC-Standart.png')
+	document.getElementById('aco').onmouseover = function () {
+		document.getElementById('showimg').setAttribute('src', 'images/menu-dropdown/img-AEC-Standart.png')
 	}
-	document.getElementById('emb').onmouseover = function(){
-		document.getElementById('showimg').setAttribute('src','images/menu-dropdown/img-ei-s.png')
+	document.getElementById('emb').onmouseover = function () {
+		document.getElementById('showimg').setAttribute('src', 'images/menu-dropdown/img-ei-s.png')
 	}
-	document.getElementById('cw').onmouseover = function(){
-		document.getElementById('showimg').setAttribute('src','images/menu-dropdown/img-cw.png')
+	document.getElementById('cw').onmouseover = function () {
+		document.getElementById('showimg').setAttribute('src', 'images/menu-dropdown/img-cw.png')
 	}
-	document.getElementById('dc').onmouseover = function(){
-		document.getElementById('showimg').setAttribute('src','images/menu-dropdown/img-dc.png')
+	document.getElementById('dc').onmouseover = function () {
+		document.getElementById('showimg').setAttribute('src', 'images/menu-dropdown/img-dc.png')
 	}
-	document.getElementById('ct').onmouseover = function(){
-		document.getElementById('showimg').setAttribute('src','images/menu-dropdown/img-cinta.png')
+	document.getElementById('ct').onmouseover = function () {
+		document.getElementById('showimg').setAttribute('src', 'images/menu-dropdown/img-cinta.png')
 	}
-	document.getElementById('ft').onmouseover = function(){
-		document.getElementById('showimg').setAttribute('src','images/menu-dropdown/img-freio-ei.png')
+	document.getElementById('ft').onmouseover = function () {
+		document.getElementById('showimg').setAttribute('src', 'images/menu-dropdown/img-freio-ei.png')
 	}
 }
 function nomouse() {
@@ -122,25 +123,25 @@ function nomouse() {
 
 //------------------função com endereços dentro pasta------------------------------
 
-function havemouse1(){
+function havemouse1() {
 
-	document.getElementById('aco').onmouseover = function(){
-		document.getElementById('showimg').setAttribute('src','../images/menu-dropdown/img-AEC-Standart.png')
+	document.getElementById('aco').onmouseover = function () {
+		document.getElementById('showimg').setAttribute('src', '../images/menu-dropdown/img-AEC-Standart.png')
 	}
-	document.getElementById('emb').onmouseover = function(){
-		document.getElementById('showimg').setAttribute('src','../images/menu-dropdown/img-ei-s.png')
+	document.getElementById('emb').onmouseover = function () {
+		document.getElementById('showimg').setAttribute('src', '../images/menu-dropdown/img-ei-s.png')
 	}
-	document.getElementById('cw').onmouseover = function(){
-		document.getElementById('showimg').setAttribute('src','../images/menu-dropdown/img-cw.png')
+	document.getElementById('cw').onmouseover = function () {
+		document.getElementById('showimg').setAttribute('src', '../images/menu-dropdown/img-cw.png')
 	}
-	document.getElementById('dc').onmouseover = function(){
-		document.getElementById('showimg').setAttribute('src','../images/menu-dropdown/img-dc.png')
+	document.getElementById('dc').onmouseover = function () {
+		document.getElementById('showimg').setAttribute('src', '../images/menu-dropdown/img-dc.png')
 	}
-	document.getElementById('ct').onmouseover = function(){
-		document.getElementById('showimg').setAttribute('src','../images/menu-dropdown/img-cinta.png')
+	document.getElementById('ct').onmouseover = function () {
+		document.getElementById('showimg').setAttribute('src', '../images/menu-dropdown/img-cinta.png')
 	}
-	document.getElementById('ft').onmouseover = function(){
-		document.getElementById('showimg').setAttribute('src','../images/menu-dropdown/img-freio-ei.png')
+	document.getElementById('ft').onmouseover = function () {
+		document.getElementById('showimg').setAttribute('src', '../images/menu-dropdown/img-freio-ei.png')
 	}
 }
 function nomouse1() {
@@ -224,7 +225,7 @@ function initHeaderSmallScroll3() {
 }
 
 /*-------------------------------------------------Modal--------------------------------------*/
-function modal(){
+function modal() {
 	var modal = document.getElementById("myModal");
 	var btn = document.getElementById("btnModal");
 	var span = document.getElementsByClassName("close")[0];
@@ -233,53 +234,53 @@ function modal(){
 	var btn2 = document.getElementById("btn-download");
 	var span2 = document.getElementsByClassName("close2")[0];
 
-	btn.onclick = function() {
+	btn.onclick = function () {
 		modal.style.display = "block"
-		
+
 	}
-	 btn2.onclick = function() {
+	btn2.onclick = function () {
 		modal2.style.display = "block"
-		
+
 	}
-	span.onclick = function() {
+	span.onclick = function () {
 		modal.style.display = "none";
-		
+
 	}
-	span2.onclick = function() {
+	span2.onclick = function () {
 		modal2.style.display = "none";
-		
+
 	}
-	window.onclick = function(event) {
-	  if (event.target == modal) {
-	   modal.style.display = "none";
-	   
-	  }
-	  if (event.target == modal2) {
-		modal2.style.display = "none";
-		
-	   }
-	}
-	}
-	function modal2(){
-		var modal = document.getElementById("myModal");
-		var btn = document.getElementById("btnModal");
-		var span = document.getElementsByClassName("close")[0];
-	
-		btn.onclick = function() {
-			modal.style.display = "block"
-			
-		}
-		span.onclick = function() {
+	window.onclick = function (event) {
+		if (event.target == modal) {
 			modal.style.display = "none";
-			
+
 		}
-		window.onclick = function(event) {
-		  if (event.target == modal) {
-		   modal.style.display = "none";
-		   
-		  }
+		if (event.target == modal2) {
+			modal2.style.display = "none";
+
 		}
+	}
+}
+function modal2() {
+	var modal = document.getElementById("myModal");
+	var btn = document.getElementById("btnModal");
+	var span = document.getElementsByClassName("close")[0];
+
+	btn.onclick = function () {
+		modal.style.display = "block"
+
+	}
+	span.onclick = function () {
+		modal.style.display = "none";
+
+	}
+	window.onclick = function (event) {
+		if (event.target == modal) {
+			modal.style.display = "none";
+
 		}
+	}
+}
 
 /*-----------------------------------------Calculo dimensionamento AEC----------------------------------------------------*/
 
@@ -288,19 +289,19 @@ function initacordeom() {
 	var i;
 
 	for (i = 0; i < acc.length; i++) {
-	acc[i].addEventListener("click", function() {
-		this.classList.toggle("activef");
-		var panel = this.nextElementSibling;
-		if (panel.style.maxHeight) {
-		panel.style.maxHeight = null;
-		} else {
-		panel.style.maxHeight = panel.scrollHeight + "px";
-		} 
-	});
-}
+		acc[i].addEventListener("click", function () {
+			this.classList.toggle("activef");
+			var panel = this.nextElementSibling;
+			if (panel.style.maxHeight) {
+				panel.style.maxHeight = null;
+			} else {
+				panel.style.maxHeight = panel.scrollHeight + "px";
+			}
+		});
+	}
 }
 
-function cliqueacordeom(){
+function cliqueacordeom() {
 	document.getElementById('pa1').style.maxHeight = null
 	document.getElementById('accor1').classList.remove('activef')
 	document.getElementById('pa2').style.maxHeight = null
@@ -311,208 +312,208 @@ function cliqueacordeom(){
 	document.getElementById('accor4').classList.remove('activef')
 }
 
-function calculo(){	
+function calculo() {
 
-    var x = document.getElementsByName('und')
- 
-    var f1 = document.getElementById('fs1').value
-    var f2 = document.getElementById('fs2').value
-    var f3 = document.getElementById('fs3').value
-    var f4 = document.getElementById('fs4').value
-    
-   f1 = Number(fs1.value)
-   f2 = Number(fs2.value)
-   f3 = Number(fs3.value)
-   f4 = Number(fs4.value)
-  
-   
-    var fs = f1 * f2 * f3 * f4;
+	var x = document.getElementsByName('und')
+
+	var f1 = document.getElementById('fs1').value
+	var f2 = document.getElementById('fs2').value
+	var f3 = document.getElementById('fs3').value
+	var f4 = document.getElementById('fs4').value
+
+	f1 = Number(fs1.value)
+	f2 = Number(fs2.value)
+	f3 = Number(fs3.value)
+	f4 = Number(fs4.value)
 
 
-    var u ;
-// Conversão de und
-    var und = document.getElementsByName('rund')
-    if (und[0].checked){
-      u = 716
-    } else if (und[1].checked){
-      u = 726
-    }else{
-      u = 973
-    }
+	var fs = f1 * f2 * f3 * f4;
 
-    
-    p = document.getElementById('potencia').value
-    n = document.getElementById('rpm').value
 
-    //var eixo = document.getElementById('eixo').value
+	var u;
+	// Conversão de und
+	var und = document.getElementsByName('rund')
+	if (und[0].checked) {
+		u = 716
+	} else if (und[1].checked) {
+		u = 726
+	} else {
+		u = 973
+	}
 
-    if (p != 0 && n != 0){     
-      var t = (u * p * fs)/n // Calculo a ser feito
-	
-      if (t > 0 && t < 4){
-        var aec = 'AEC086';
-      }else if (t >= 4 && t < 7){
-       var aec = 'AEC104'      
-      }else if (t >= 7 && t < 16){
-        var aec = 'AEC136'
-      }else if (t >= 16 && t < 33){
-        var aec = 'AEC178'
-      }else if (t >= 33 && t < 50){
-        var aec = 'AEC178H'
-      }else if (t >= 50 && t < 85){
-        var aec = 'AE210'
-      }else if (t >= 85 && t < 105){
-        var aec = 'AEC210H'
-      }else if (t >= 105 && t < 135){
-        var aec = 'AEC263'
-      }else if (t >= 135 && t < 180){
-        var aec = 'AEC263H'
-      }else if (t >= 180 && t < 250){
-        var aec = 'AEC310'
-      }else if (t >= 250 && t < 300){
-        var aec = 'AEC310H'
-      }else if (t >= 300 && t < 370){
-        var aec = 'AEC370'
-      }else if (t >= 370 && t < 450){
-        var aec = 'AEC370H'
-      }else if (t >= 450 && t < 525){
-        var aec = 'AEC402'
-      }else if (t >= 525 && t < 675){
-        var aec = 'AEC402H'
-      }else if (t >= 675 && t < 750){
-        var aec = 'AEC450'
-      }else if (t >= 750 && t < 940){
-        var aec = 'AEC450H'
-      }else if (t >= 940 && t < 1350){
-        var aec = 'AEC550'
-      }else if (t >= 1350 && t < 1940){
-        var aec = 'AEC550H'
-      }else if (t >= 1940 && t < 105){
-        var aec = 'AEC724H'
-		}else {	}
-//----------------------------------------------------------------------
 
-if ((aec === 'AEC086'|| aec === 'AEC104' || aec === 'AEC136') && n > 4500 ){
-	var vel = "Velocidade máxima excedida, favor entrar em contato para mais informações.";
-}else if ((aec === 'AEC178' || aec === 'AEC178H' || aec === 'AEC210' || aec === 'AEC210H') && n > 3600 ){
-	var vel = "Velocidade máxima excedida, favor entrar em contato para mais informações.";
-}else if ((aec === 'AEC263' || aec === 'AEC263H' || aec === 'AEC310'|| aec === 'AEC310H') && n > 2700 ){
-	var vel = "Velocidade máxima excedida, favor entrar em contato para mais informações.";
-}else if ((aec === 'AEC370' || aec === 'AEC370H' || aec === 'AEC402' || aec === 'AEC402H') && n > 2250 ){
-	var vel = "Velocidade máxima excedida, favor entrar em contato para mais informações.";
-}else if ((aec === 'AEC402' || aec === 'AEC402H') && n > 2070 ){
-	var vel = "Velocidade máxima excedida, favor entrar em contato para mais informações.";
-}else if ((aec === 'AEC450' || aec === 'AEC450H') && n > 1620 ){
-	var vel = "Velocidade máxima excedida, favor entrar em contato para mais informações.";
-}else if ((aec === 'AEC550' || aec === 'AEC550H') && n > 1350 ){
-	var vel = "Velocidade máxima excedida, favor entrar em contato para mais informações.";
-}else if (aec === 'AEC724' && n > 910 ){
-	var vel = "Velocidade máxima excedida, favor entrar em contato para mais informações.";
-}else{
-	var vel = "";
-}
+	p = document.getElementById('potencia').value
+	n = document.getElementById('rpm').value
 
-// --------------------------------------------------------------------
+	//var eixo = document.getElementById('eixo').value
+
+	if (p != 0 && n != 0) {
+		var t = (u * p * fs) / n // Calculo a ser feito
+
+		if (t > 0 && t < 4) {
+			var aec = 'AEC086';
+		} else if (t >= 4 && t < 7) {
+			var aec = 'AEC104'
+		} else if (t >= 7 && t < 16) {
+			var aec = 'AEC136'
+		} else if (t >= 16 && t < 33) {
+			var aec = 'AEC178'
+		} else if (t >= 33 && t < 50) {
+			var aec = 'AEC178H'
+		} else if (t >= 50 && t < 85) {
+			var aec = 'AE210'
+		} else if (t >= 85 && t < 105) {
+			var aec = 'AEC210H'
+		} else if (t >= 105 && t < 135) {
+			var aec = 'AEC263'
+		} else if (t >= 135 && t < 180) {
+			var aec = 'AEC263H'
+		} else if (t >= 180 && t < 250) {
+			var aec = 'AEC310'
+		} else if (t >= 250 && t < 300) {
+			var aec = 'AEC310H'
+		} else if (t >= 300 && t < 370) {
+			var aec = 'AEC370'
+		} else if (t >= 370 && t < 450) {
+			var aec = 'AEC370H'
+		} else if (t >= 450 && t < 525) {
+			var aec = 'AEC402'
+		} else if (t >= 525 && t < 675) {
+			var aec = 'AEC402H'
+		} else if (t >= 675 && t < 750) {
+			var aec = 'AEC450'
+		} else if (t >= 750 && t < 940) {
+			var aec = 'AEC450H'
+		} else if (t >= 940 && t < 1350) {
+			var aec = 'AEC550'
+		} else if (t >= 1350 && t < 1940) {
+			var aec = 'AEC550H'
+		} else if (t >= 1940 && t < 105) {
+			var aec = 'AEC724H'
+		} else { }
+		//----------------------------------------------------------------------
+
+		if ((aec === 'AEC086' || aec === 'AEC104' || aec === 'AEC136') && n > 4500) {
+			var vel = "Velocidade máxima excedida, favor entrar em contato para mais informações.";
+		} else if ((aec === 'AEC178' || aec === 'AEC178H' || aec === 'AEC210' || aec === 'AEC210H') && n > 3600) {
+			var vel = "Velocidade máxima excedida, favor entrar em contato para mais informações.";
+		} else if ((aec === 'AEC263' || aec === 'AEC263H' || aec === 'AEC310' || aec === 'AEC310H') && n > 2700) {
+			var vel = "Velocidade máxima excedida, favor entrar em contato para mais informações.";
+		} else if ((aec === 'AEC370' || aec === 'AEC370H' || aec === 'AEC402' || aec === 'AEC402H') && n > 2250) {
+			var vel = "Velocidade máxima excedida, favor entrar em contato para mais informações.";
+		} else if ((aec === 'AEC402' || aec === 'AEC402H') && n > 2070) {
+			var vel = "Velocidade máxima excedida, favor entrar em contato para mais informações.";
+		} else if ((aec === 'AEC450' || aec === 'AEC450H') && n > 1620) {
+			var vel = "Velocidade máxima excedida, favor entrar em contato para mais informações.";
+		} else if ((aec === 'AEC550' || aec === 'AEC550H') && n > 1350) {
+			var vel = "Velocidade máxima excedida, favor entrar em contato para mais informações.";
+		} else if (aec === 'AEC724' && n > 910) {
+			var vel = "Velocidade máxima excedida, favor entrar em contato para mais informações.";
+		} else {
+			var vel = "";
+		}
+
+		// --------------------------------------------------------------------
 
 		var converter = t * 9.8067
-	
-      
-      torque.value = `${converter.toFixed(2)}`
-	  fstotal.value = `${fs.toFixed(2)}`
-	  res.innerHTML = `O Acoplamento ideal é <strong style = color:blue;>${aec}</strong>.`
-	  res1.innerHTML = `${vel}`
 
-	  document.getElementById('minhaTabela').style.display = "block"
 
-		if (aec === 'AEC086'){
-			document.getElementById("a086").style.background ="var(--selected-aec-color)"
-			document.getElementById("a086").style.color ="var(--selected-aec-colorfont)"
-		}else {
-			document.getElementById("a086").style.background ="inherit"
-			document.getElementById("a086").style.color ="inherit"
-		} 
-		if (aec === 'AEC104'){
-			document.getElementById("a104").style.background ="var(--selected-aec-color)"
-			document.getElementById("a104").style.color ="var(--selected-aec-colorfont)"
-		}else{
-			document.getElementById("a104").style.background ="inherit"
-			document.getElementById("a104").style.color ="inherit"
+		torque.value = `${converter.toFixed(2)}`
+		fstotal.value = `${fs.toFixed(2)}`
+		res.innerHTML = `O Acoplamento ideal é <strong style = color:blue;>${aec}</strong>.`
+		res1.innerHTML = `${vel}`
+
+		document.getElementById('minhaTabela').style.display = "block"
+
+		if (aec === 'AEC086') {
+			document.getElementById("a086").style.background = "var(--selected-aec-color)"
+			document.getElementById("a086").style.color = "var(--selected-aec-colorfont)"
+		} else {
+			document.getElementById("a086").style.background = "inherit"
+			document.getElementById("a086").style.color = "inherit"
 		}
-		if (aec === 'AEC136'){
-			document.getElementById("a136").style.background ="var(--selected-aec-color)"
-			document.getElementById("a136").style.color ="var(--selected-aec-colorfont)"
-		}else {
-			document.getElementById("a136").style.background ="inherit"
-			document.getElementById("a136").style.color ="inherit"
-		} 
-		if (aec === 'AEC178'|| aec === 'AEC178H'){
-			document.getElementById("a178").style.background ="var(--selected-aec-color)"
-			document.getElementById("a178").style.color ="var(--selected-aec-colorfont)"
-		}else{
-			document.getElementById("a178").style.background ="inherit"
-			document.getElementById("a178").style.color ="inherit"
+		if (aec === 'AEC104') {
+			document.getElementById("a104").style.background = "var(--selected-aec-color)"
+			document.getElementById("a104").style.color = "var(--selected-aec-colorfont)"
+		} else {
+			document.getElementById("a104").style.background = "inherit"
+			document.getElementById("a104").style.color = "inherit"
 		}
-		if (aec === 'AEC210' || aec === 'AEC210H'){
-			document.getElementById("a210").style.background ="var(--selected-aec-color)"
-			document.getElementById("a210").style.color ="var(--selected-aec-colorfont)"
-		}else {
-			document.getElementById("a210").style.background ="inherit"
-			document.getElementById("a210").style.color ="inherit"
-		} 
-		if (aec === 'AEC263' || aec === 'AEC263H'){
-			document.getElementById("a263").style.background ="var(--selected-aec-color)"
-			document.getElementById("a263").style.color ="var(--selected-aec-colorfont)"
-		}else{
-			document.getElementById("a263").style.background ="inherit"
-			document.getElementById("a263").style.color ="inherit"
+		if (aec === 'AEC136') {
+			document.getElementById("a136").style.background = "var(--selected-aec-color)"
+			document.getElementById("a136").style.color = "var(--selected-aec-colorfont)"
+		} else {
+			document.getElementById("a136").style.background = "inherit"
+			document.getElementById("a136").style.color = "inherit"
 		}
-		if (aec === 'AEC310' || aec === 'AEC310H'){
-			document.getElementById("a310").style.background ="var(--selected-aec-color)"
-			document.getElementById("a310").style.color ="var(--selected-aec-colorfont)"
-		}else {
-			document.getElementById("a310").style.background ="inherit"
-			document.getElementById("a310").style.color ="inherit"
-		} 
-		if (aec === 'AEC370' || aec === 'AEC370H'){
-			document.getElementById("a370").style.background ="var(--selected-aec-color)"
-			document.getElementById("a370").style.color ="var(--selected-aec-colorfont)"
-		}else{
-			document.getElementById("a370").style.background ="inherit"
-			document.getElementById("a370").style.color ="inherit"
+		if (aec === 'AEC178' || aec === 'AEC178H') {
+			document.getElementById("a178").style.background = "var(--selected-aec-color)"
+			document.getElementById("a178").style.color = "var(--selected-aec-colorfont)"
+		} else {
+			document.getElementById("a178").style.background = "inherit"
+			document.getElementById("a178").style.color = "inherit"
 		}
-		if (aec === 'AEC402' || aec === 'AEC402H'){
-			document.getElementById("a402").style.background ="var(--selected-aec-color)"
-			document.getElementById("a402").style.color ="var(--selected-aec-colorfont)"
-		}else {
-			document.getElementById("a402").style.background ="inherit"
-			document.getElementById("a402").style.color ="inherit"
-		} 
-		if (aec === 'AEC450' || aec === 'AEC450H'){
-			document.getElementById("a450").style.background ="var(--selected-aec-color)"
-			document.getElementById("a450").style.color ="var(--selected-aec-colorfont)"
-		}else{
-			document.getElementById("a450").style.background ="inherit"
-			document.getElementById("a450").style.color ="inherit"
+		if (aec === 'AEC210' || aec === 'AEC210H') {
+			document.getElementById("a210").style.background = "var(--selected-aec-color)"
+			document.getElementById("a210").style.color = "var(--selected-aec-colorfont)"
+		} else {
+			document.getElementById("a210").style.background = "inherit"
+			document.getElementById("a210").style.color = "inherit"
 		}
-		if (aec === 'AEC550' || aec === 'AEC550H'){
-			document.getElementById("a550").style.background ="var(--selected-aec-color)"
-			document.getElementById("a550").style.color ="var(--selected-aec-colorfont)"
-		}else {
-			document.getElementById("a550").style.background ="inherit"
-			document.getElementById("a550").style.color ="inherit"
-		} 
-		if (aec === 'AEC724'){
-			document.getElementById("a724").style.background ="var(--selected-aec-color)"
-			document.getElementById("a724").style.color ="var(--selected-aec-colorfont)"
-		}else{
-			document.getElementById("a724").style.background ="inherit"
-			document.getElementById("a724").style.color ="inherit"
+		if (aec === 'AEC263' || aec === 'AEC263H') {
+			document.getElementById("a263").style.background = "var(--selected-aec-color)"
+			document.getElementById("a263").style.color = "var(--selected-aec-colorfont)"
+		} else {
+			document.getElementById("a263").style.background = "inherit"
+			document.getElementById("a263").style.color = "inherit"
 		}
-	
-	
-    }else{
-      alert('Digite valores válidos') 
-    }
+		if (aec === 'AEC310' || aec === 'AEC310H') {
+			document.getElementById("a310").style.background = "var(--selected-aec-color)"
+			document.getElementById("a310").style.color = "var(--selected-aec-colorfont)"
+		} else {
+			document.getElementById("a310").style.background = "inherit"
+			document.getElementById("a310").style.color = "inherit"
+		}
+		if (aec === 'AEC370' || aec === 'AEC370H') {
+			document.getElementById("a370").style.background = "var(--selected-aec-color)"
+			document.getElementById("a370").style.color = "var(--selected-aec-colorfont)"
+		} else {
+			document.getElementById("a370").style.background = "inherit"
+			document.getElementById("a370").style.color = "inherit"
+		}
+		if (aec === 'AEC402' || aec === 'AEC402H') {
+			document.getElementById("a402").style.background = "var(--selected-aec-color)"
+			document.getElementById("a402").style.color = "var(--selected-aec-colorfont)"
+		} else {
+			document.getElementById("a402").style.background = "inherit"
+			document.getElementById("a402").style.color = "inherit"
+		}
+		if (aec === 'AEC450' || aec === 'AEC450H') {
+			document.getElementById("a450").style.background = "var(--selected-aec-color)"
+			document.getElementById("a450").style.color = "var(--selected-aec-colorfont)"
+		} else {
+			document.getElementById("a450").style.background = "inherit"
+			document.getElementById("a450").style.color = "inherit"
+		}
+		if (aec === 'AEC550' || aec === 'AEC550H') {
+			document.getElementById("a550").style.background = "var(--selected-aec-color)"
+			document.getElementById("a550").style.color = "var(--selected-aec-colorfont)"
+		} else {
+			document.getElementById("a550").style.background = "inherit"
+			document.getElementById("a550").style.color = "inherit"
+		}
+		if (aec === 'AEC724') {
+			document.getElementById("a724").style.background = "var(--selected-aec-color)"
+			document.getElementById("a724").style.color = "var(--selected-aec-colorfont)"
+		} else {
+			document.getElementById("a724").style.background = "inherit"
+			document.getElementById("a724").style.color = "inherit"
+		}
+
+
+	} else {
+		alert('Digite valores válidos')
+	}
 }
 
 
@@ -2020,13 +2021,13 @@ lib = {
 }(jQuery, this));
 
 
-/*  -------------------- GDPR Cookies plugin --------------------------*/ 
+/*  -------------------- GDPR Cookies plugin --------------------------*/
 
 !function (e) { var n; if ("function" == typeof define && define.amd && (define(e), n = !0), "object" == typeof exports && (module.exports = e(), n = !0), !n) { var t = window.Cookies, o = window.Cookies = e(); o.noConflict = function () { return window.Cookies = t, o } } }(function () { function e() { for (var e = 0, n = {}; e < arguments.length; e++) { var t = arguments[e]; for (var o in t) n[o] = t[o] } return n } function n(e) { return e.replace(/(%[0-9A-Z]{2})+/g, decodeURIComponent) } return function t(o) { function r() { } function i(n, t, i) { if ("undefined" != typeof document) { "number" == typeof (i = e({ path: "/" }, r.defaults, i)).expires && (i.expires = new Date(1 * new Date + 864e5 * i.expires)), i.expires = i.expires ? i.expires.toUTCString() : ""; try { var c = JSON.stringify(t); /^[\{\[]/.test(c) && (t = c) } catch (e) { } t = o.write ? o.write(t, n) : encodeURIComponent(String(t)).replace(/%(23|24|26|2B|3A|3C|3E|3D|2F|3F|40|5B|5D|5E|60|7B|7D|7C)/g, decodeURIComponent), n = encodeURIComponent(String(n)).replace(/%(23|24|26|2B|5E|60|7C)/g, decodeURIComponent).replace(/[\(\)]/g, escape); var f = ""; for (var u in i) i[u] && (f += "; " + u, !0 !== i[u] && (f += "=" + i[u].split(";")[0])); return document.cookie = n + "=" + t + f } } function c(e, t) { if ("undefined" != typeof document) { for (var r = {}, i = document.cookie ? document.cookie.split("; ") : [], c = 0; c < i.length; c++) { var f = i[c].split("="), u = f.slice(1).join("="); t || '"' !== u.charAt(0) || (u = u.slice(1, -1)); try { var a = n(f[0]); if (u = (o.read || o)(u, a) || n(u), t) try { u = JSON.parse(u) } catch (e) { } if (r[a] = u, e === a) break } catch (e) { } } return e ? r[e] : r } } return r.set = i, r.get = function (e) { return c(e, !1) }, r.getJSON = function (e) { return c(e, !0) }, r.remove = function (n, t) { i(n, "", e(t, { expires: -1 })) }, r.defaults = {}, r.withConverter = t, r }(function () { }) });
 
 /*----------------------Google translator------------------------------------*/
 
-         
+
 var comboGoogleTradutor = null; //Varialvel global
 
 function googleTranslateElementInit() {
