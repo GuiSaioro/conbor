@@ -34,8 +34,8 @@ $mail->Host = "mail-nt.braslink.com";
 $mail->Port = "25";
 //$mail->SMTPSecure = false;
 $mail->SMTPSauth = false;
-$mail->Username = "deptec2@conbor.com.br";
-$mail->Password = "07Conb20";
+$mail->Username = "";
+$mail->Password = "";
 
 //Config de mensagem
 
