@@ -11336,7 +11336,7 @@ p .sitebar button span #nav>li>a.has-drop-down-a span::before {
 .tabset {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 33px;
+  margin-bottom: 15px;
 }
 
 @media (max-width: 1023px) {

@@ -35,7 +35,7 @@
     <meta name="msapplication-TileColor" content="#0e0e10">
     <meta name="msapplication-config" content="/favicon/browserconfig.xml">
     <meta name="theme-color" content="#0e0e10">
-    <title> Elementos EI</title>
+    <title>Elementos EI</title>
     <style>
         .grecaptcha-badge {
             z-index: 9999;
@@ -45,7 +45,7 @@
 
 </head>
 
-<body onload="modal()">
+<body onload="modal2()">
     <div id="wrapper">
         <header>
             <div class="container">
@@ -108,59 +108,18 @@
                     </ul>
             </div>
             </li>
-            <!--<li>
-                            <a href="#">Visualizar por setor industrial </a>
-                            <div class="dropdown">
-                                <ul>
-                                    <li>
-                                        <a href="industries/bridges-movable-structures.html">Industria Papel </a>
-                                        <div class="dropdown"></div>
-                                    </li>
-                                    <li>
-                                        <a href="industries/container-handling.html">Mineração </a>
-                                        <div class="dropdown"></div>
-                                    </li>
-                                    <li>
-                                        <a href="industries/cranes-hoists.html">Plastico </a>
-                                        <div class="dropdown"></div>
-                                    </li>
-                                    <li>
-                                        <a href="industries/general-industry.html">Perfuração </a>
-                                        <div class="dropdown"></div>
-                                    </li>
-                                    <li>
-                                        <a href="industries/iron-steel.html">Cerâmica </a>
-                                        <div class="dropdown"></div>
-                                    </li>
-                                    <li>
-                                        <a href="industries/marine-propulsion.html">Açúcar </a>
-                                        <div class="dropdown"></div>
-                                    </li>
-                                    <li>
-                                        <a href="industries/material-handling.html">Ciderurgica </a>
-                                        <div class="dropdown"></div>
-                                    </li>
-                                    <li>
-                                        <a href="industries/material-handling.html">Demais </a>
-                                        <div class="dropdown"></div>
-                                    </li>
-                                    
-                                    
-                                </ul>
-                            </div>
-                        </li>-->
             <li>
-                <a href="../produtos.html">Ver todos os produtos </a>
+                <a href="../products.html">Ver todos os produtos </a>
                 <div class="dropdown">
                 </div>
             </li>
             <li>
-                <a href="../produtos/intercambiabilidade.html">Intercambiabilidade </a>
+                <a href="../products/intercambiabilidade.html">Intercambiabilidade </a>
                 <div class="dropdown">
                 </div>
             </li>
             <li>
-                <a href="../produtos/document-downloads.html">Downloads <spam></spam></a>
+                <a href="../products/document-downloads.html">Downloads <spam></spam></a>
                 <div class="dropdown">
                 </div>
             </li>
@@ -175,7 +134,7 @@
 
                 </li>
                 <li>
-                    <a href="#">Suporte Técnico </a>
+                    <a href="../manutencao.html">Suporte Técnico </a>
                     <div class="dropdown">
                     </div>
                 </li>
@@ -183,8 +142,23 @@
         </div>
     </li>
     <li>
-        <a href="../company/empresa.html">Empresa <span></span></a>
+        <a href="../grupo.html">Grupo <span></span></a>
         <div class="dropdown">
+            <ul>
+                <li>
+                    <a href="../conbor.html" translate="no">CONBOR</a>
+
+                </li>
+                <li>
+                    <a href="../mectrans.html" translate="no">MECTRANS </a>
+                    <div class="dropdown">
+                    </div>
+                </li>
+                <li>
+                    <a href="../historia.html" translate="no">História</a>
+
+                </li>
+            </ul>
         </div>
     </li>
     <li>
@@ -216,7 +190,7 @@
 
             </div>
             <a class="button"
-                href="https://wa.me/5521981512239?text=Olá%20Gostaria%20de%20mais%20informações%20sobre%20AEC-Standart"
+                href="https://wa.me/5521981512239?text=Olá%20Gostaria%20de%20mais%20informações%20sobre%20Elementos%20EI"
                 target="_blank"><span class="fa fa-whatsapp"></span></a>
         </li>
         <li class="">
@@ -232,6 +206,7 @@
                 <ul class="breadcrumbs">
                     <li><a href="../index.html">Inicio</a></li>
                     <li><a href="../produtos.html">Produtos</a></li>
+                    <li><a href="../product-types/freios-embreagens-pneumaticas.html">Produtos</a></li>
                     <li>Elemento Pneumatico EI</li>
                 </ul>
             </div>
@@ -243,16 +218,16 @@
                     <div class="button-holder right">
                         <a href="https://wa.me/5521981512239?text=Olá%20Gostaria%20de%20mais%20informações%20sobre%20Acoplamento AEC-Standart"
                             class="btn" target="_blank">PEDIR INFORMAÇÃO</a>
-                        <button class="btn" id="btn-download">Download Catálogo</button>
+                        <button class="btn" id="btnModal">Download Catálogo</button>
                         <!-- Modal -->
-                        <div id="modalDownload" class="modal">
+                        <div id="myModal" class="modal">
 
                             <!-- Conteudo do Modal  -->
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h1>Nos Diga quem é
                                         <!--<img id="imgaco" src="../images/products/img-aec.png" alt="Acoplamento">-->
-                                        <span class="close2">&times;</span>
+                                        <span class="close icon-icon-close"></span>
                                     </h1>
                                 </div>
                                 <div class="d-form">
@@ -274,35 +249,22 @@
                                                 required>
                                             <label for="" class="form__label">E-Mail</label>
                                         </div>
-                                        <div class="form__div">
-                                            <input class="form__input" type="tel" name="tel" placeholder=" " required>
-                                            <label for="" class="form__label">Tel.:(xx)xxxx-xxxx</label>
-                                        </div>
-                                        <div class="form__div">
-                                            <textarea class="form__input" name="message" cols="30" rows="10"
-                                                placeholder=" "></textarea>
-                                            <label for="" class="form__label">Mensagem</label>
-                                        </div>
-
-
-
-                                        <!--<input type="submit" class="btn form__button" value="ENVIAR" onclick="openInNewTab()">
-                                    <input type="hidden" name="_captcha" value="false">
-                                    <input type="hidden" name="_next" value="../product/aec-standart.html">-->
                                     </form>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                     <div class="row-holder">
                         <div class="col-6">
                             <div class="slider">
                                 <div class="slide">
-                                    <img src="../images/products/img-ei-s.jpg?width=555&amp;height=395&amp;mode=crop"
+                                    <img src="../images/products/ei-s.JPG?width=555&amp;height=395&amp;mode=crop"
                                         alt="">
                                 </div>
                                 <img src="../images/products/img-ei-bi.JPG" alt="">
                                 <img src="../images/products/img-ei-bi-expl.JPG" alt="">
+                                <!-- Colocar outra imagem do AEC cortada-->
                             </div>
                         </div>
                         <div class="col-6">
@@ -420,7 +382,7 @@
                                     <div class="col-4 produtos">
                                         <div class="item">
                                             <div class="img-holder">
-                                                <a href="../products/cmb-3-for-sb-brakes.html"><img
+                                                <a href="../products/cinta.html"><img
                                                         src="../images/products/img-cinta.JPG" alt=""></a>
                                             </div>
                                             <div class="item-name">
@@ -522,8 +484,7 @@
                     <div class="col-8">
                         <div class="global">
                             <h1>ASSISTENCIA TÉCNICA</h1>
-                            <p>A CONBOR/MECTRANS possui um Departamento Técnico formado por especialistas que estão
-                                sempre
+                            <p>A CONBOR possui um Departamento Técnico formado por especialistas que estão sempre
                                 prontos para atender às solicitações de nossos clientes,
                                 que contam, ainda, com um suporte pós-venda para toda a nossa linha de produtos.</p>
                             <p>Entre em contato e saiba mais</p>
