@@ -16,10 +16,47 @@ jQuery(function () {
 	initAnchors();
 	initacordeom();
 	initCookies();
+	//lgpdcookie();
 });
 //-------------------------------------------------------------------------------//
+function lgpdcookie() {
+	let lgpdUrl = 'https://jsonplaceholder.typicode.com/posts';
+
+	let lgpdHtml = `
+	<div id="gdpr-cookies" class="container">
+		<div class="holder">
+			<p>O site CONBOR/Mectrans utiliza cookies para lhe proporcionar a melhor experiência de usuário. Para
+				continuar, você concorda com o uso de cookies de acordo com nossa <a href="politica.html">Politica
+				de Privacidade</a>.
+			</p>
+			<button href="#" class="btn btn-accept-cookie"><span class="icon-icon-accept"></span> Aceitar</button>
+			<button href="#" class="close-btn"><span class="icon-icon-close"></span></button>
+		</div>
+	</div>`;
+
+	let lsContent = Cookies.getItem('gdpr-cookies');
+	if(!lsContent){
+		document.body.innerHTML += lgpdHtml;
+
+		let lgpdArea = document.querySelector('#gdpr-cookies');
+		let lgpdButton = lgpdArea.querySelector('.btn-accept-cookie');
+
+		lgpdButton.addEventListener('click', async ()=>{
+			lgpdArea.remove();
+
+			let result = await fetch(lgpdUrl); 
+			let json = await result.json();
+			if(json.error != ''){
+				//let id =  '123'//json.id
+				Cookies.set('gdpr-cookie', 'aceito', { expires: 365 });
+			}
+
+			//localStorage.setItem('#gdpr-cookies','123');
+		});
 
 
+	}
+}
 //-------------------------------------------------------------------------------//
 $(window).load(function () {
 	//initMenuCropping();
@@ -38,7 +75,6 @@ function initCookies() {
             setCookie = Cookies.get('gdpr-cookie'); 
               
             if(isCookieSet()){
-                
                 hideMessageBlock();
             } else{
                 showMessageBlock();
@@ -49,7 +85,7 @@ function initCookies() {
                 hideMessageBlock();
             
                 Cookies.remove('gdpr-cookie');
-                Cookies.set('gdpr-cookie', 'accepted', { expires: 365 });
+                Cookies.set('gdpr-cookie', 'aceito', { expires: 365 });
             });
             
             $(document).on('click', 'button.close-btn', function(event) {
@@ -67,7 +103,7 @@ function initCookies() {
             }
     
             function isCookieSet(){
-              if(setCookie == "accepted" || setCookie == "rejected"){
+              if(setCookie == "aceito" || setCookie == "negado"){
                 return true;
               }
             }
@@ -1996,7 +2032,6 @@ lib = {
 /*  -------------------- GDPR Cookies plugin --------------------------*/
 
 !function (e) { var n; if ("function" == typeof define && define.amd && (define(e), n = !0), "object" == typeof exports && (module.exports = e(), n = !0), !n) { var t = window.Cookies, o = window.Cookies = e(); o.noConflict = function () { return window.Cookies = t, o } } }(function () { function e() { for (var e = 0, n = {}; e < arguments.length; e++) { var t = arguments[e]; for (var o in t) n[o] = t[o] } return n } function n(e) { return e.replace(/(%[0-9A-Z]{2})+/g, decodeURIComponent) } return function t(o) { function r() { } function i(n, t, i) { if ("undefined" != typeof document) { "number" == typeof (i = e({ path: "/" }, r.defaults, i)).expires && (i.expires = new Date(1 * new Date + 864e5 * i.expires)), i.expires = i.expires ? i.expires.toUTCString() : ""; try { var c = JSON.stringify(t); /^[\{\[]/.test(c) && (t = c) } catch (e) { } t = o.write ? o.write(t, n) : encodeURIComponent(String(t)).replace(/%(23|24|26|2B|3A|3C|3E|3D|2F|3F|40|5B|5D|5E|60|7B|7D|7C)/g, decodeURIComponent), n = encodeURIComponent(String(n)).replace(/%(23|24|26|2B|5E|60|7C)/g, decodeURIComponent).replace(/[\(\)]/g, escape); var f = ""; for (var u in i) i[u] && (f += "; " + u, !0 !== i[u] && (f += "=" + i[u].split(";")[0])); return document.cookie = n + "=" + t + f } } function c(e, t) { if ("undefined" != typeof document) { for (var r = {}, i = document.cookie ? document.cookie.split("; ") : [], c = 0; c < i.length; c++) { var f = i[c].split("="), u = f.slice(1).join("="); t || '"' !== u.charAt(0) || (u = u.slice(1, -1)); try { var a = n(f[0]); if (u = (o.read || o)(u, a) || n(u), t) try { u = JSON.parse(u) } catch (e) { } if (r[a] = u, e === a) break } catch (e) { } } return e ? r[e] : r } } return r.set = i, r.get = function (e) { return c(e, !1) }, r.getJSON = function (e) { return c(e, !0) }, r.remove = function (n, t) { i(n, "", e(t, { expires: -1 })) }, r.defaults = {}, r.withConverter = t, r }(function () { }) });
-
 /*----------------------Google translator------------------------------------*/
 
 

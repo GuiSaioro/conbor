@@ -49,6 +49,7 @@ Empresa: $empresa<br>
 Telefone: $tel<br>
 e-mail:($email):
 <br>
+estou de acordo em fornecer o Nome da Empresa, E-mail e meu Telefone para que a CONBOR/MECTRANS entre em contato comigo.
 <br>
 Mensagem: $mensagem";
 

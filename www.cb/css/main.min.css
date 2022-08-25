@@ -2562,7 +2562,7 @@ input[type="submit"] {
 }
 
 form .text {
-  font-size: 10px;
+  font-size: 12px;
 }
 
 form .text a {
@@ -12244,7 +12244,7 @@ iframe {
   background: rgb(14, 14, 16);
   color: rgb(238, 238, 238);
   position: fixed;
-  left: 50%;
+  left: 50%; 
   transform: translateX(-50%);
   z-index: 9999;
   box-shadow: rgb(235, 237, 240) 0px 0px 34px;
@@ -12341,6 +12341,12 @@ iframe {
   color: white;
   border: rgb(76, 40, 235);
 }
+
+/*//////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////*/
 
 footer {
   background: rgb(141, 142, 143);
@@ -13666,7 +13672,7 @@ td {
   }
 
   .l-form {
-    min-height: 280vh;
+    min-height: 210vh;
     flex-direction: column;
   }
 
