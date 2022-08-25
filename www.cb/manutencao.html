@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="pt-BR">
 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 
@@ -13,11 +14,13 @@
     <link
         href="http://fonts.googleapis.com/css2?family=Commissioner:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="../cdn.jsdelivr.net/gh/fancyapps/fancybox%403.5.7/dist/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="css/main.min.css">
     <script src="../ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script type="text/javascript" src="../cdn.jsdelivr.net/npm/slick-carousel%401.8.1/slick/slick.min.js"></script>
     <script src="../cdn.jsdelivr.net/gh/fancyapps/fancybox%403.5.7/dist/jquery.fancybox.min.js"></script>
     <script src="js/jquery.main.js"></script>
+    <link rel="stylesheet" href="css/style-slider.css">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
@@ -27,24 +30,15 @@
     <meta name="msapplication-TileColor" content="#0e0e10">
     <meta name="msapplication-config" content="/favicon/browserconfig.xml">
     <meta name="theme-color" content="#0e0e10">
-    <title>CONBOR/MECTRANS | Home </title>
+    <title>Serviços | Manutenção </title>
     <style>
         .grecaptcha-badge {
             z-index: 9999;
         }
     </style>
-    <meta name="description" content="Conbor Borrachas Técnico Industriais é uma empresa 100% brasileira, estabelecida no bairro de Bonsucesso - Rio de Janeiro desde 1984, 
-        atendendo com seus produtos e serviços, equipamentos dos mais diversos setores da indústria.O Seu objetivo básico é o de desenvolver, fabricar
-          e oferecer ao público alvo produtos e serviços fabricados em conformindade com seu sistema de gestão de qualidade ISO 9001:2008 certificado 
-          pelo RINA/IQNET, destinados a solucionar demandas de acionamento, e frenagem tensionadora, dos mais diversos equiapmentos da indústria.
-         Fabricamos e fornecemos embreagens, e freios tensionadores pneumátcos radiais, acoplamentos elásticos e peças técnicas moldadas de borracha.
-        Nossos serviços incluem desenvolvimento de projetos de acionamentos e freios, bem como, executamos recondicionamento de embreagens pneumáticas
-        e de cintas de freio para guinchos de elevação e de ancoragem, com a mesma garantia da peça nova." />
-    <link rel="canonical" href="index.html">
-
 </head>
 
-<body class="home" onload="empresas()">
+<body>
     <div id="wrapper">
         <header>
             <div class="container">
@@ -107,68 +101,18 @@
                     </ul>
             </div>
             </li>
-            <!--<li>
-                            <a href="#">Visualizar por setor industrial </a>
-                            <div class="dropdown">
-                                <ul>
-                                    <li>
-                                        <a href="industries/bridges-movable-structures.html">Industria Papel </a>
-                                        <div class="dropdown">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <a href="industries/container-handling.html">Mineração </a>
-                                        <div class="dropdown">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <a href="industries/cranes-hoists.html">Plastico </a>
-                                        <div class="dropdown">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <a href="industries/general-industry.html">Perfuração </a>
-                                        <div class="dropdown">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <a href="industries/iron-steel.html">Cerâmica </a>
-                                        <div class="dropdown">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <a href="industries/marine-propulsion.html">Açúcar </a>
-                                        <div class="dropdown">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <a href="industries/material-handling.html">Ciderurgica </a>
-                                        <div class="dropdown">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <a href="industries/material-handling.html">Demais </a>
-                                        <div class="dropdown">
-                                        </div>
-                                    </li>
-                                    
-                                    
-                                </ul>
-                            </div>
-                        </li>-->
             <li>
-                <a href="produtos.html">Ver todos os produtos</a>
-
+                <a href="produtos.html">Ver todos os produtos </a>
                 <div class="dropdown">
                 </div>
             </li>
             <li>
-                <a href="products/intercambiabilidade.html">Intercambiabilidade </a>
+                <a href="produtos/intercambiabilidade.html">Intercambiabilidade </a>
                 <div class="dropdown">
                 </div>
             </li>
             <li>
-                <a href="products/document-downloads.html">Downloads <spam></spam></a>
+                <a href="produtos/document-downloads.html">Downloads <spam></spam></a>
                 <div class="dropdown">
                 </div>
             </li>
@@ -177,13 +121,13 @@
     <li>
         <a href="servicos.html">Serviços <span></span></a>
         <div class="dropdown">
-             <ul>
-               <li>
+            <ul>
+                <li>
                     <a href="recuperacao.html">Recuperação de Embreagens e peças técnicas </a>
 
                 </li>
                 <li>
-                    <a href="#">Suporte Técnico </a>
+                    <a href="services/become-a-supplier.html">Suporte Técnico </a>
                     <div class="dropdown">
                     </div>
                 </li>
@@ -191,7 +135,7 @@
         </div>
     </li>
     <li>
-        <a href="#">Grupo <span></span></a>
+        <a href="grupo.html">Grupo <span></span></a>
         <div class="dropdown">
             <ul>
                 <li>
@@ -222,17 +166,24 @@
     </li>
     </ul>
     </nav> <a class="nav-opener" href="#"><span></span></a>
-
     </div>
     </header>
     <ul class="sitebar">
+        <!--<li class="site-search">
+            <form action="produtos.html"> Alterar para site CONBOR
+                <input type="hidden"  value="">
+                <input type="text" name="search" placeholder="Pesquisar produtos" maxlength="255" value="">
+                <button><span class="icon-search"></span></button>
+            </form>
+            <a class="button clickLink" href="#"><span class="icon-search"></span></a>
+        </li>-->
         <li class="loc">
             <div class="custom-select">
                 <div class="category"></div>
 
             </div>
             <a class="button"
-                href="https://wa.me/5521981512239?text=Olá%20Gostaria%20de%20mais%20informações%20sobre%20os%20produtos"
+                href="https://wa.me/5521981512239?text=Olá%20Gostaria%20de%20mais%20informações%20sobre%20Acoplamentos%20"
                 target="_blank"><span class="fa fa-whatsapp"></span></a>
         </li>
         <li class="">
@@ -240,111 +191,87 @@
             <!--data-fancybox colocar entre button e data para lista de traduções-->
         </li>
     </ul>
+
     <main role="main">
-        <section class="main-banner" style="background-image: url(images/home-video.jpg)">
+        <section class="main-banner" style="background-image: url(images/product-list-banner.jpg)">
             <div class="container">
-                <div class="text">
-                    <h1 class="large">A melhor solução <br> para as máquinas mais exigentes <strong
-                            class="white">EMBREAGENS E FREIOS PNEUMÁTICOS</strong></h1>
-                    <p>Recuperação de Embreagens</p>
-                    <a href="recuperacao.html" class="btn">SAIBA MAIS</a>
-                </div>
-            </div>
-            <iframe
-                src="https://player.vimeo.com/video/731741001?h=80f73400cc?autoplay=1&h=8914dac98b&background=1&loop=1&autoplay=1&muted=1&byline=0&title=0&quality=1080p"
-                allow="autoplay; fullscreen; picture-in-picture" webkitallowfullscreen=""
-                mozallowfullscreen=""></iframe>
-        </section>
-        <section id="home_empresas">
-            <div class="painel_empresas">
+                <div class="holder">
 
-                <div class="split esquerda">
-                    <h1> <img src="images/logoCBsemfundo.png" alt="Conbor"></h1>
-                    <p>A CONBOR é líder nacional no mercado de freios, embreagens e acoplamentos industriais.
-                        Nossos produtos conquistaram a credibilidade de diversos setores da indústria brasileira
-                        pela segurança, facilidade de manutenção e, principalmente, pela qualidade</p>
-                    <a href="conbor.html" class="btn_empresas">Sobre</a>
-                </div>
-
-                <div class="split direita">
-                    <h1><img src="images/header-logo-mectrans.png" alt="Mectrans"></h1>
-                    <p>Há mais de 15 anos no mercado da industria brasileira trabalhando
-                        em parceria com a CONBOR em todo país, a MECTRANS se destaca pelo
-                        seu crescimento, desenvolvimento ecônomico e com respeito ao meio ambiente
-                        ajudando o Brasil com capacidade produtiva e representatividade alcançada
-                        no mercado de Freios, Embreagens, Acoplamentos e peças técnicas de Borraschas,
-                        desde 2007.</p>
-                    <a href="mectrans.html" class="btn_empresas">Sobre</a>
+                    <h1 class="large">Serviços de Manutenção</h1>
+                    <ul class="breadcrumbs">
+                        <li><a href="index.html">Início</a></li>
+                        <li>Serviços de Manutenção</li>
+                    </ul>
                 </div>
             </div>
         </section>
-        <!--<section class="intro-section bg-blue ">
-            <div class="home-download">
 
-                <div class="home-download-catalogo" style="background-image:url(images/home-intro-bg-verde.jpg)">
-                         <span class="home-catalogo-text-up">Cátalogo de freios e embreagens <strong>CONBOR / MECTRANS</strong>.</span>
-                            <a class="img-catalogo" href="pdf/catalogo-embreagense-freios-conbor.pdf" target="_blank"><img src="images/catalogo-verde.jpg" alt=""></a>
-                            <div class="home-catalogo-text">
-                                <p>A solução perfeita para problemas de transmissão e frenagem</p>
-                            </div> 
-                </div>
-                <div class="home-download-catalogo" style="background-image:url(images/home-intro-bg-azul.jpg)">
-                            <span class="home-catalogo-text-up">Cátalogo de acoplamentos <strong>CONBORFLEX</strong>.</span>
-                            <a class="img-catalogo" href="pdf/catalogo-acoplamentos-conbor.pdf"><img src="images/catalogo-azul.jpg" alt=""></a>                            
-                            <div class="home-catalogo-text">
-                                    <p>A solução mais flexível para as máquinas mais exigentes</p>    
+        <section class="servicos">
+            <div class="container">
+                    <div>
+                        <div style="display: flex;"></div>
+                    <h1>SERVIÇOS DE MANUTENÇÃO CONBOR/MECTRANS <img src="images/logotipo manutenção-02.png" width="50px" alt=""></h1>
+                    <p>
+                        Executamos serviços de manutenção e montagem das linhas de Freios, Freios Tensionadores,
+                        Acionamentos e Elementos pneumáticos radiais;
+                    </p>
+                    <p style="text-align:justify">
+                        Nossas equipes técnicas, em função de contratos firmados com nossos cliente, inspecionam
+                        acionamentos e freios pneumáticos instalados em seus equipamentos, recomendando e executando
+                        substituição de componentes sempre que necessárias. Este serviços é executado durante as paradas
+                        de máquina programadas pelo cliente para manutenção, e garante a otimização do desempenho dos
+                        freios e acionamentos pneumáticos no equipamento, garantindo assim a eliminação de paradas não
+                        programadas para a mesma finalidade.
+                        Consulte-nos, sem compromisso.
+                    </p>
+
+                            <div class="title left">
+                                <h1></h1>
+                            </div>
+                            <div class="fotos">
+                                <div class="row-holder2">
+                                    <div class="col-5">
+                                        <div class="item">
+                                            <div class="img-holder">
+                                                <a href="images/feiras/feiras-1.jpg" target="_blank">
+                                                    <img src="images/feiras/feiras-1.jpg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="item">
+                                            <div class="img-holder">
+                                                <a href="images/feiras/feiras-2.jpg" target="_blank">
+                                                    <img src="images/feiras/feiras-2.jpg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="item">
+                                            <div class="img-holder">
+                                                <a href="images/feiras/feiras-3.jpg" target="_blank">
+                                                    <img src="images/feiras/feiras-3.jpg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="item">
+                                            <div class="img-holder">
+                                                <a href="images/feiras/feiras-4.jpg" target="_blank">
+                                                    <img src="images/feiras/feiras-4.jpg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                 </div>
             </div>
-        </section>-->
+        </section>
     </main>
-    <section class="fotos">
-        <div class="container">
-            <div class="title left">
-                <h1>Produtos em ação</h1>
-                <p>Veja nossa linha de produtos em ação na industria</p>
-            </div>
-            <div class="fotos">
-                <div class="row-holder">
-                    <div class="col-4">
-                        <div class="item">
-                            <div class="img-holder">
-                                <a href="images/productsinaction/img-embreagem-em-acao.jpg" target="_blank">
-                                    <img src="images/productsinaction/img-embreagem-em-acao.jpg" alt="">
-                                </a>
-                            </div>
-                            <p><a href="images/productsinaction/img-embreagem-em-acao.jpg" target="_blank"> Moinho</a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="item">
-                            <div class="img-holder">
-                                <a href="images/productsinaction/img-moinho2.jpg" target="_blank">
-                                    <img src="images/productsinaction/img-moinho2.jpg" alt="">
-                                </a>
-                            </div>
-                            <p><a href="images/productsinaction/img-moinho2.jpg" target="_blank"> Moinho 2</a></p>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="item">
-                            <div class="img-holder">
-                                <a href="images/productsinaction/img-embreagem-52.jpg" target="_blank">
-                                    <img src="images/productsinaction/img-embreagem-52.jpg" alt="">
-                                </a>
-                            </div>
-                            <p><a href="images/productsinaction/img-embreagem-52.jpg" target="_blank"> Recuperação 52
-                                    IV-L</a></p>
-                        </div>
-                    </div>
-                    <!-- <div class="pagination">
-                        <a href="#" class="btn">Veja todas as fotos</a>-->
-                </div>
-            </div>
-        </div>
-        </div>
-    </section>
     <footer>
         <div class="container">
             <div class="top-footer">
@@ -414,18 +341,14 @@
             <div class="holder">
                 <p>O site CONBOR/Mectrans utiliza cookies para lhe proporcionar a melhor experiência de usuário. Para
                     continuar, você concorda com o uso de cookies de acordo com nossa <a href="politica.html">Politica
-                    de Privacidade</a>.
-                </p>
+                        de Privacidade</a>.</p>
                 <button href="#" class="btn btn-accept-cookie"><span class="icon-icon-accept"></span> Aceitar</button>
                 <button href="#" class="close-btn"><span class="icon-icon-close"></span></button>
             </div>
         </div>
     </footer>
-
     <script type="text/javascript"
-        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
-        </script>
-
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 </html>
