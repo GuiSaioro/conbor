@@ -11090,6 +11090,7 @@ p .sitebar button span #nav>li>a.has-drop-down-a span::before {
 
 .support-banner .global {
   max-width: 625px;
+  text-align: justify;
 }
 
 .support-banner h1 {
@@ -12341,13 +12342,10 @@ iframe {
   color: white;
   border: rgb(76, 40, 235);
 }
-
-/*//////////////////////////////////////////////////////////////////////////////////*/
-
-
-
-/*///////////////////////////////////////////////////////////////////////////////////*/
-
+.servicos{
+  margin: 40px 0 20px 0;
+  
+}
 footer {
   background: rgb(141, 142, 143);
   color: rgb(255, 255, 255);

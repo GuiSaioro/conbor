@@ -16,47 +16,9 @@ jQuery(function () {
 	initAnchors();
 	initacordeom();
 	initCookies();
-	//lgpdcookie();
 });
 //-------------------------------------------------------------------------------//
-function lgpdcookie() {
-	let lgpdUrl = 'https://jsonplaceholder.typicode.com/posts';
 
-	let lgpdHtml = `
-	<div id="gdpr-cookies" class="container">
-		<div class="holder">
-			<p>O site CONBOR/Mectrans utiliza cookies para lhe proporcionar a melhor experiência de usuário. Para
-				continuar, você concorda com o uso de cookies de acordo com nossa <a href="politica.html">Politica
-				de Privacidade</a>.
-			</p>
-			<button href="#" class="btn btn-accept-cookie"><span class="icon-icon-accept"></span> Aceitar</button>
-			<button href="#" class="close-btn"><span class="icon-icon-close"></span></button>
-		</div>
-	</div>`;
-
-	let lsContent = Cookies.getItem('gdpr-cookies');
-	if(!lsContent){
-		document.body.innerHTML += lgpdHtml;
-
-		let lgpdArea = document.querySelector('#gdpr-cookies');
-		let lgpdButton = lgpdArea.querySelector('.btn-accept-cookie');
-
-		lgpdButton.addEventListener('click', async ()=>{
-			lgpdArea.remove();
-
-			let result = await fetch(lgpdUrl); 
-			let json = await result.json();
-			if(json.error != ''){
-				//let id =  '123'//json.id
-				Cookies.set('gdpr-cookie', 'aceito', { expires: 365 });
-			}
-
-			//localStorage.setItem('#gdpr-cookies','123');
-		});
-
-
-	}
-}
 //-------------------------------------------------------------------------------//
 $(window).load(function () {
 	//initMenuCropping();
