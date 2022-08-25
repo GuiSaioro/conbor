@@ -13266,6 +13266,9 @@ body {
   animation-name: animatetop;
   animation-duration: 0.4s;
 }
+.modal-content-download{
+  width: 30%;
+}
 
 .modal-header .close {
   color: white;
@@ -13549,6 +13552,9 @@ td {
   display: flex;
   justify-content: center;
   height: 100vh;
+}
+.d-formdownload{
+  height: 50vh;
 }
 
 .form {
