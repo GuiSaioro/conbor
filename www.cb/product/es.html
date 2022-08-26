@@ -225,31 +225,45 @@
                             <!-- Conteudo do Modal  -->
                             <div class="modal-content-download modal-content">
                                 <div class="modal-header">
-                                    <h1>Nos Diga quem é
+                                    <h1>Download
                                         <!--<img id="imgaco" src="../images/products/img-aec.png" alt="Acoplamento">-->
                                         <span class="close icon-icon-close"></span>
                                     </h1>
                                 </div>
                                 <div class="d-formdownload d-form">
 
-                                    <form action="https://formsubmit.co/9d7bd0e99bfcc583e9ba43054e4b4ac8" class="form"
-                                        style=" box-shadow: none;" method="POST">
-                                        <h2 class="">CONTATO</h2>
+                                    <form action="enviar.php" class="form" style=" box-shadow: none;" method="POST">
+                                        <!--<h2 class="">Donwload</h2>-->
+                                        <p>Preencha para Download do documento</p>
                                         <div class="form__div">
-                                            <input class="form__input" type="text" name="name" placeholder=" " required>
+                                            <input class="form__input" type="text" name="nome" placeholder=" " required>
                                             <label for="" class="form__label">Nome</label>
-                                        </div>
-                                        <div class="form__div">
-                                            <input class="form__input" type="text" name="empresa" placeholder=" "
-                                                required>
-                                            <label for="" class="form__label">Empresa</label>
                                         </div>
                                         <div class="form__div">
                                             <input class="form__input" type="text" name="email" placeholder=" "
                                                 required>
                                             <label for="" class="form__label">E-Mail</label>
                                         </div>
+                                        <div class="form__div text">
+                                            <p style="text-align:justify">Ao clicar em enviar digo que estou de acordo
+                                                em fornecer o Nome da Empresa, E-mail e meu Telefone para
+                                                que a <strong>CONBOR/MECTRANS</strong>
+                                                entre em contato comigo.
+                                            </p>
+                                        </div>
+                                        <input class="btn form__button" type="submit" value="enviar" name="enviar"
+                                            onclick="valida()">
+
+                                        <!--<button class="btn form__button" target="_blank"> Enviar</button>-->
                                     </form>
+                                    <script type="text/javascript">
+                                        function valida() {
+                                            if (grecaptcha.getResponse() == "") {
+                                                alert("Você precisa marcar")
+                                                return false;
+                                            }
+                                        }
+                                    </script>
                                 </div>
                             </div>
                         </div>
@@ -277,17 +291,15 @@
                                     <h3>Elemento Pneumatico ES</h3>
                                     <dl>
                                         <dt>Torque:</dt>
-                                        <dd> 30705 Nm max</dd>
+                                        <dd> 1050 Nm max</dd>
                                     </dl>
                                     <p>Os Elementos Pneumáticos Radiais Conbor/Mectrans,
                                         funcionam como embreagens ou freios, e são
                                         a melhor solução para problemas de transmissão ou frenagem.</br>
-                                        ELEMENTO EI
-                                        Composto de aro metálico, câmara de expansão vulcanizada diretamente no aro,
-                                        sapatas em chapa de aço com lonas de fricção coladas e rebitadas. As sapatas são
-                                        fixadas à câmara por meio de pinos e contra-pinos. Podem ser usadas em rotação
-                                        elevada e em ciclos rápidos de operação.</p>
-                                    <p>Do 03EI ao 45EI ou modelo 400EI a 700EI</p>
+                                        Composto de aro metálico, câmara de expansão vulcanizada diretamente no aro. Não
+                                        possui sapatas. Deve ser acionada somente quando o elemento e o tambor estiverem
+                                        na mesma velocidade.</p>
+                                    <p>Do 06ES ao 24ES</p>
                                 </div>
                                 <div id="tab2">
                                     <ul>

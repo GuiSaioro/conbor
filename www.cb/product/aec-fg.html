@@ -214,56 +214,51 @@
                     <div class="button-holder right">
                         <a href="https://wa.me/5521981512239?text=Olá%20Gostaria%20de%20mais%20informações%20sobre%20Acoplamento%20AEC-FG"
                             class="btn" target="_blank">PEDIR INFORMAÇÃO</a>
-                        <!--<button class="btn" id="btn-download">Download Catálogo</button>-->
-                        <a href="../pdf/tabela-de-acoplamentos-fg-conbor.pdf"class="btn" target="_blank">Download Catálogo</a>
-                        <!-- Modal -->
-                        <div id="modalDownload" class="modal">
-
-                            <!-- Conteudo do Modal  -->
-                            <div class="modal-content-download modal-content">
-                                <div class="modal-header">
-                                    <h1>Nos Diga quem é
-                                        <span class="close2 icon-icon-close"></span>
-                                    </h1>
-                                </div>
-                                <div class="d-formdownload d-form">
-
-                                    <form action="https://formsubmit.co/9d7bd0e99bfcc583e9ba43054e4b4ac8" class="form"
-                                        style=" box-shadow: none;" method="POST">
-                                        <h2 class="">CONTATO</h2>
-                                        <div class="form__div">
-                                            <input class="form__input" type="text" name="name" placeholder=" " required>
-                                            <label for="" class="form__label">Nome</label>
-                                        </div>
-                                        <div class="form__div">
-                                            <input class="form__input" type="text" name="empresa" placeholder=" "
-                                                required>
-                                            <label for="" class="form__label">Empresa</label>
-                                        </div>
-                                        <div class="form__div">
-                                            <input class="form__input" type="text" name="email" placeholder=" "
-                                                required>
-                                            <label for="" class="form__label">E-Mail</label>
-                                        </div>
-                                        <input class="btn form__button" type="submit" value="enviar" name="enviar"
-                                            onclick="valida()">
-                                        <div class="form__div text">
-                                            <p style="text-align:justify">Ao clicar em enviar digo que estou de acordo
-                                                em fornecer o Nome da Empresa, E-mail e meu Telefone para
-                                                que a <strong>CONBOR/MECTRANS</strong>
-                                                entre em contato comigo.
-                                            </p>
-                                        </div>
-                                        <!--<button class="btn form__button" target="_blank"> Enviar</button>-->
-                                    </form>
-                                    <script type="text/javascript">
-                                        function valida() {
-                                            if (grecaptcha.getResponse() == "") {
-                                                alert("Você precisa marcar")
-                                                return false;
+                            <button class="btn" id="btn-download">Download Catálogo</button>
+                            <!-- Modal -->
+                            <div id="modalDownload" class="modal">
+    
+                                <!-- Conteudo do Modal  -->
+                                <div class="modal-content-download modal-content">
+                                    <div class="modal-header">
+                                        <h1>Download
+                                            <!--<img id="imgaco" src="../images/products/img-aec.png" alt="Acoplamento">-->
+                                            <span class="close2 icon-icon-close"></span>
+                                        </h1>
+                                    </div>
+                                    <div class="d-formdownload d-form">
+    
+                                        <form action="enviar.php" class="form"
+                                            style=" box-shadow: none;" method="POST">
+                                            <!--<h2 class="">Donwload</h2>-->
+                                            <p>Preencha para Download do documento</p>
+                                            <div class="form__div">
+                                                <input class="form__input" type="text" name="nome" placeholder=" " required>
+                                                <label for="" class="form__label">Nome</label>
+                                            </div>
+                                            <div class="form__div">
+                                                <input class="form__input" type="text" name="email" placeholder=" "
+                                                    required>
+                                                <label for="" class="form__label">E-Mail</label>
+                                            </div>
+                                            <div class="form__div text">
+                                                <p style="text-align:justify">Ao clicar em enviar digo que estou de acordo em fornecer o Nome da Empresa, E-mail e meu Telefone para
+                                                    que a <strong>CONBOR/MECTRANS</strong>
+                                                    entre em contato comigo.
+                                                </p>
+                                            </div>
+                                            <input class="btn form__button" type="submit" value="enviar" name="enviar" onclick="valida()">
+                                            
+                                            <!--<button class="btn form__button" target="_blank"> Enviar</button>-->
+                                        </form>
+                                        <script type="text/javascript">
+                                            function valida() {
+                                                if (grecaptcha.getResponse() == "") {
+                                                    alert("Você precisa marcar")
+                                                    return false;
+                                                }
                                             }
-                                        }
-                                    </script>
+                                        </script>
                                     </form>
                                 </div>
                             </div>
