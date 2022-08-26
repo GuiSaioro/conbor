@@ -22,6 +22,7 @@ jQuery(function () {
 //-------------------------------------------------------------------------------//
 $(window).load(function () {
 	//initMenuCropping();
+	
 });
 
 function initCookies() {
@@ -33,7 +34,7 @@ function initCookies() {
         if (condition || condition == null) { 
             var setCookie = "";
             var messageBlock = $("#gdpr-cookies");
-              
+			              
             setCookie = Cookies.get('gdpr-cookie'); 
               
             if(isCookieSet()){
