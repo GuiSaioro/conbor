@@ -2911,7 +2911,7 @@ p .sitebar button span #nav > li > a.has-drop-down-a span::before { bottom: -42p
   .download-list .buttons a::after { height: 15px; }
 }
 .download-list .buttons a:last-child::after { display: none; }
-.download-list .buttons a .icon { color: rgb(0, 178, 228); margin-right: 7px; }
+.download-list .buttons a .icon {color: rgb(25 131 218);margin-right: 7px;}
 .contact-block { background: rgb(247, 248, 249); border: 1px solid rgb(235, 237, 240); text-align: center; position: relative; margin-top: 8px; padding: 52px 20px 40px; }
 @media (max-width: 767px) {
   .contact-block { margin-top: 0px; }
