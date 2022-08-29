@@ -3020,7 +3020,7 @@ p .sitebar button span #nav > li > a.has-drop-down-a span::before { bottom: -42p
 }
 .support-banner .button-holder { justify-content: flex-start; }
 .button-holder { display: flex; align-items: center; justify-content: center; text-align: center; }
-.button-holder.right { justify-content: flex-end; }
+.button-holder.right {justify-content: flex-end;}
 .button-holder .btn { margin-right: 28px; }
 @media (max-width: 1023px) {
   .button-holder .btn { margin-right: 10px; margin-bottom: 10px; }
@@ -3530,7 +3530,7 @@ button.btn { outline: 0px; }
 .custom-select .drop li:last-child { border-bottom: none; }
 .custom-select .drop a { color: rgb(14, 14, 16); line-height: 30px; text-decoration: none; width: 100%; display: block; padding: 0px 5px; transition: color 0.2s linear 0s; }
 .custom-select .drop a:hover { color: rgb(0, 178, 228); }
-.product-info .button-holder { margin-bottom: 0px; margin-top: 20px; }
+.product-info .button-holder {margin-bottom: 30px;margin-top: 20px;}
 @media (max-width: 1199px) {
   .product-info .button-holder { margin-bottom: 60px; }
 }
