@@ -3669,8 +3669,6 @@ header .container {
 
 @media (min-width: 769px) {
   #nav>li.product-nav>.dropdown li:first-child .dropdown {
-    display: block;
-    padding-top: 0px;
   }
 }
 
@@ -8373,7 +8371,7 @@ button.btn {
 #nav>li>.dropdown>ul {
   background: rgb(124, 126, 124);
   border: rgb(0, 34, 228);
-  border-radius: 50px;
+  border-radius: 25px;
   padding: 31px 40px;
   min-width: 500px;
   opacity: 0;
@@ -8429,7 +8427,7 @@ button.btn {
 }
 
 #nav>li>.dropdown a:hover {
-  color: rgb(42, 0, 228);
+  color: rgb(1 48 155);
 }
 
 #nav>li li:not(.has-drop-down) .dropdown {
@@ -10571,6 +10569,7 @@ p .sitebar button span #nav>li>a.has-drop-down-a span::before {
 
 .bg-gray {
   background: linear-gradient(to top, rgb(247, 248, 249), rgb(255, 255, 255), rgb(255, 255, 255));
+  margin-top: 50px;
 }
 
 .bg-blue {
