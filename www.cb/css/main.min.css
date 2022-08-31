@@ -3391,7 +3391,7 @@ header .container {
 .home-download-catalogo {
   display: flex;
   justify-content: space-evenly;
-  min-height: 85vh;
+  height: 100%;
   align-items: center;
   background-size: cover;
   width: -webkit-fill-available;
@@ -3406,7 +3406,7 @@ header .container {
 
 .img-catalogo {
   max-width: 55vw;
-  max-height: 87vw;
+  max-height: 74vw;
   overflow: hidden;
   border: 2px solid rgb(0, 0, 0);
 }
@@ -3424,15 +3424,11 @@ header .container {
 
 @media (min-width: 1023px) {
   .img-catalogo {
-    max-width: 21vw;
-    max-height: 28vw;
   }
 }
 
 @media (min-width: 767px) {
   .img-catalogo {
-    min-width: 18vw;
-    min-height: 24vw;
   }
 }
 
@@ -3452,6 +3448,7 @@ header .container {
   font-size: 20px;
   margin-bottom: 80px;
   margin-top: 50px;
+  text-align: center;
 }
 
 @media (max-width: 450px) {
@@ -10241,6 +10238,7 @@ p .sitebar button span #nav>li>a.has-drop-down-a span::before {
 
 .title h1 {
   text-transform: uppercase;
+  margin-top: 30px;
 }
 
 .title h3 {
