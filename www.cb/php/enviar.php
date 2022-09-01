@@ -79,7 +79,9 @@ if (isset($_POST['enviar'])){
   //print_r($resultado);
   //echo $resultado->sucess;
   if ($resultado->success == 1){
-    header("Location: enviado.html");
+    setcookie("CookieTeste", $nome);
+    echo $_COOKIE["CookieTeste"];
+    header("Location: ".$_SERVER['HTTP_REFERER']."");
   }else{
     echo "Falha no envio. $mail->ErrorInfo";
 }

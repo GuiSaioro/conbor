@@ -35,7 +35,7 @@
     <meta name="msapplication-TileColor" content="#0e0e10">
     <meta name="msapplication-config" content="/favicon/browserconfig.xml">
     <meta name="theme-color" content="#0e0e10">
-    <title>Elementos EI-IV e EIV</title>
+    <title>Elementos IV</title>
     <style>
         .grecaptcha-badge {
             z-index: 9999;
@@ -45,7 +45,7 @@
 
 </head>
 
-<body>
+<body onload="modal2()">
     <div id="wrapper">
         <header>
             <div class="container">
@@ -193,12 +193,12 @@
     <main role="main">
         <section class="main-banner" style="background-image: url(../images/itens-detail-banner.jpg)">
             <div class="container">
-                <h1 class="large">Elemento Pneumatico EI-IV</h1>
+                <h1 class="large">Elemento Pneumatico IV</h1>
                 <ul class="breadcrumbs">
                     <li><a href="../index.html">Inicio</a></li>
                     <li><a href="../produtos.html">Produtos</a></li>
                     <li><a href="../product-types/freios-embreagens-pneumaticas.html">Freios e Embreagens</a></li>
-                    <li>Elemento Pneumatico EI-IV</li>
+                    <li>Elemento Pneumatico IV</li>
                 </ul>
             </div>
         </section>
@@ -207,9 +207,9 @@
                 <div class="product-info">
 
                     <div class="button-holder right">
-                        <a href="https://wa.me/5521981512239?text=Olá%20Gostaria%20de%20mais%20informações%20sobre%20Elemento%20EI-IV"
+                        <a href="https://wa.me/5521981512239?text=Olá%20Gostaria%20de%20mais%20informações%20sobre%20Acoplamento AEC-Standart"
                             class="btn" target="_blank">PEDIR INFORMAÇÃO</a>
-                            <button class="btn btndownload" id="btnModal">Download Catálogo</button>
+                        <button class="btn" id="btnModal">Download Catálogo</button>
                         <!-- Modal -->
                         <div id="myModal" class="modal">
 
@@ -224,13 +224,14 @@
                                 <div class="d-formdownload d-form">
 
                                     <form action="enviar.php" class="form" style=" box-shadow: none;" method="POST">
+                                        <!--<h2 class="">Donwload</h2>-->
                                         <p>Preencha para Download do documento</p>
                                         <div class="form__div">
-                                            <input class="form__input" type="text" name="nome" id="nome" placeholder=" " required>
+                                            <input class="form__input" type="text" name="nome" placeholder=" " required>
                                             <label for="" class="form__label">Nome</label>
                                         </div>
                                         <div class="form__div">
-                                            <input class="form__input" type="text" name="email" id="email" placeholder=" "
+                                            <input class="form__input" type="text" name="email" placeholder=" "
                                                 required>
                                             <label for="" class="form__label">E-Mail</label>
                                         </div>
@@ -241,8 +242,10 @@
                                                 entre em contato comigo.
                                             </p>
                                         </div>
-                                        <input class="btn form__button" id="ei" type="submit" value="enviar" name="enviar" onclick="valida()">
+                                        <input class="btn form__button" type="submit" value="enviar" name="enviar"
+                                            onclick="valida()">
 
+                                        <!--<button class="btn form__button" target="_blank"> Enviar</button>-->
                                     </form>
                                     <script type="text/javascript">
                                         function valida() {
@@ -261,10 +264,10 @@
                         <div class="col-6">
                             <div class="slider">
                                 <div class="slide">
-                                    <img src="../images/products/img-ei-iv.JPG?width=555&amp;height=395&amp;mode=crop"
+                                    <img src="../images/products/img-iv.JPG?width=555&amp;height=395&amp;mode=crop"
                                         alt="">
                                 </div>
-                                <img src="../images/products/img-eiv.JPG" alt="">
+                                <img src="../images/products/img-iv-l.JPG" alt="">
                                 <!-- Colocar outra imagem do AEC cortada-->
                             </div>
                         </div>
@@ -276,20 +279,19 @@
                             </ul>
                             <div class="tab-content">
                                 <div id="tab1">
-                                    <h3>Elemento Pneumatico EI-IV e EIV</h3>
+                                    <h3>Elemento Pneumatico EI</h3>
                                     <dl>
                                         <dt>Torque:</dt>
-                                        <dd> 66570 Nm max</dd>
+                                        <dd> 30705 Nm max</dd>
                                     </dl>
                                     <p>Os Elementos Pneumáticos Radiais Conbor/Mectrans,
                                         funcionam como embreagens ou freios, e são
                                         a melhor solução para problemas de transmissão ou frenagem.</br>
-                                        Composto de aro metálico, câmara de expansão vulcanizada diretamente no aro,
-                                        sapatas de alumínio com lonas de fricção coladas e rebitadas. As sapatas são
-                                        fixadas à câmara por meio de pinos e contra-pinos. Podem ser usadas em rotação
-                                        elevada e em ciclos rápidos de operação.<br>
-                                    Elemento híbrido. Tem características dps elementos EI e IV.  </p>
-                                    <p>Do 06EI-IV4 ao 12EI-IV10 ou modelo 26EIV a 48EIV</p>
+                                        Composto de aro metálico, tampas laterais, câmara de expansão, sapatas de
+                                        alumínio com lonas de fricção, braços de torque e molas. Recomendadas para
+                                        trabalhos pesados. As sapatas de aluminio dissipam boa parte do calor gerado na
+                                        hora do acoplamento.</p>
+                                    <p>Do 08IV-E ao 42IV-E ou 14IV-L ao 76IV-L</p>
                                 </div>
                                 <div id="tab2">
                                     <ul>
@@ -306,10 +308,11 @@
                                 <div id="tab3">
                                     <ul>
                                         <li>Aro</li>
+                                        <li>Tampas Laterais</li>
                                         <li>Câmara de expansão</li>
-                                        <li>Sapatas de fricção</li>
-                                        <li>Pinos</li>
-                                        <li>Contrapinos</li>
+                                        <li>Sapatas de fricção de alumínio lonadas</li>
+                                        <li>Braço de Torque</li>
+                                        <li>Mola Plana</li>
                                     </ul>
                                 </div>
                             </div>
@@ -326,6 +329,24 @@
                                 data-type_name="Acoplamentos.html">
                                 <div class="filter">
                                     <div class="row-holder">
+                                        <!--<div class="col-4">
+                                   <div class="custom-select filterButtonHolder industryFilter">
+                                        <div class="label">FILTRO POR INDÚSTRIA</div>
+                                        <div class="category">
+                                            <a class="filterButtonBTN" href="javascript:;">TODOS</a>
+                                        </div>
+                                        <div class="drop-holder">
+                                            <ul class="drop">
+                                                <li><a class="filterButton" href="#" data-filter_val="">Todos</a></li>
+                                                <li><a class="filterButton" href="#" data-filter_val="Wind Energy">Industria Papel</a></li>
+                                                <li><a class="filterButton" href="#" data-filter_val="Container Handling">Mineração</a></li>
+                                                <li><a class="filterButton" href="#" data-filter_val="Iron &amp; Steel">Plastico</a></li>
+                                                <li><a class="filterButton" href="#" data-filter_val="Cranes &amp; Hoists">Perfuração</a></li>
+                                                <li><a class="filterButton" href="#" data-filter_val="Material Handling">Cerâmica</a></li>
+                                                <li><a class="filterButton" href="#" data-filter_val="Mining &amp; Bulk Handling">Açúcar</a></li>
+                                                <li><a class="filterButton" href="#" data-filter_val="Mining &amp; Bulk Handling">Ciderurgica</a></li>
+                                            </ul>
+                                        </div>-->
                                     </div>
                                 </div>
                                 <div class="col-4">
@@ -365,12 +386,11 @@
                                     <div class="col-4 produtos">
                                         <div class="item">
                                             <div class="img-holder">
-                                                <a href="../product/ei.html"><img src="../images/products/img-ei-s.JPG"
-                                                        alt=""></a>
+                                                <a href="ei.html"><img src="../images/products/img-ei-s.JPG" alt=""></a>
                                             </div>
                                             <div class="item-name">
-                                                <h5><a href="../product/ei.html"><span translate="no">ELEMENTOS PNEUMATICOS
-                                                            EI</span></a></h5>
+                                                <h5><a href="ei.html"><span translate="no">ELEMENTOS PNEUMATICOS EI</span></a>
+                                                </h5>
                                             </div>
                                             <p>Os Elementos Pneumáticos <strong> CONBOR</strong>, funcionam como
                                                 embreagens ou freios, e são a melhor solução para problemas de
@@ -380,26 +400,11 @@
                                     <div class="col-4 produtos">
                                         <div class="item">
                                             <div class="img-holder">
-                                                <a href="../product/iv.html"><img src="../images/products/img-iv.JPG"
-                                                        alt=""></a>
-                                            </div>
-                                            <div class="item-name">
-                                                <h5><a href="../product/iv.html"><span translate="no">ELEMENTOS
-                                                            PNEUMATICOS IV</span></a></h5>
-                                            </div>
-                                            <p>Os Elementos Pneumáticos <strong> CONBOR</strong>, funcionam como
-                                                embreagens ou freios, e são a melhor solução para problemas de
-                                                transmissão ou frenagem. Expansão interna ventilada.</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-4 produtos">
-                                        <div class="item">
-                                            <div class="img-holder">
                                                 <a href="../product/aec-fi.html"><img
                                                         src="../images/products/img-AEC-FI.jpg" alt=""></a>
                                             </div>
                                             <div class="item-name">
-                                                <h5><a href="products/aec-fi.html"><span
+                                                <h5><a href="product/aec-fi.html"><span
                                                             translate="no">AEC-FI</span></a></h5>
                                             </div>
                                             <p>Simples de instalar e de fácil inspeção visual,
@@ -443,11 +448,25 @@
                                     <div class="col-4 produtos">
                                         <div class="item">
                                             <div class="img-holder">
-                                                <a href="../product/cw.html"><img src="../images/products/img-cw.JPG"
+                                                <a href="ei-iv.html"><img src="../images/products/img-ei-iv.JPG" alt=""></a>
+                                            </div>
+                                            <div class="item-name">
+                                                <h5><a href="ei-iv.html"><span translate="no">ELEMENTOS
+                                                            PNEUMATICOS EI-IV</span></a></h5>
+                                            </div>
+                                            <p>Os Elementos Pneumáticos <strong> CONBOR</strong>, funcionam como
+                                                embreagens ou freios, e são a melhor solução para problemas de
+                                                transmissão ou frenagem. Expansão interna ventilada.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 produtos">
+                                        <div class="item">
+                                            <div class="img-holder">
+                                                <a href="cw.html"><img src="../images/products/img-cw.JPG"
                                                         alt=""></a>
                                             </div>
                                             <div class="item-name">
-                                                <h5><a href="../product/cw.html"><span translate="no">CÂMARAS
+                                                <h5><a href="cw.html"><span translate="no">CÂMARAS
                                                             CW</span></a></h5>
                                             </div>
                                             <p>A combinação de fibras e elastometros proporcionam vida útil prolongada e
@@ -555,7 +574,7 @@
             </div>
         </div>
     </footer>
-
+   
     <script type="text/javascript"
         src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
