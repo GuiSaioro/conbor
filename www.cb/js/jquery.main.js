@@ -16,7 +16,8 @@ jQuery(function () {
 	initAnchors();
 	initacordeom();
 	initCookies();
-	chamarmodal()
+	chamarmodal();
+	modal();
 });
 //-------------------------------------------------------------------------------//
 
@@ -226,61 +227,32 @@ function initHeaderSmallScroll3() {
 }
 
 /*-------------------------------------------------Modal--------------------------------------*/
-function modal() {
-	var modal = document.getElementById("myModal");
-	var btn = document.getElementById("btnModal");
-	var span = document.getElementsByClassName("close")[0];
 
-	var modal2 = document.getElementById("modalDownload");
-	var btn2 = document.getElementById("btn-download");
-	var span2 = document.getElementsByClassName("close2")[0];
+function modal(){
+	var modalDim = document.getElementById("modalDim");
+	var btnDim = document.getElementById("btnDim");
+	var spanDim = document.getElementsByClassName("closeDim")[0];
 
-	btn.onclick = function () {
-		modal.style.display = "block"
+	btnDim.addEventListener('click',function(){
 
-	}
-	btn2.onclick = function () {
-		modal2.style.display = "block"
+	modalDim.style.display = "block"
+	btnDim.onclick = function () {
+	modalDim.style.display = "block"
 
 	}
-	span.onclick = function () {
-		modal.style.display = "none";
+	
+	spanDim.onclick = function () {
+		modalDim.style.display = "none";
 
 	}
-	span2.onclick = function () {
-		modal2.style.display = "none";
-
-	}
+	
 	window.onclick = function (event) {
-		if (event.target == modal) {
-			modal.style.display = "none";
-
-		}
-		if (event.target == modal2) {
-			modal2.style.display = "none";
-
-		}
-	}
-}
-function modal2() {
-	var modal = document.getElementById("myModal");
-	var btn = document.getElementById("btnModal");
-	var span = document.getElementsByClassName("close")[0];
-
-	btn.onclick = function () {
-		modal.style.display = "block"
+	if (event.target == modalDim) {
+		modalDim.style.display = "none";
 
 	}
-	span.onclick = function () {
-		modal.style.display = "none";
-
 	}
-	window.onclick = function (event) {
-		if (event.target == modal) {
-			modal.style.display = "none";
-
-		}
-	}
+	})
 }
 
 function chamarmodal(){
@@ -324,27 +296,75 @@ function chamarmodal(){
 			);
 		}else{
 			
+			idnumber();
+		}
+		
+	});
+
+}
+
+function modalvariado(){
+
+	var CookieSetado = Cookies.get('Nome');
+	if(CookieSetado == undefined){
+		var modal = document.getElementById("myModal");
+		var btn = document.getElementById("btnModal");
+		var span = document.getElementsByClassName("close")[0];
+		
+
+		modal.style.display = "block"
+
+		btn.onclick = function () {
+			modal.style.display = "block"
+		}
+		span.onclick = function () {
+			modal.style.display = "none";
+
+		}
+		window.onclick = function (event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+		}
+		//console.log(CookieSetado)
+
+		let buttonmodal = document.querySelector('.form__button');
+		
+
+		buttonmodal.addEventListener('click',function(){
+			let nomecookie = document.querySelector('#nome').value;
+			let emailcookie = document.querySelector('#email').value;
+			Cookies.set('Nome', nomecookie , {expires: 365} );
+			Cookies.set('E-mail', emailcookie , {expires: 365} )
+			//console.log(nome)
+		}
+		);
+	}else{
+			
+		idnumber();
+	
+	}
+}
+function idnumber(){
 			nome.value = Cookies.get('Nome')
 			email.value = Cookies.get('E-mail')
-			//document.querySelector('.form').submit();
-			//console.log(nome.value)
-			//console.log(email.value)
+			//document.querySelector('.form').submit(); Colocar assim que upar
 
 			let pdf = [     //Lista de PDFs
-				'../pdf/catalogo-acoplamentos-conbor.pdf',                    // [0]
-				'../pdf/catalogo-embreagense-freios-conbor.pdf',              // [1]
-				'../pdf/catalogo-pecas-tecnicas-conbor.pdf',                  // [2]
-				'../pdf/certificado_ISO_9001-2015-IQNet.pdf',                 // [3]
-				'../pdf/Certificado_ISO-9001-2015-RINA.pdf',                  // [4]
-				'../pdf/CRCC_Petrobras-24-11-20.pdf',                         // [5]
-				'../pdf/manual_EI-conbor.pdf',                                // [6]
-				'../pdf/manual_IV-conbor.pdf',                                // [7]
-				'../pdf/tabela-de-acoplamentos-conbor.pdf',                   // [8]
-				'../pdf/tabela-de-acoplamentos-fg-conbor.pdf',                // [9]
-				'../pdf/tabela-de-acoplamentos-fi-conbor.pdf',                // [10]
-				'../pdf/tabela-de-acoplamentos-standart-conbor.pdf',          // [11]
-				'../pdf/tabela-de-equivalencia-dos-acoplamentos-conbor.pdf',  // [12]
-				'../pdf/tabela-de-medidas-de-elementos-pneumaticos-conbor.pdf'// [13]
+				'../pdf/catalogo-acoplamentos-conbor.pdf',//-------------------- [0]
+				'../pdf/catalogo-embreagense-freios-conbor.pdf',//---------------[1]
+				'../pdf/catalogo-pecas-tecnicas-conbor.pdf',// ------------------[2]
+				'../pdf/certificado_ISO_9001-2015-IQNet.pdf',//----------------- [3]
+				'../pdf/Certificado_ISO-9001-2015-RINA.pdf',//------------------ [4]
+				'../pdf/CRCC_Petrobras-24-11-20.pdf',//------------------------- [5]
+				'../pdf/manual_EI-conbor.pdf',//-------------------------------- [6]
+				'../pdf/manual_IV-conbor.pdf',//-------------------------------- [7]
+				'../pdf/tabela-de-acoplamentos-conbor.pdf',//------------------- [8]
+				'../pdf/tabela-de-acoplamentos-fg-conbor.pdf',//---------------- [9]
+				'../pdf/tabela-de-acoplamentos-fi-conbor.pdf',//-----------------[10]
+				'../pdf/tabela-de-acoplamentos-standart-conbor.pdf',//-----------[11]
+				'../pdf/tabela-de-equivalencia-dos-acoplamentos-conbor.pdf',//-- [12]
+				'../pdf/tabela-de-medidas-de-elementos-pneumaticos-conbor.pdf'//-[13]
 			]
 
 			var id = document.querySelector('.form__button').id;
@@ -391,12 +411,7 @@ function chamarmodal(){
 			if(id == "13"){
 				window.open(pdf[13], '_blank');
 			}
-		}
-		
-		
 	
-	});
-
 }
 
 /*-----------------------------------------Calculo dimensionamento AEC----------------------------------------------------*/
@@ -850,128 +865,6 @@ function initContactReasonDrop() {
 		}
 	}
 }
-/*
-function initFindLocation()
-{
-	var busy = false;
-	var id = "";
-	var condition = $('#findLocationDrop').length
-		// && false
-	;init(condition);
-
-	function init(condition)
-	{
-		if(condition || condition == null)
-		{
-			findLocationDrop();
-		}
-
-		function findLocationDrop()
-		{
-			$('#findLocationDrop .filterButton').click(function ()
-			{
-				if(!busy)
-				{
-					busy = true;
-					var _this = $(this);
-
-					id = _this.data('filter_val');
-					_this.closest('.drop').find('.filterButton').removeClass('active');
-					_this.closest('.custom-select').find('.filterButtonBTN').text(_this.text());
-					_this.addClass('active');
-
-					$('.location-item').addClass('loader');
-
-					filterAjax(function ()
-					{
-						$('.location-item').removeClass('loader');
-						busy = false;
-					});
-				}
-
-				return false;
-			});
-		}
-
-		function filterAjax(callback)
-		{
-			callback = callback==null ? function(){} : callback;
-			var _href = '/inner_api/find-location?item_id=' + id;
-
-			$.ajax({
-				url: _href,
-				success: function (data) {
-					var content = $(data).html();
-					$(".map-info").html(content);
-					callback();
-				}
-			});
-		}
-	}
-}
-
-function initListLocationFiltering()
-{
-	var busy = false;
-	var paramRegionVal = '';
-	var paramModuleId =  $('.filtrationLocationHolder').data('module_id');
-	var condition = $('.filtrationLocationHolder').length
-	// && false
-	;init(condition);
-
-	function init(condition)
-	{
-		if(condition || condition == null)
-		{
-			filterByRegionSetup();
-		}
-
-		function filterByRegionSetup()
-		{
-			$('.filtrationLocationHolder .filterButton').click(function ()
-			{
-				if(!busy)
-				{
-					busy = true;
-					var _this = $(this);
-
-					paramRegionVal = _this.data('filter_val');
-					_this.closest('.drop').find('.filterButton').removeClass('active');
-					_this.closest('.custom-select').find('.filterButtonBTN').text(_this.text());
-					_this.addClass('active');
-
-					$('.location-filter').addClass('loader');
-
-					filterAjax(function ()
-					{
-						$('.location-filter').removeClass('loader');
-						busy = false;
-					});
-				}
-
-				return false;
-			});
-		}
-
-		function filterAjax(callback)
-		{
-			callback = callback==null ? function(){} : callback;
-			var paramRegion = '&prop_Region=' + encodeURIComponent(paramRegionVal);
-			var _href = '?prop_ModuleId=' + paramModuleId + paramRegion;
-
-			$.ajax({
-				url: _href,
-				success: function (data) {
-					var content = $(".location-holder", data).html();
-					$(".location-holder").html(content);
-					callback();
-				}
-			});
-		}
-	}
-}
- */
-
 // mobile menu init
 function initMobileNav() {
 	jQuery('body').mobileNav({

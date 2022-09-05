@@ -41,11 +41,11 @@
             z-index: 9999;
         }
     </style>
-    <meta name="description" content="Acoplamento Elástico AEC-Standart">
+    <meta name="description" content="Freios Tensionadores">
 
 </head>
 
-<body onload="modal2()">
+<body>
     <div id="wrapper">
         <header>
             <div class="container">
@@ -91,12 +91,12 @@
                                     </li>
                                     <li>
                                         <a id="ct" class="img-dropdown-size"
-                                            href="../product-types/freios-embreagens-pneumaticas.html">Cintas<img
+                                            href="../product/cinta.html">Cintas de Freio<img
                                                 src="../images/menu-dropdown/img-cinta.png" alt=""></a>
                                     </li>
                                     <li>
                                         <a id="ft" class="img-dropdown-size"
-                                            href="../product-types/freios-embreagens-pneumaticas.html">Freios
+                                            href="../product/freio.html">Freios
                                             Tensionadores<img src="../images/menu-dropdown/img-freio-ei.png" alt=""></a>
                                     </li>
                                     <li>
@@ -113,12 +113,17 @@
                 </div>
             </li>
             <li>
-                <a href="../product/intercambiabilidade.html">Intercambiabilidade </a>
+                <a href="#">Montagem e Instalação</a>
                 <div class="dropdown">
+                    <ul>
+                        <li>
+                            <a id="aco" class="img-dropdown-size"
+                                href="../product-types/montagem-acoplamentos.html">Acoplamentos </a>
+                        </li>
                 </div>
             </li>
             <li>
-                <a href="../downloads.html">Downloads <spam></spam></a>
+                <a href="../product-types/downloads.html">Downloads <spam></spam></a>
                 <div class="dropdown">
                 </div>
             </li>
@@ -133,7 +138,7 @@
 
                 </li>
                 <li>
-                    <a href="../manutencao.html">Suporte Técnico </a>
+                    <a href="../manutencao.html">Serviço de Manutenção</a>
                     <div class="dropdown">
                     </div>
                 </li>
@@ -154,7 +159,7 @@
                     </div>
                 </li>
                 <li>
-                    <a href="../historia.html" translate="no">História</a>
+                    <!--<a href="historia.html" translate="no">História</a>-->
 
                 </li>
             </ul>
@@ -208,7 +213,7 @@
                     <div class="button-holder right">
                         <a href="https://wa.me/5521981512239?text=Olá%20Gostaria%20de%20mais%20informações%20sobre%20Elemento%20EI-IV"
                             class="btn" target="_blank">PEDIR INFORMAÇÃO</a>
-                        <button class="btn" id="btnModal">Download Catálogo</button>
+                            <button class="btn btndownload" id="btnModal">Download Catálogo</button>
                         <!-- Modal -->
                         <div id="myModal" class="modal">
 
@@ -223,14 +228,13 @@
                                 <div class="d-formdownload d-form">
 
                                     <form action="enviar.php" class="form" style=" box-shadow: none;" method="POST">
-                                        <!--<h2 class="">Donwload</h2>-->
                                         <p>Preencha para Download do documento</p>
                                         <div class="form__div">
-                                            <input class="form__input" type="text" name="nome" placeholder=" " required>
+                                            <input class="form__input" type="text" name="nome" id="nome" placeholder=" " required>
                                             <label for="" class="form__label">Nome</label>
                                         </div>
                                         <div class="form__div">
-                                            <input class="form__input" type="text" name="email" placeholder=" "
+                                            <input class="form__input" type="text" name="email" id="email" placeholder=" "
                                                 required>
                                             <label for="" class="form__label">E-Mail</label>
                                         </div>
@@ -241,10 +245,7 @@
                                                 entre em contato comigo.
                                             </p>
                                         </div>
-                                        <input class="btn form__button" type="submit" value="enviar" name="enviar"
-                                            onclick="valida()">
-
-                                        <!--<button class="btn form__button" target="_blank"> Enviar</button>-->
+                                        <input class="btn form__button" id="1" type="submit" value="enviar" name="enviar" onclick="valida()">
                                     </form>
                                     <script type="text/javascript">
                                         function valida() {
@@ -341,10 +342,10 @@
                                                 <li><a href="../product-types/acoplamentos.html">Acoplamentos</a></li>
                                                 <li><a href="../product-types/freios-e-embreagens.html">Freios e
                                                         embreagens</a></li>
-                                                <li><a href="../product-types/camaras-cw.html">Câmaras CW</a></li>
+                                                <li><a href="../product/cw.html">Câmaras CW</a></li>
                                                 <li><a href="../product-types/diafragma-dc.html">Diafragmas DC</a></li>
-                                                <li><a href="#">Cintas</a></li>
-                                                <li><a href="#">Freio Tensionador</a></li>
+                                                <li><a href="../product/cinta.html">Cinta de Freio</a></li>
+                                                <li><a href="../product/freio.html">Freio Tensionador</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -503,10 +504,10 @@
                         <a href="../produtos.html">VER PRODUTOS</a>
                     </li>
                     <li>
-                        <a href="../servicos.html">Suporte</a>
+                        <a href="../servicos.html">Serviços</a>
                     </li>
                     <li>
-                        <a href="../downloads.html">Downloads</a>
+                        <a href="../product-types/downloads.html">Downloads</a>
                     </li>
                     <li>
                         <a href="../certificacoes.html">Certificações</a>
