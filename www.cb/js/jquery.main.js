@@ -16,6 +16,7 @@ jQuery(function () {
 	initAnchors();
 	initacordeom();
 	initCookies();
+	//modal();
 });
 //-------------------------------------------------------------------------------//
 
@@ -257,8 +258,7 @@ function modalvariado(a){
 	
 	if(CookieSetado == undefined){
 		var modal = document.getElementById("myModal");
-		//var btnD = document.getElementById("btnModal");
-		var btnD = document.querySelector('.btnModal');
+		var btnD = document.getElementById("btnModal");
 		var span = document.getElementsByClassName("close")[0];
 		
 
