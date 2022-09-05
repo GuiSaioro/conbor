@@ -213,7 +213,7 @@
                     <div class="button-holder right">
                         <a href="https://wa.me/5521981512239?text=Olá%20Gostaria%20de%20mais%20informações%20sobre%20Elemento%20EI-IV"
                             class="btn" target="_blank">PEDIR INFORMAÇÃO</a>
-                            <button class="btn btndownload" id="btnModal">Download Catálogo</button>
+                            <button class="btn btndownload" onclick="modalvariado(this.value)" value="13">Download Catálogo</button>
                         <!-- Modal -->
                         <div id="myModal" class="modal">
 
@@ -221,7 +221,6 @@
                             <div class="modal-content-download modal-content">
                                 <div class="modal-header">
                                     <h1>Download
-                                        <!--<img id="imgaco" src="../images/products/img-aec.png" alt="Acoplamento">-->
                                         <span class="close icon-icon-close"></span>
                                     </h1>
                                 </div>
@@ -245,7 +244,7 @@
                                                 entre em contato comigo.
                                             </p>
                                         </div>
-                                        <input class="btn form__button" id="1" type="submit" value="enviar" name="enviar" onclick="valida()">
+                                        <input class="btn form__button" type="submit" value="enviar" name="enviar" onclick="valida()">
                                     </form>
                                     <script type="text/javascript">
                                         function valida() {

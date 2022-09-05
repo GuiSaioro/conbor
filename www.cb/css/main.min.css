@@ -11167,10 +11167,6 @@ p .sitebar button span #nav>li>a.has-drop-down-a span::before {
   align-items: center;
 }
 
-.button-holder.right {
-  /* justify-content: flex-end; */
-}
-
 .button-holder .btn {
   margin-right: 8px;
 }
@@ -14069,4 +14065,9 @@ td {
 a.logo{
   display: flex;
   flex-direction: column;
+}
+.textlink {
+  border: none;
+  background: none;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }

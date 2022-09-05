@@ -214,9 +214,8 @@
                 <li>2 - Conpensar alguns desalinhamentos extre os eixos.</li>
 
                 <p>
-                    Existem muitos modelos de acoplamentos que fazem esse trabalho, mas somente o <strong><a
-                            href="acoplamentos.html">Acoplamento Elástico
-                            CONBORFLEX</a> </strong> faz melhor.
+                    Existem muitos modelos de acoplamentos que fazem esse trabalho, mas somente o <strong><button class="btnModal textlink" onclick="modalvariado(this.value)" value="0">Acoplamento Elástico
+                        CONBORFLEX</button></strong> faz melhor.
                 </p>
                 <p>
                     Quando você escolhe <strong>CONBORFLEX</strong> , você escolhe um produto com a qualidade e
@@ -236,9 +235,9 @@
                     flutuação axial dos eixos é maior que a admissível pelo acoplamento, use um limitador.</li>
                 <li>3 - Consulte as tabelas e ajuste a distância entre os cubos conforme o desenho correspondente.</li>
                 <img src="../images/montagem/acoplamentos.png" width="80%" alt="">
-                <li>4 - Verifique o alinhamento dos eixos. O desalinhamento admisspivel está indicado nas <a
-                        href="../pdf/catalogo-acoplamentos-conbor.pdf" target="_blank">tabelas de acoplamento
-                        FG,FI e STANDART</a> . Quanto melhor for o alinhamento, maior será a vida útil do acoplamento.
+                <li>4 - Verifique o alinhamento dos eixos. O desalinhamento admisspivel está indicado nas <strong>
+                    <button class="btnModal textlink" onclick="modalvariado(this.value)" value="8">tabelas de acoplamento
+                            FG,FI e STANDART</button></strong>. Quanto melhor for o alinhamento, maior será a vida útil do acoplamento.
                 </li>
                 <li>5 - Remova qualquer lubrificante ou anti-ferrugem das superfícies do corpo elástico e dos flanges de
                     aperto.</li>
@@ -255,8 +254,7 @@
                     direção à partição para diminuir ao máximo a abertura.</br>
                     Aperte com a mão os demais parafusos ordenadamente do mais distante para o mais próximo da
                     partição.br <br>
-                    Finalmente aperte cada parafuso com uma chave até o torque espefificado na <a
-                        href="../pdf/catalogo-acoplamentos-conbor.pdf" target="_blank">tabela AEC.</a>
+                    Finalmente aperte cada parafuso com uma chave até o torque espefificado na <strong><button class="btnModal textlink" onclick="modalvariado(this.value)" value="8">tabela AEC</button></strong>.
                     </li>
                     <img src="../images/montagem/montagem-figura4.png" alt="">
                 <li><strong>OBS</strong>: O Aperto correto dos parafusos é fundamental para o bom funcionamento do
@@ -294,6 +292,52 @@
                 </div>
             </div>
         </section>
+        <section>
+            <!-- Modal -->
+            <div id="myModal" class="modal">
+    
+             <!-- Conteudo do Modal  -->
+             <div class="modal-content-download modal-content">
+                 <div class="modal-header">
+                     <h1>Download <span class="close icon-icon-close"></span></h1>
+                 </div>
+                 <div class="d-formdownload d-form">
+    
+                     <form action="enviar.php" class="form" style=" box-shadow: none;" method="POST">
+                         <p>Preencha para Download do documento</p>
+                         <div class="form__div">
+                             <input class="form__input" type="text" name="nome" id="nome" placeholder=" "
+                                 required>
+                             <label for="" class="form__label">Nome</label>
+                         </div>
+                         <div class="form__div">
+                             <input class="form__input" type="text" name="email" id="email" placeholder=" "
+                                 required>
+                             <label for="" class="form__label">E-Mail</label>
+                         </div>
+                         <div class="form__div text">
+                             <p style="text-align:justify">Ao clicar em enviar digo que estou de acordo
+                                 em fornecer o Nome da Empresa, E-mail e meu Telefone para
+                                 que a <strong>CONBOR/MECTRANS</strong>
+                                 entre em contato comigo.
+                             </p>
+                         </div>
+                         <input class="btn form__button" type="submit" value="enviar" name="enviar"
+                             onclick="valida()">
+    
+                     </form>
+                     <script type="text/javascript">
+                         function valida() {
+                             if (grecaptcha.getResponse() == "") {
+                                 alert("Você precisa marcar")
+                                 return false;
+                             }
+                         }
+                     </script>
+                 </div>
+             </div>
+         </div>
+         </section>
     </main>
     <footer>
         <div class="container">

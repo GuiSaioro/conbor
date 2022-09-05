@@ -45,7 +45,7 @@
 
 </head>
 
-<body>
+<body onload="modal()">
     <div id="wrapper">
         <header>
             <div class="container">
@@ -90,13 +90,11 @@
                                                 src="../images/menu-dropdown/img-dc.png" alt=""></a>
                                     </li>
                                     <li>
-                                        <a id="ct" class="img-dropdown-size"
-                                            href="../product/cinta.html">Cintas de Freio<img
-                                                src="../images/menu-dropdown/img-cinta.png" alt=""></a>
+                                        <a id="ct" class="img-dropdown-size" href="../product/cinta.html">Cintas de
+                                            Freio<img src="../images/menu-dropdown/img-cinta.png" alt=""></a>
                                     </li>
                                     <li>
-                                        <a id="ft" class="img-dropdown-size"
-                                            href="../product/freio.html">Freios
+                                        <a id="ft" class="img-dropdown-size" href="../product/freio.html">Freios
                                             Tensionadores<img src="../images/menu-dropdown/img-freio-ei.png" alt=""></a>
                                     </li>
                                     <li>
@@ -201,7 +199,6 @@
                 <ul class="breadcrumbs">
                     <li><a href="../index.html">Inicio</a></li>
                     <li><a href="../produtos.html">Produtos</a></li>
-                    <li><a href="../product-types/acoplamentos.html">Acoplamentos</a></li>
                     <li>AEC-Standart</li>
                 </ul>
             </div>
@@ -213,50 +210,52 @@
                     <div class="button-holder right">
                         <a href="https://wa.me/5521981512239?text=Olá%20Gostaria%20de%20mais%20informações%20sobre%20Acoplamento%20AEC-Standart"
                             class="btn" target="_blank">PEDIR INFORMAÇÃO</a>
-                           
-                            <button class="btn btndownload" id="btnModal">Download Catálogo</button>
-                            <!-- Modal -->
-                            <div id="myModal" class="modal">
-    
-                                <!-- Conteudo do Modal  -->
-                                <div class="modal-content-download modal-content">
-                                    <div class="modal-header">
-                                        <h1>Download
-                                            <!--<img id="imgaco" src="../images/products/img-aec.png" alt="Acoplamento">-->
-                                            <span class="close icon-icon-close"></span>
-                                        </h1>
-                                    </div>
-                                    <div class="d-formdownload d-form">
-    
-                                        <form action="enviar.php" class="form" style=" box-shadow: none;" method="POST">
-                                            <p>Preencha para Download do documento</p>
-                                            <div class="form__div">
-                                                <input class="form__input" type="text" name="nome" id="nome" placeholder=" " required>
-                                                <label for="" class="form__label">Nome</label>
-                                            </div>
-                                            <div class="form__div">
-                                                <input class="form__input" type="text" name="email" id="email" placeholder=" "
-                                                    required>
-                                                <label for="" class="form__label">E-Mail</label>
-                                            </div>
-                                            <div class="form__div text">
-                                                <p style="text-align:justify">Ao clicar em enviar digo que estou de acordo
-                                                    em fornecer o Nome da Empresa, E-mail e meu Telefone para
-                                                    que a <strong>CONBOR/MECTRANS</strong>
-                                                    entre em contato comigo.
-                                                </p>
-                                            </div>
-                                            <input class="btn form__button" id="11" type="submit" value="enviar" name="enviar" onclick="valida()">
-    
-                </form>
-                <script type="text/javascript">
-                    function valida() {
-                        if (grecaptcha.getResponse() == "") {
-                            alert("Você precisa marcar")
-                            return false;
-                        }
-                    }
-                </script>
+
+                        <button class="btn btndownload" onclick="modalvariado(this.value)" value="11">Download Catálogo</button>
+                        <!-- Modal -->
+                        <div id="myModal" class="modal">
+
+                            <!-- Conteudo do Modal  -->
+                            <div class="modal-content-download modal-content">
+                                <div class="modal-header">
+                                    <h1>Download
+                                        <!--<img id="imgaco" src="../images/products/img-aec.png" alt="Acoplamento">-->
+                                        <span class="close icon-icon-close"></span>
+                                    </h1>
+                                </div>
+                                <div class="d-formdownload d-form">
+
+                                    <form action="enviar.php" class="form" style=" box-shadow: none;" method="POST">
+                                        <p>Preencha para Download do documento</p>
+                                        <div class="form__div">
+                                            <input class="form__input" type="text" name="nome" id="nome" placeholder=" "
+                                                required>
+                                            <label for="" class="form__label">Nome</label>
+                                        </div>
+                                        <div class="form__div">
+                                            <input class="form__input" type="text" name="email" id="email"
+                                                placeholder=" " required>
+                                            <label for="" class="form__label">E-Mail</label>
+                                        </div>
+                                        <div class="form__div text">
+                                            <p style="text-align:justify">Ao clicar em enviar digo que estou de acordo
+                                                em fornecer o Nome da Empresa, E-mail e meu Telefone para
+                                                que a <strong>CONBOR/MECTRANS</strong>
+                                                entre em contato comigo.
+                                            </p>
+                                        </div>
+                                        <input class="btn form__button" type="submit" value="enviar" name="enviar"
+                                            onclick="valida()">
+
+                                    </form>
+                                    <script type="text/javascript">
+                                        function valida() {
+                                            if (grecaptcha.getResponse() == "") {
+                                                alert("Você precisa marcar")
+                                                return false;
+                                            }
+                                        }
+                                    </script>
                                 </div>
                             </div>
                         </div>
@@ -271,7 +270,8 @@
                                 <!-- Conteudo do Modal  -->
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h1>Ferramenta de dimensionamento CONBORFLEX<span class="closeDim icon-icon-close"></span>
+                                        <h1>Ferramenta de dimensionamento CONBORFLEX<span
+                                                class="closeDim icon-icon-close"></span>
                                         </h1>
                                     </div>
                                     <p>Selecione o fator de serviço clicando abaixo:</p>
@@ -1236,8 +1236,8 @@
                                     </p>
                                 </div>
                             </div>
-                        </div> 
-    <!--------------------Acabou Dimencionamento---------------------------------------------->
+                        </div>
+                        <!--------------------Acabou Dimencionamento---------------------------------------------->
                     </div>
                     <div class="row-holder">
                         <div class="col-6">
@@ -1263,11 +1263,14 @@
                                         <dt>Torque:</dt>
                                         <dd> 4900 Nm max</dd>
                                     </dl>
-                                    <p> A suavidade torsial do Acoplamento Elástico ConborFlex elimina choques e absorve vibrações, ajudando a proteger o motor.</p>
-                                        <p>Simples de instalar e de fácil inspeção visual, o Acoplamento elástico
+                                    <p> A suavidade torsial do Acoplamento Elástico ConborFlex elimina choques e absorve
+                                        vibrações, ajudando a proteger o motor.</p>
+                                    <p>Simples de instalar e de fácil inspeção visual, o Acoplamento elástico
                                         ConborFlex absorve grandes desalinhamentos em máquinas,
                                         diminuindo as forças de reação sobre os mancais e rolamentos..</p>
-                                        <p>O Acoplamento Elástico ConborFlex oferece extrema facilidade de manutenção, não sendo necessário remover motor, mancais ou eixos para substituir o elemento elástico.</p>
+                                    <p>O Acoplamento Elástico ConborFlex oferece extrema facilidade de manutenção, não
+                                        sendo necessário remover motor, mancais ou eixos para substituir o elemento
+                                        elástico.</p>
                                     <p>Do AEC 086 ao AEC 724</p>
                                 </div>
                                 <div id="tab2">
@@ -1343,7 +1346,8 @@
                                                 <a href="ei.html"><img src="../images/products/img-ei-s.JPG" alt=""></a>
                                             </div>
                                             <div class="item-name">
-                                                <h5><a href="ei.html"><span translate="no">ELEMENTOS PNEUMATICOS EI</span></a>
+                                                <h5><a href="ei.html"><span translate="no">ELEMENTOS PNEUMATICOS
+                                                            EI</span></a>
                                                 </h5>
                                             </div>
                                             <p>Os Elementos Pneumáticos <strong> CONBOR</strong>, funcionam como
@@ -1354,12 +1358,11 @@
                                     <div class="col-4 produtos">
                                         <div class="item">
                                             <div class="img-holder">
-                                                <a href="aec-fi.html"><img
-                                                        src="../images/products/img-AEC-FI.jpg" alt=""></a>
+                                                <a href="aec-fi.html"><img src="../images/products/img-AEC-FI.jpg"
+                                                        alt=""></a>
                                             </div>
                                             <div class="item-name">
-                                                <h5><a href="aec-fi.html"><span
-                                                            translate="no">AEC-FI</span></a></h5>
+                                                <h5><a href="aec-fi.html"><span translate="no">AEC-FI</span></a></h5>
                                             </div>
                                             <p>Simples de instalar e de fácil inspeção visual,
                                                 o Acoplamento Elástico <strong> CONBORFLEX</strong> absorve grandes
@@ -1370,12 +1373,11 @@
                                     <div class="col-4 produtos">
                                         <div class="item">
                                             <div class="img-holder">
-                                                <a href="aec-fg.html"><img
-                                                        src="../images/products/img-AEC-FG.jpg" alt=""></a>
+                                                <a href="aec-fg.html"><img src="../images/products/img-AEC-FG.jpg"
+                                                        alt=""></a>
                                             </div>
                                             <div class="item-name">
-                                                <h5><a href="aec-fg.html"><span
-                                                            translate="no">AEC-FG</span></a></h5>
+                                                <h5><a href="aec-fg.html"><span translate="no">AEC-FG</span></a></h5>
                                             </div>
                                             <p>Simples de instalar e de fácil inspeção visual,
                                                 o Acoplamento Elástico <strong> CONBORFLEX</strong> absorve grandes
@@ -1386,12 +1388,12 @@
                                     <div class="col-4 produtos">
                                         <div class="item">
                                             <div class="img-holder">
-                                                <a href="aec-fi-fg.html"><img
-                                                        src="../images/products/img-AEC-FI-FG.jpg" alt=""></a>
+                                                <a href="aec-fi-fg.html"><img src="../images/products/img-AEC-FI-FG.jpg"
+                                                        alt=""></a>
                                             </div>
                                             <div class="item-name">
-                                                <h5><a href="aec-fi-fg.html"><span
-                                                            translate="no">AEC-FI/FG</span></a></h5>
+                                                <h5><a href="aec-fi-fg.html"><span translate="no">AEC-FI/FG</span></a>
+                                                </h5>
                                             </div>
                                             <p>Simples de instalar e de fácil inspeção visual,
                                                 o Acoplamento Elástico <strong> CONBORFLEX</strong> absorve grandes
@@ -1402,7 +1404,8 @@
                                     <div class="col-4 produtos">
                                         <div class="item">
                                             <div class="img-holder">
-                                                <a href="ei-iv.html"><img src="../images/products/img-ei-iv.JPG" alt=""></a>
+                                                <a href="ei-iv.html"><img src="../images/products/img-ei-iv.JPG"
+                                                        alt=""></a>
                                             </div>
                                             <div class="item-name">
                                                 <h5><a href="ei-iv.html"><span translate="no">ELEMENTOS
@@ -1416,8 +1419,7 @@
                                     <div class="col-4 produtos">
                                         <div class="item">
                                             <div class="img-holder">
-                                                <a href="cw.html"><img src="../images/products/img-cw.JPG"
-                                                        alt=""></a>
+                                                <a href="cw.html"><img src="../images/products/img-cw.JPG" alt=""></a>
                                             </div>
                                             <div class="item-name">
                                                 <h5><a href="cw.html"><span translate="no">CÂMARAS
@@ -1479,7 +1481,7 @@
                         <a href="../produtos.html">VER PRODUTOS</a>
                     </li>
                     <li>
-                        <a href="../servicos.html">Serviços</a>
+                        <a href="../servicos.html">Suporte</a>
                     </li>
                     <li>
                         <a href="../product-types/downloads.html">Downloads</a>

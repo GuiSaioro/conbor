@@ -16,8 +16,6 @@ jQuery(function () {
 	initAnchors();
 	initacordeom();
 	initCookies();
-	//chamarmodal();
-	//modal();
 });
 //-------------------------------------------------------------------------------//
 
@@ -254,62 +252,13 @@ function modal(){
 	}
 	})
 }
-
-function chamarmodal(){
-
-	const $buttondownload = document.querySelector('.btndownload');
-	 
-	 var CookieSetado = Cookies.get('Nome');
-
-	$buttondownload.addEventListener('click',function(){
-		if(CookieSetado == undefined){
-			var modal = document.getElementById("myModal");
-			var btn = document.getElementById("btnModal");
-			var span = document.getElementsByClassName("close")[0];
-
-			modal.style.display = "block"
-
-			btn.onclick = function () {
-				modal.style.display = "block"
-			}
-			span.onclick = function () {
-				modal.style.display = "none";
-
-			}
-			window.onclick = function (event) {
-				if (event.target == modal) {
-					modal.style.display = "none";
-				}
-			}
-			//console.log(CookieSetado)
-
-			let buttonmodal = document.querySelector('.form__button');
-			
-
-			buttonmodal.addEventListener('click',function(){
-				let nomecookie = document.querySelector('#nome').value;
-				let emailcookie = document.querySelector('#email').value;
-				Cookies.set('Nome', nomecookie , {expires: 365} );
-				Cookies.set('E-mail', emailcookie , {expires: 365} )
-				//console.log(nome)
-			}
-			);
-		}else{
-			
-			idnumber();
-		}
-		
-	});
-
-}
-
-function modalvariado(){
-
+function modalvariado(a){
 	var CookieSetado = Cookies.get('Nome');
-	console.log(btnD);
+	
 	if(CookieSetado == undefined){
 		var modal = document.getElementById("myModal");
-		var btnD = document.getElementById("btnModal");
+		//var btnD = document.getElementById("btnModal");
+		var btnD = document.querySelector('.btnModal');
 		var span = document.getElementsByClassName("close")[0];
 		
 
@@ -327,7 +276,6 @@ function modalvariado(){
 				modal.style.display = "none";
 			}
 		}
-		//console.log(CookieSetado)
 
 		let buttonmodal = document.querySelector('.form__button');
 		
@@ -337,21 +285,17 @@ function modalvariado(){
 			let emailcookie = document.querySelector('#email').value;
 			Cookies.set('Nome', nomecookie , {expires: 365} );
 			Cookies.set('E-mail', emailcookie , {expires: 365} )
-			//console.log(nome)
+
 		}
 		);
 	}else{
-			
-		idnumber();
-	
-	}
-}
-function idnumber(){
-			nome.value = Cookies.get('Nome')
-			email.value = Cookies.get('E-mail')
-			//document.querySelector('.form').submit(); Colocar assim que upar
+		nome.value = Cookies.get('Nome')
+		email.value = Cookies.get('E-mail')
+	//document.querySelector('.form').submit(); Colocar assim que upar
 
-			let pdf = [     //Lista de PDFs
+	
+
+	let pdf = [     //Lista de PDFs
 				'../pdf/catalogo-acoplamentos-conbor.pdf',//-------------------- [0]
 				'../pdf/catalogo-embreagense-freios-conbor.pdf',//---------------[1]
 				'../pdf/catalogo-pecas-tecnicas-conbor.pdf',// ------------------[2]
@@ -365,54 +309,69 @@ function idnumber(){
 				'../pdf/tabela-de-acoplamentos-fi-conbor.pdf',//-----------------[10]
 				'../pdf/tabela-de-acoplamentos-standart-conbor.pdf',//-----------[11]
 				'../pdf/tabela-de-equivalencia-dos-acoplamentos-conbor.pdf',//-- [12]
-				'../pdf/tabela-de-medidas-de-elementos-pneumaticos-conbor.pdf'//-[13]
+				'../pdf/tabela-de-medidas-de-elementos-pneumaticos-conbor.pdf',//[13]
+
+				//---------------Para paginas no index------------------------------//
+				
+				'pdf/certificado_ISO_9001-2015-IQNet.pdf',//----------------- [14]
+				'pdf/Certificado_ISO-9001-2015-RINA.pdf',//------------------ [15]
+				'pdf/CRCC_Petrobras-24-11-20.pdf'//-------------------------- [16]
+				
 			]
 
-			var id = document.querySelector('.form__button').id;
-
-			if(id == "0"){
-				window.open(pdf[0], '_blank');
-			}
-			if(id == "1"){
-				window.open(pdf[1], '_blank');
-			}
-			if(id == "2"){
-				window.open(pdf[2], '_blank');
-			}
-			if(id == "3"){
-				window.open(pdf[3], '_blank');
-			}
-			if(id == "4"){
-				window.open(pdf[4], '_blank');
-			}
-			if(id == "5"){
-				window.open(pdf[5], '_blank');
-			}
-			if(id == "6"){
-				window.open(pdf[6], '_blank');
-			}
-			if(id == "7"){
-				window.open(pdf[7], '_blank');
-			}
-			if(id == "8"){
-				window.open(pdf[8], '_blank');
-			}
-			if(id == "9"){
-				window.open(pdf[9], '_blank');
-			}
-			if(id == "10"){
-				window.open(pdf[10], '_blank');
-			}
-			if(id == "11"){
-				window.open(pdf[11], '_blank');
-			}
-			if(id == "12"){
-				window.open(pdf[12], '_blank');
-			}
-			if(id == "13"){
-				window.open(pdf[13], '_blank');
-			}
-	
+			
+		if(a == "0"){
+			window.open(pdf[0], '_blank');
+		}
+		if(a == "1"){
+			window.open(pdf[1], '_blank');
+		}
+		if(a == "2"){
+			window.open(pdf[2], '_blank');
+		}
+		if(a == "3"){
+			window.open(pdf[3], '_blank');
+		}
+		if(a == "4"){
+			window.open(pdf[4], '_blank');
+		}
+		if(a == "5"){
+			window.open(pdf[5], '_blank');
+		}
+		if(a == "6"){
+			window.open(pdf[6], '_blank');
+		}
+		if(a == "7"){
+			window.open(pdf[7], '_blank');
+		}
+		if(a == "8"){
+			window.open(pdf[8], '_blank');
+		}
+		if(a == "9"){
+			window.open(pdf[9], '_blank');
+		}
+		if(a == "10"){
+			window.open(pdf[10], '_blank');
+		}
+		if(a == "11"){
+			window.open(pdf[11], '_blank');
+		}
+		if(a == "12"){
+			window.open(pdf[12], '_blank');
+		}
+		if(a == "13"){
+			window.open(pdf[13], '_blank');
+		}
+		if(a == "14"){
+			window.open(pdf[14], '_blank');
+		}
+		if(a == "15"){
+			window.open(pdf[15], '_blank');
+		}
+		if(a == "16"){
+			window.open(pdf[16], '_blank');
+		}
+	}
 }
 
 /*-----------------------------------------Calculo dimensionamento AEC----------------------------------------------------*/

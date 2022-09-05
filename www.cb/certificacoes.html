@@ -29,7 +29,6 @@
         z-index: 9999;
     }
 </style> 
-<!--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-200750506-1"></script><script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-200750506-1'); </script>-->
  </head>
 
 <body>
@@ -205,65 +204,78 @@
             </p>
              <div class="certificados">
                 <div class="containerbox">
-                    <a href="pdf/Certificado_ISO-9001-2015-RINA.pdf" target="_blank">
+                    <button class="btnModal textlink" onclick="modalvariado(this.value)" value="15">
                         <img src="images/rina.fw.2020.png" alt="Certificado RINA" class="imagebox" style="width:100%">
                         <div class="middle">
                         <div class="textbox">Certificado RINA</div>
                         </div>
-                    </a>
+                    </button>
                 </div>
                 <div class="containerbox">
-                    <a href="pdf/Certificado_ISO_9001-2015-IQNet.pdf" target="_blank">
+                    <button class="btnModal textlink" onclick="modalvariado(this.value)" value="14">
                         <img src="images/iqnet.2020.fw.png" alt="Certificado IQNet" class="imagebox" style="width:100%">
                         <div class="middle">
                         <div class="textbox">Certificado IQNet</div>
                         </div>
-                    </a>
+                    </button>
                 </div>
                 <div class="containerbox">
-                    <a href="pdf/CRCC_Petrobras-24-11-20.pdf" target="_blank">
+                    <button class="btnModal textlink" onclick="modalvariado(this.value)" value="16">
                         <img src="images/crcc.2020.fw.png" alt="Certificado crcc" class="imagebox" style="width:100%">
                         <div class="middle">
                         <div class="textbox">Certificado CRCC</div>
                         </div>
-                    </a>
+                    </button>
                 </div>
             </div>
-            <!--
-            <h2 style="color:#da7322;">Certificações <img src="images/header-logo-mectrans.png" alt="" style="width: 248px"></h2>
-            <p> 
-                A MECTRANS como a CONBOR possui certificados das principais certificadoras internacionais, comprovando nosso compromisso
-                com a qualidade de nossos produtos e serviços, Atentando também a qualidade do atendimento ao cliente.
-            </p>
-             <div class="certificados">
-                <div class="containerbox">
-                    <a href="pdf/Certificado_ISO-9001-2015-RINA.pdf" target="_blank">
-                        <img src="images/rina.fw.2020.png" alt="Certificado RINA" class="imagebox" style="width:100%">
-                        <div class="middle">
-                        <div class="textbox">Certificado RINA</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="containerbox">
-                    <a href="pdf/Certificado_ISO_9001-2015-IQNet.pdf" target="_blank">
-                        <img src="images/iqnet.2020.fw.png" alt="Certificado IQNet" class="imagebox" style="width:100%">
-                        <div class="middle">
-                        <div class="textbox">Certificado IQNet</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="containerbox">
-                    <a href="pdf/CRCC_Petrobras-24-11-20.pdf" target="_blank">
-                        <img src="images/crcc.2020.fw.png" alt="Certificado crcc" class="imagebox" style="width:100%">
-                        <div class="middle">
-                        <div class="textbox">Certificado CRCC</div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>-->
+            <!--Colocar os da MECTRANS-->
     </section><!----------------------------------------------------------------------------->
-   
+    <section>
+        <!-- Modal -->
+        <div id="myModal" class="modal">
+
+         <!-- Conteudo do Modal  -->
+         <div class="modal-content-download modal-content">
+             <div class="modal-header">
+                 <h1>Download <span class="close icon-icon-close"></span></h1>
+             </div>
+             <div class="d-formdownload d-form">
+
+                 <form action="enviar.php" class="form" style=" box-shadow: none;" method="POST">
+                     <p>Preencha para Download do documento</p>
+                     <div class="form__div">
+                         <input class="form__input" type="text" name="nome" id="nome" placeholder=" "
+                             required>
+                         <label for="" class="form__label">Nome</label>
+                     </div>
+                     <div class="form__div">
+                         <input class="form__input" type="text" name="email" id="email" placeholder=" "
+                             required>
+                         <label for="" class="form__label">E-Mail</label>
+                     </div>
+                     <div class="form__div text">
+                         <p style="text-align:justify">Ao clicar em enviar digo que estou de acordo
+                             em fornecer o Nome da Empresa, E-mail e meu Telefone para
+                             que a <strong>CONBOR/MECTRANS</strong>
+                             entre em contato comigo.
+                         </p>
+                     </div>
+                     <input class="btn form__button" type="submit" value="enviar" name="enviar"
+                         onclick="valida()">
+
+                 </form>
+                 <script type="text/javascript">
+                     function valida() {
+                         if (grecaptcha.getResponse() == "") {
+                             alert("Você precisa marcar")
+                             return false;
+                         }
+                     }
+                 </script>
+             </div>
+         </div>
+     </div>
+     </section>
  </main>
  <footer>
     <div class="container">
