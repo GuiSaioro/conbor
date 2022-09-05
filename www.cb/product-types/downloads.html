@@ -211,52 +211,7 @@
 
                     <button class="img-catalogo btndownload"><img src="../images/catalogo-verde.jpg" alt=""></button>
                     
-                     <!-- Modal -->
-            <div id="myModal" class="modal">
-
-                <!-- Conteudo do Modal  -->
-                <div class="modal-content-download modal-content">
-                    <div class="modal-header">
-                        <h1>Download <span class="close icon-icon-close"></span></h1>
-                    </div>
-                    <div class="d-formdownload d-form">
-
-                        <form action="enviar.php" class="form" style=" box-shadow: none;" method="POST">
-                            <p>Preencha para Download do documento</p>
-                            <div class="form__div">
-                                <input class="form__input" type="text" name="nome" id="nome" placeholder=" "
-                                    required>
-                                <label for="" class="form__label">Nome</label>
-                            </div>
-                            <div class="form__div">
-                                <input class="form__input" type="text" name="email" id="email" placeholder=" "
-                                    required>
-                                <label for="" class="form__label">E-Mail</label>
-                            </div>
-                            <div class="form__div text">
-                                <p style="text-align:justify">Ao clicar em enviar digo que estou de acordo
-                                    em fornecer o Nome da Empresa, E-mail e meu Telefone para
-                                    que a <strong>CONBOR/MECTRANS</strong>
-                                    entre em contato comigo.
-                                </p>
-                            </div>
-                            <input class="btn form__button" id="1" type="submit" value="enviar" name="enviar"
-                                onclick="valida()">
-
-                        </form>
-                        <script type="text/javascript">
-                            function valida() {
-                                if (grecaptcha.getResponse() == "") {
-                                    alert("Você precisa marcar")
-                                    return false;
-                                }
-                            }
-                        </script>
-                    </div>
-                </div>
-            </div>
-
-
+                     
                     <div class="home-catalogo-text">
                         <p>A solução perfeita para problemas de transmissão e frenagem</p>
                     </div>
@@ -264,7 +219,7 @@
                 <div class="home-download-catalogo" style="background-image:url(../images/home-intro-bg-azul.jpg)">
                     <span class="home-catalogo-text-up">Cátalogo de acoplamentos <strong>CONBORFLEX</strong>.</span>
 
-                    <button class="img-catalogo"><img src="../images/catalogo-azul.jpg" alt=""></button>     
+                    <button class="img-catalogo" onclick="modalvariado()"><img src="../images/catalogo-azul.jpg" alt=""></button>     
                     <div class="home-catalogo-text">
                         <p>A solução mais flexível para as máquinas mais exigentes</p>
                     </div>
@@ -288,25 +243,25 @@
                                 <li>
                                     <h6>Manual de Elementos Pneumáticos IV</h6>
                                     <div class="buttons">
-                                        <button class="btn" onclick="modalvariado()" id="1"> DOWNLOAD <span class="icon icon-download"></span></button>
+                                        <button class="btn" onclick="modalvariado()" id="2"> DOWNLOAD <span class="icon icon-download"></span></button>
                                     </div>
                                 </li>
                                 <li>
                                     <h6>Tabela de acoplamentos</h6>
                                     <div class="buttons">
-                                        <button class="btn" onclick="modalvariado()" id="1"> DOWNLOAD <span class="icon icon-download"></span></button>
+                                        <button class="btn" onclick="modalvariado()" id="3"> DOWNLOAD <span class="icon icon-download"></span></button>
                                     </div>
                                 </li>
                                 <li>
                                     <h6>Tabela de equivalencia dos acoplamentos</h6>
                                     <div class="buttons">
-                                        <button class="btn" onclick="modalvariado()" id="1"> DOWNLOAD <span class="icon icon-download"></span></button>
+                                        <button class="btn" onclick="modalvariado()" id="4"> DOWNLOAD <span class="icon icon-download"></span></button>
                                     </div>
                                 </li>
                                 <li>
                                     <h6>Tabela de medidas de elementos pneumaticos</h6>
                                     <div class="buttons">
-                                        <button class="btn" onclick="modalvariado()" id="1"> DOWNLOAD <span class="icon icon-download"></span></button>
+                                        <button class="btn" onclick="modalvariado()" id="5"> DOWNLOAD <span class="icon icon-download"></span></button>
                                     </div>
                                 </li>
                             </ul>
@@ -319,7 +274,50 @@
             </div>
         </section>
         <section>
-           
+           <!-- Modal -->
+           <div id="myModal" class="modal">
+
+            <!-- Conteudo do Modal  -->
+            <div class="modal-content-download modal-content">
+                <div class="modal-header">
+                    <h1>Download <span class="close icon-icon-close"></span></h1>
+                </div>
+                <div class="d-formdownload d-form">
+
+                    <form action="enviar.php" class="form" style=" box-shadow: none;" method="POST">
+                        <p>Preencha para Download do documento</p>
+                        <div class="form__div">
+                            <input class="form__input" type="text" name="nome" id="nome" placeholder=" "
+                                required>
+                            <label for="" class="form__label">Nome</label>
+                        </div>
+                        <div class="form__div">
+                            <input class="form__input" type="text" name="email" id="email" placeholder=" "
+                                required>
+                            <label for="" class="form__label">E-Mail</label>
+                        </div>
+                        <div class="form__div text">
+                            <p style="text-align:justify">Ao clicar em enviar digo que estou de acordo
+                                em fornecer o Nome da Empresa, E-mail e meu Telefone para
+                                que a <strong>CONBOR/MECTRANS</strong>
+                                entre em contato comigo.
+                            </p>
+                        </div>
+                        <input class="btn form__button" id="1" type="submit" value="enviar" name="enviar"
+                            onclick="valida()">
+
+                    </form>
+                    <script type="text/javascript">
+                        function valida() {
+                            if (grecaptcha.getResponse() == "") {
+                                alert("Você precisa marcar")
+                                return false;
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
         </section>
     </main>
     <footer>

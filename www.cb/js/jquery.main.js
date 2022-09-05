@@ -16,8 +16,8 @@ jQuery(function () {
 	initAnchors();
 	initacordeom();
 	initCookies();
-	chamarmodal();
-	modal();
+	//chamarmodal();
+	//modal();
 });
 //-------------------------------------------------------------------------------//
 
@@ -306,15 +306,16 @@ function chamarmodal(){
 function modalvariado(){
 
 	var CookieSetado = Cookies.get('Nome');
+	console.log(btnD);
 	if(CookieSetado == undefined){
 		var modal = document.getElementById("myModal");
-		var btn = document.getElementById("btnModal");
+		var btnD = document.getElementById("btnModal");
 		var span = document.getElementsByClassName("close")[0];
 		
 
 		modal.style.display = "block"
 
-		btn.onclick = function () {
+		btnD.onclick = function () {
 			modal.style.display = "block"
 		}
 		span.onclick = function () {
