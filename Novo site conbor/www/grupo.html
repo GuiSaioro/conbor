@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<head>
+    <link media="all" rel="stylesheet" href="cms-assets/css/main.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="http://fonts.googleapis.com/css2?family=Commissioner:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="cdn.jsdelivr.net/gh/fancyapps/fancybox%403.5.7/dist/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="css/main.min.css">
+    <script src="ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="cdn.jsdelivr.net/npm/slick-carousel%401.8.1/slick/slick.min.js"></script>
+    <script src="cdn.jsdelivr.net/gh/fancyapps/fancybox%403.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="js/jquery.main.js"></script>
+    <link rel="stylesheet" href="css/style-slider.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5a646e">
+    <link rel="shortcut icon" href="favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#0e0e10">
+    <meta name="msapplication-config" content="/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#0e0e10">
+    <title>GRUPO </title>
+    <style>
+        .grecaptcha-badge {
+            z-index: 9999;
+        }
+    </style>
+</head>
+
+<body onload="empresas()">
+    <div id="wrapper">
+        <header>
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <img src="images/logoCBsemfundo.png" alt="CONBOR" class="visible" width="247" height="78">
+                    <img src="images/header-logo-white.png" alt="CONBOR" class="hide" width="147" height="40">
+                    <img src="images/header-logo-mectrans.png" alt="MECTRANS" class="hide" width="147" height="78">
+                    <img src="images/header-logo-white-mectrans.png" alt="MECTRANS" class="visible" width="247"
+                        height="78">
+                </a>
+                <nav class="main_navigation nav-holder">
+                    <ul id="nav">
+                        <li class="product-nav ">
+                            <a href="produtos.html">Produtos <span></span></a>
+                            <div class="dropdown">
+                                <ul>
+                                    <li>
+                                        <a href="#">Por tipo de produto</a>
+                                        <div class=" dropdown " onmouseout="nomouse()" onmouseover="havemouse()">
+                                            <ul>
+                                    </li>
+                                    <li>
+                                        <a id="aco" class="img-dropdown-size"
+                                            href="product-types/acoplamentos.html">Acoplamentos<img
+                                                src="images/menu-dropdown/img-AEC-Standart.png" alt=""></a>
+
+                                    </li>
+
+                                    <li>
+                                        <a id="emb" class="img-dropdown-size"
+                                            href="product-types/freios-embreagens-pneumaticas.html">Freios e
+                                            embreagens<img src="images/menu-dropdown/img-ei-s.png" alt=""></a>
+
+                                    </li>
+                                    <li>
+                                        <a id="cw" class="img-dropdown-size" href="product/cw.html">Câmaras CW<img
+                                                src="images/menu-dropdown/img-cw.png" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a id="dc" class="img-dropdown-size"
+                                            href="product-types/diafragma-dc.html">Diafragma DC<img
+                                                src="images/menu-dropdown/img-dc.png" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a id="ct" class="img-dropdown-size"
+                                            href="product/cinta.html">Cintas de Freio<img
+                                                src="images/menu-dropdown/img-cinta.png" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a id="ft" class="img-dropdown-size"
+                                            href="product/freio.html">Freios
+                                            Tensionadores<img src="images/menu-dropdown/img-freio-ei.png" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <img id="showimg" src="images/menu-dropdown/img-vazia.jpg">
+                                        <ul>
+                                    </li>
+                                </ul>
+                    </ul>
+            </div>
+            </li>
+            <li>
+                <a href="produtos.html">Ver todos os produtos</a>
+
+                <div class="dropdown">
+
+                </div>
+            </li>
+
+            <li>
+                <a href="#">Montagem e Instalação</a>
+                <div class="dropdown">
+                    <ul>
+                        <li>
+                            <a id="aco" class="img-dropdown-size"
+                                href="product-types/montagem-acoplamentos.html">Acoplamentos </a>
+                        </li>
+                </div>
+            </li>
+            <li>
+                <a href="protuct-types/downloads.html">Downloads <spam></spam></a>
+                <div class="dropdown">
+                </div>
+            </li>
+            </ul>
+            </div>
+            <li>
+                <a href="servicos.html">Serviços <span></span></a>
+                <div class="dropdown">
+            <ul>
+                <li>
+                    <a href="recuperacao.html">Recuperação de Embreagens e peças técnicas </a>
+
+                </li>
+                <li>
+                    <a href="manutencao.html">Serviço de manutenção </a>
+                    <div class="dropdown">
+                    </div>
+                </li>
+            </ul>
+            </div>
+            </li>
+            <li>
+            <a href="grupo.html">Grupo <span></span></a>
+            <div class="dropdown">
+            <ul>
+                <li>
+                    <a href="conbor.html" translate="no">CONBOR</a>
+
+                </li>
+                <li>
+                    <a href="mectrans.html" translate="no">MECTRANS </a>
+                    <div class="dropdown">
+                    </div>
+                </li>
+                <li>
+                    <!--<a href="historia.html" translate="no">História</a>-->
+
+                </li>
+            </ul>
+        </div>
+        </li>
+        <li>
+            <a href="certificacoes.html">Certificações <span></span></a>
+            <div class="dropdown">
+            </div>
+        </li>
+        <li>
+            <a href="contato.html">Contato <span></span></a>
+            <div class="dropdown">
+            </div>
+        </li>
+        </ul>
+        </nav> <a class="nav-opener" href="#"><span></span></a>
+
+        </div>
+    </header>
+    <ul class="sitebar">
+        <!--<li class="site-search">
+            <form action="produtos.html"> Alterar para site CONBOR
+                <input type="hidden"  value="">
+                <input type="text" name="search" placeholder="Pesquisar produtos" maxlength="255" value="">
+                <button><span class="icon-search"></span></button>
+            </form>
+            <a class="button clickLink" href="#"><span class="icon-search"></span></a>
+        </li>-->
+        <li class="loc">
+            <div class="custom-select">
+                <div class="category"></div>
+
+            </div>
+            <a class="button"
+                href="https://wa.me/5521981512239?text=Olá%20Gostaria%20de%20mais%20informações%20sobre%20o%20Grupo"
+                target="_blank"><span class="fa fa-whatsapp"></span></a>
+        </li>
+        <li class="">
+            <a class="button" href="contato.html"><span class="icon-service-02"></span></a>
+            <!--data-fancybox colocar entre button e data para lista de traduções-->
+        </li>
+    </ul>
+
+    <main role="main" style="background-color: #f8f9f8">
+        <section class="main-banner" style="background-image: url(images/product-list-banner.jpg)">
+            <div class="container">
+                <div class="holder">
+
+                    <h1 class="large">Grupo</h1>
+                    <ul class="breadcrumbs">
+                        <li><a href="index.html">Início</a></li>
+                        <li>Grupo</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="grupo">
+            <div class="container">
+                <div>
+                    <h2>Um pouco do grupo econômico <a href="conbor.html"><img src="images/header-logo-scroll-white.png" width="150px" alt="conbor"></a>|<a href="mectrans.html"><img src="images/header-logo-mectrans.png" width="180px alt="></a></h2>
+                    <p>O mercado brasileiro de indústrias do país já contava com a Conbor Borrachas. Agora, o novo grupo
+                        industrial
+                        Conbor/Mectrans juntos reúnem 53 anos de experiência e tem presença comercial em todo o Brasil.<br><br>
+    
+                        O grupo nasce com boas perspectivas econômicas, produção, desempenho e qualidade em seu conteúdo.
+                        Possui
+                        profissionais capacitados onde cada uma de suas partes opera de forma independente mas integrada, e
+                        os
+                        projetos são em sua maioria realizados em conjunto. Trabalhos que vão da criação à restauração de
+                        peças que
+                        operam nas maquinas em todo o país.</br><br>
+    
+                        <a href="conbor.html"><img src="images/header-logo-scroll-white.png" width="80px" alt="conbor"></a>|<a href="mectrans.html"><img src="images/header-logo-mectrans.png" width="80px alt="></a> é o nome do novo grupo
+                        industrial formado por duas empresas de longa trajetória ele é o
+                        resultado do impulso e da expansão da empresa ocupando uma posição privilegiada tanto por seu
+                        volume,
+                        diversificação na criação de produtos e presença nacional com perspectiva internacional.</br>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="home_empresas">
+            <div class="painel_empresas">
+
+                <div class="split esquerda">
+                    <h1> <img src="images/logoCBsemfundo.png" alt="Conbor"></h1>
+                    <p>A CONBOR é líder nacional no mercado de freios, embreagens e acoplamentos industriais.
+                        Nossos produtos conquistaram a credibilidade de diversos setores da indústria brasileira
+                        pela segurança, facilidade de manutenção e, principalmente, pela qualidade</p>
+                    <a href="conbor.html" class="btn_empresas">Sobre</a>
+                </div>
+
+                <div class="split direita">
+                    <h1><img src="images/header-logo-mectrans.png" alt="Mectrans"></h1>
+                    <p>Há mais de 15 anos no mercado da industria brasileira trabalhando
+                        em parceria com a CONBOR em todo país, a MECTRANS se destaca pelo
+                        seu crescimento, desenvolvimento ecônomico e com respeito ao meio ambiente
+                        ajudando o Brasil com capacidade produtiva e representatividade alcançada
+                        no mercado de Freios, Embreagens, Acoplamentos e peças técnicas de Borraschas,
+                        desde 2007.</p>
+                    <a href="mectrans.html" class="btn_empresas">Sobre</a>
+                </div>
+            </div>
+        </section>
+        <section class="support-banner" style="background-image: url(images/home-services-bg.jpg)">
+            <div class="container">
+                <div class="row-holder">
+                    <div class="col-8">
+                        <div class="global">
+                            <h1>ASSISTENCIA TÉCNICA</h1>
+                            <p>A CONBOR possui um Departamento Técnico formado por especialistas que estão sempre
+                                prontos para atender às solicitações de nossos clientes,
+                                que contam, ainda, com um suporte pós-venda para toda a nossa linha de produtos.</p>
+                            <p>Entre em contato e saiba mais</p>
+                            <div class="button-holder">
+                                <a href="../contato.html" class="btn">Contato</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="top-footer">
+                <a href="index.html" class="logo">
+                    <img src="images/header-logo-white.png" alt="CONBOR" width="147" height="78">
+                    <img src="images/header-logo-mectrans.png" alt="MECTRANS" width="147" height="78">
+                </a>
+                <ul class="social">
+                    <li><a href="https://www.linkedin.com/company/conbor-borrachas-t%C3%A9cnico-industriais-ltda./mycompany/"
+                            target="_blank"><span class="icon-linkedin"></span></a></li>
+                    <li><a href="https://www.instagram.com/conborborrachas/" target="_blank"><span
+                                class="fa fa-instagram"></span></a></li>
+                </ul>
+            </div>
+            <div class="footer-content">
+                <ul class="footer-list" translate="no">
+                    <li>Telefones</li>
+                    <li><a href="tel:+552122700821">(21) 2270-0821</a></li>
+                    <li><a href="tel:+552138664508">(21) 3866-4508</a></li>
+                    <li><a href="tel:+552138853343">(21) 3885-3343 </a></li>
+                    <li><a href="tel:+552132173565">(21) 3217-3565</a></li>
+                </ul>
+                <ul class="footer-nav">
+                    <li>
+                        <a href="produtos.html">VER PRODUTOS</a>
+                    </li>
+                    <li>
+                        <a href="servicos.html">Serviços</a>
+                    </li>
+                    <li>
+                        <a href="protuct-types/downloads.html">Downloads</a>
+                    </li>
+                    <li>
+                        <a href="certificacoes.html">Certificações</a>
+                    </li>
+                    <li>
+                        <a href="grupo.html">Grupo</a>
+                    </li>
+                    <li>
+                        <a href="contato.html">Contato</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <ul class="copy-list">
+                    <li>© 2022, CONBOR. all rights reserved. </li>
+                    <li><a href="politica.html">POLITICA DE PRIVACIDADE</a></li>
+                </ul>
+                <p translate="no">WEBSITE BY:
+                    <!--<a href="" target="_blank">-->GUISAIORO</a>
+                </p>
+                <div id="google_translate_element"></div>
+                <div>
+                    <p>Traduzir para:</p>
+                    <div class="boxTradutor">
+                        <a href="javascript:trocarIdioma('es')"><img alt="espanhol"
+                                src="images/flags-tradutor/img-flag-es.png"></a>
+                        <a href="javascript:trocarIdioma('en')"><img alt="ingles"
+                                src="images/flags-tradutor/img-flag-en.png"></a>
+                        <a href="javascript:trocarIdioma('pt')"><img alt="portugues BR"
+                                src="images/flags-tradutor/img-flag-br.png"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="gdpr-cookies" class="container">
+            <div class="holder">
+                <p>O site CONBOR/Mectrans utiliza cookies para lhe proporcionar a melhor experiência de usuário. Para
+                    continuar, você concorda com o uso de cookies de acordo com nossa <a href="politica.html">Politica
+                        de Privacidade</a>.</p>
+                <button href="#" class="btn btn-accept-cookie"><span class="icon-icon-accept"></span> Aceitar</button>
+                <button href="#" class="close-btn"><span class="icon-icon-close"></span></button>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+
+</html>
